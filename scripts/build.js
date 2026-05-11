@@ -135,12 +135,27 @@ function lintNoEmDash() {
   const FORBIDDEN = "\u2014"; // —
   const targets = [SRC, path.join(ROOT, "content")];
   const offenders = [];
+  // Skip vendor / generated trees - we only police our own copy.
+  const SKIP_DIRS = new Set(["admin", "node_modules", "__generated__", ".tina"]);
   const walk = (dir) => {
     if (!fs.existsSync(dir)) return;
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.isDirectory()) {
+        if (SKIP_DIRS.has(entry.name)) continue;
+        walk(path.join(dir, entry.name));
+        continue;
+      }
+      // Only police text-y content we author; skip .min.js, .map, etc.
+      if (!/\.(html?|css|md|json)$/i.test(entry.name)) {
+        // For JS we only police src/scripts and scripts (our authored JS),
+        // not anything that landed via a build tool.
+        if (!/\.(js|mjs|cjs)$/i.test(entry.name)) continue;
+        const rel = path.relative(SRC, path.join(dir, entry.name));
+        const inAuthoredJs = rel.startsWith("scripts" + path.sep);
+        const inBuildScripts = path.join(dir, entry.name).startsWith(path.join(ROOT, "scripts") + path.sep);
+        if (!inAuthoredJs && !inBuildScripts) continue;
+      }
       const p = path.join(dir, entry.name);
-      if (entry.isDirectory()) { walk(p); continue; }
-      if (!/\.(html?|css|js|mjs|cjs|md|json)$/i.test(entry.name)) continue;
       const txt = fs.readFileSync(p, "utf8");
       if (txt.includes(FORBIDDEN)) offenders.push(p);
     }
