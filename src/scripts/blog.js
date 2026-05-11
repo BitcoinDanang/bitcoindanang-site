@@ -52,7 +52,12 @@ function renderEmpty(lang) {
     lang === "en"
       ? "No posts yet. Check back soon!"
       : "Chưa có bài viết nào. Hãy theo dõi sớm nhé!";
-  return `<p class="blog-empty">${msg}</p>`;
+  return `
+    <div class="blog-empty">
+      <img class="blog-empty__img" src="/images/blog-empty-state.jpg" alt="" loading="lazy" />
+      <p class="blog-empty__msg">${msg}</p>
+    </div>
+  `;
 }
 
 async function loadPosts() {
