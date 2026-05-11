@@ -44,7 +44,7 @@ README.md
 - API token + account ID are stored in `/Users/bowz/.claude/projects/-Users-bowz/memory/bitcoindanang_project.md`. **Do not paste secrets into this file.**
 - Domains on the same Cloudflare account: `bitcoindanang.com` (primary site) and `bitcoindanang.org` (email primary, also redirects to .com).
 - CF Pages project name: `bitcoindanang`. Production branch: **`main`** (NOT `master`). Default URL: `https://bitcoindanang.pages.dev`.
-- Custom domain (`bitcoindanang.com`, `www.bitcoindanang.com`) is NOT yet attached — the maintainer adds it manually in the CF Pages dashboard after the first successful deploy.
+- Custom domains `bitcoindanang.com` and `www.bitcoindanang.com` ARE attached to the CF Pages project (added via API 2026-05-11, status `initializing` then `pending` — DNS + SSL provision automatically because the zones are on the same account).
 
 ## GitHub
 
@@ -96,7 +96,7 @@ These strings appear verbatim in the source and will be replaced in Phase 9:
 
 - `TELEGRAM_HANDLE_TBD` — Telegram group handle (e.g. `@BitcoinDaNang`).
 - `/public/images/logo.png`, `/public/images/logo.svg` — logo files.
-- `/public/images/flag-vn.svg`, `/public/images/flag-en.svg` — language switcher flags.
+- `/public/images/flag-vn.jpg`, `/public/images/flag-en.jpg` — language switcher flags (copied from trading-platform assets 2026-05-11).
 - `/public/images/hero-pizza-day.jpg`, `laszlo-illustration.jpg`, `bitcoin-vs-gold-hero.jpg`, `vietnamese-family-bitcoin.jpg`, `og-default.jpg` — generated illustrations (prompts in Phase 8 of the runbook, also in the Obsidian vault).
 - `/public/data/pizza-day-history.json` — currently a placeholder array; the Phase 6 build script will fetch the real CoinGecko data.
 - Wallet/QR for Pizza Day donations — placeholder, replace before May 22, 2026.
@@ -106,4 +106,4 @@ These strings appear verbatim in the source and will be replaced in Phase 9:
 - Don't paste real secrets (CF token, Tina token) into the repo. `.env.example` keeps keys only; `.env.local` is gitignored.
 - Don't touch the Obsidian vault from this repo.
 - Don't commit `admin/` (Tina build output) or `tina/__generated__/` — both are gitignored.
-- Don't add the custom domain via API — the maintainer does it in the CF Pages dashboard after first deploy.
+- Don't add new custom domains via API without checking with the maintainer first — the existing two (`bitcoindanang.com`, `www.bitcoindanang.com`) are wired.
