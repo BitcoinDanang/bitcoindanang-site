@@ -1,91 +1,104 @@
 /**
- * Pizza Day live price feed - fetches the current BTC/VND rate from BitcoinVN.io
- * and renders `10,000 BTC × rate` formatted in Vietnamese number style.
+ * Pizza Day live price feed.
+ *
+ * BTC/VND from CoinGecko's free public simple/price endpoint (returns VND
+ * directly). If that fails or returns garbage, fall back to a two-step
+ * compute: CryptoCompare BTC/USD x open.er-api.com USD/VND.
  *
  * Target DOM:
  *   #pizza-price-value     - main large gold price display
- *   #pizza-price-fallback  - hidden by default, shown if the API fails
+ *   #pizza-price-fallback  - hidden by default, shown if all sources fail
  *
- * The BitcoinVN public rates endpoint is `https://bitcoinvn.io/api/v1/rates`.
- * The exact JSON shape may shift; this script searches a few common field paths
- * before giving up. If the API consistently fails in production, swap in the
- * correct field name below and document it in Phase 9 of the runbook.
+ * The element gets `data-rate` set to the BTC/VND single-coin rate so the
+ * returns-table renderer downstream can reuse the live number.
+ *
+ * The previous BitcoinVN endpoint (`bitcoinvn.io/api/v1/rates`) returns 404 -
+ * they no longer publish a public REST rate. Attribution shown on the page
+ * now reads "Nguồn giá: CoinGecko".
  */
 (function () {
-  const RATES_URL = 'https://bitcoinvn.io/api/v1/rates';
-  const COINS = 10000;
+  var COINS = 10000;
+  var SOURCES = [
+    {
+      name: "coingecko",
+      url: "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=vnd",
+      pick: function (j) {
+        return j && j.bitcoin && typeof j.bitcoin.vnd === "number" ? j.bitcoin.vnd : null;
+      },
+    },
+    {
+      name: "cc+er",
+      url: null, // composite - handled below
+      pick: null,
+    },
+  ];
 
-  // Format a number using Vietnamese thousands separator (.) - e.g. 249.340.000.000.000
   function formatVnd(n) {
-    if (n == null || !isFinite(n)) return '';
-    const rounded = Math.round(n);
-    return rounded.toLocaleString('vi-VN') + ' ₫';
+    if (n == null || !isFinite(n)) return "";
+    return Math.round(n).toLocaleString("vi-VN") + " ₫";
   }
 
-  // Look for a BTC/VND sell rate in a variety of plausible JSON shapes.
-  function extractBtcVndRate(payload) {
-    if (!payload) return null;
-
-    // 1. Flat: { BTC_VND: 2493400000 } or { btc_vnd: ... }
-    const flat = payload.BTC_VND || payload.btc_vnd || payload.BTCVND;
-    if (typeof flat === 'number') return flat;
-    if (typeof flat === 'string' && !isNaN(parseFloat(flat))) return parseFloat(flat);
-
-    // 2. Nested: { BTC: { VND: { sell: ... } } } or { rates: { BTC: { VND: ... } } }
-    const candidates = [
-      payload?.BTC?.VND?.sell,
-      payload?.BTC?.VND?.ask,
-      payload?.BTC?.VND,
-      payload?.rates?.BTC?.VND,
-      payload?.rates?.BTC_VND,
-      payload?.data?.BTC?.VND,
-      payload?.data?.btc_vnd,
-    ];
-    for (const v of candidates) {
-      if (typeof v === 'number') return v;
-      if (typeof v === 'string' && !isNaN(parseFloat(v))) return parseFloat(v);
-      if (v && typeof v === 'object') {
-        const inner = v.sell || v.ask || v.value;
-        if (typeof inner === 'number') return inner;
-      }
+  async function fetchJson(url, timeoutMs) {
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, timeoutMs || 8000);
+    try {
+      var res = await fetch(url, { headers: { Accept: "application/json" }, signal: ctrl.signal });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return await res.json();
+    } finally {
+      clearTimeout(t);
     }
+  }
 
-    // 3. Array of rate objects: [{ pair: 'BTC/VND', sell: ... }, ...]
-    if (Array.isArray(payload)) {
-      const hit = payload.find(function (r) {
-        const p = (r && (r.pair || r.symbol || r.name) || '').toString().toUpperCase();
-        return p.includes('BTC') && p.includes('VND');
-      });
-      if (hit) {
-        const v = hit.sell || hit.ask || hit.rate || hit.price || hit.value;
-        if (typeof v === 'number') return v;
-        if (typeof v === 'string' && !isNaN(parseFloat(v))) return parseFloat(v);
-      }
+  async function fetchCompositeBtcVnd() {
+    var btcUsdJson = await fetchJson(
+      "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD"
+    );
+    var btcUsd = btcUsdJson && btcUsdJson.USD;
+    if (!btcUsd) throw new Error("no BTC/USD from cryptocompare");
+    var fxJson = await fetchJson("https://open.er-api.com/v6/latest/USD");
+    var usdVnd = fxJson && fxJson.rates && fxJson.rates.VND;
+    if (!usdVnd) throw new Error("no USD/VND from er-api");
+    return btcUsd * usdVnd;
+  }
+
+  async function getBtcVnd() {
+    // 1) CoinGecko direct
+    try {
+      var j = await fetchJson(SOURCES[0].url);
+      var v = SOURCES[0].pick(j);
+      if (v && v > 0) return { rate: v, source: "CoinGecko" };
+    } catch (e) {
+      console.warn("[pizza-price] coingecko failed:", e && e.message);
     }
-
+    // 2) Composite fallback
+    try {
+      var v2 = await fetchCompositeBtcVnd();
+      if (v2 && v2 > 0) return { rate: v2, source: "CryptoCompare x open.er-api" };
+    } catch (e) {
+      console.warn("[pizza-price] composite failed:", e && e.message);
+    }
     return null;
   }
 
-  async function fetchPrice() {
-    const valueEl = document.getElementById('pizza-price-value');
-    const fallbackEl = document.getElementById('pizza-price-fallback');
+  async function render() {
+    var valueEl = document.getElementById("pizza-price-value");
+    var fallbackEl = document.getElementById("pizza-price-fallback");
     if (!valueEl) return;
 
-    try {
-      const res = await fetch(RATES_URL, { headers: { Accept: 'application/json' } });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const json = await res.json();
-      const rate = extractBtcVndRate(json);
-      if (!rate) throw new Error('Could not find BTC/VND rate in response');
-      const total = rate * COINS;
-      valueEl.textContent = formatVnd(total);
-      valueEl.setAttribute('data-rate', String(rate));
-    } catch (err) {
-      console.warn('[pizza-price] live fetch failed:', err);
-      valueEl.textContent = '';
+    var hit = await getBtcVnd();
+    if (!hit) {
+      console.warn("[pizza-price] all sources failed");
+      valueEl.textContent = "";
       if (fallbackEl) fallbackEl.hidden = false;
+      return;
     }
+    var total = hit.rate * COINS;
+    valueEl.textContent = formatVnd(total);
+    valueEl.setAttribute("data-rate", String(hit.rate));
+    valueEl.setAttribute("data-source", hit.source);
+    document.dispatchEvent(new CustomEvent("pizza-price:loaded", { detail: hit }));
   }
 
-  document.addEventListener('DOMContentLoaded', fetchPrice);
+  document.addEventListener("DOMContentLoaded", render);
 })();
