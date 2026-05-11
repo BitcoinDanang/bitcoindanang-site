@@ -1,0 +1,29 @@
+<!-- Top navigation partial — copy into each page. -->
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a href="/src/pages/index.html" class="nav__logo">
+      <img src="/public/images/logo.png" alt="Bitcoin Đà Nẵng" />
+      <span>Bitcoin Đà Nẵng</span>
+    </a>
+
+    <button class="nav__toggle" type="button" data-nav-toggle aria-label="Menu">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <ul class="nav__links">
+      <li><a href="/src/pages/index.html#events" data-i18n="nav.events">Sự kiện</a></li>
+      <li><a href="/src/pages/bitcoin.html" data-i18n="nav.bitcoin">Bitcoin là gì?</a></li>
+      <li><a href="https://t.me/TELEGRAM_HANDLE_TBD" data-i18n="nav.join">Tham gia</a></li>
+      <li>
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button type="button" data-lang-btn="vi" aria-label="Tiếng Việt">
+            <span class="flag flag--vn" aria-hidden="true"></span>VI
+          </button>
+          <button type="button" data-lang-btn="en" aria-label="English">
+            <span class="flag flag--en" aria-hidden="true"></span>EN
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

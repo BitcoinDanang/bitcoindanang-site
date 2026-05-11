@@ -1,0 +1,243 @@
+/* Bitcoin Đà Nẵng — Reusable components */
+
+/* Buttons */
+.btn-primary,
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+.btn-primary:hover {
+  background: var(--color-gold-light);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--color-gold-light);
+}
+
+body.theme-light .btn-outline {
+  border-color: var(--color-gold-dark);
+  color: var(--color-gold-dark);
+}
+body.theme-light .btn-outline:hover {
+  background: rgba(160, 124, 30, 0.08);
+}
+
+/* Cards */
+.card {
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: var(--transition);
+}
+
+body.theme-dark .card {
+  background: var(--color-black-card);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+body.theme-light .card {
+  background: #fff;
+  border: 1px solid var(--color-white-muted);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.card--gold-border {
+  border: 2px solid var(--color-gold);
+}
+
+/* Sections */
+.section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+.section + .section { border-top: 1px solid rgba(212, 175, 55, 0.08); }
+
+/* Navigation */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+body.theme-dark .nav { background: rgba(13, 13, 13, 0.82); border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+body.theme-light .nav { background: rgba(250, 247, 240, 0.86); border-bottom: 1px solid var(--color-white-muted); }
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem var(--gutter);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+.nav__logo img { width: 36px; height: 36px; }
+
+.nav__links {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.nav__links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.97rem;
+  color: inherit;
+  opacity: 0.85;
+}
+.nav__links a:hover { opacity: 1; color: var(--color-gold); }
+
+.nav__right { display: flex; align-items: center; gap: 1rem; }
+
+/* Language switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+}
+.lang-switcher button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: inherit;
+  font-size: 0.85rem;
+  opacity: 0.55;
+  transition: var(--transition);
+}
+.lang-switcher button:hover { opacity: 1; }
+.lang-switcher button.is-active {
+  opacity: 1;
+  border-color: var(--color-gold);
+}
+.lang-switcher .flag {
+  width: 22px;
+  height: 16px;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  background-color: rgba(255,255,255,0.08);
+}
+.lang-switcher .flag--vn { background-image: url('/public/images/flag-vn.svg'); }
+.lang-switcher .flag--en { background-image: url('/public/images/flag-en.svg'); }
+
+/* Hamburger (mobile) */
+.nav__toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.6rem;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    width: 78vw;
+    max-width: 320px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1.75rem 2rem;
+    gap: 1.25rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+  body.theme-dark .nav__links { background: var(--color-black-soft); }
+  body.theme-light .nav__links { background: #fff; }
+  .nav__links.is-open { transform: translateX(0); box-shadow: -8px 0 32px rgba(0,0,0,0.25); }
+  .nav__toggle { display: inline-flex; }
+}
+
+/* Footer */
+.footer {
+  padding: 3rem var(--gutter) 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+body.theme-dark .footer { background: var(--color-black-soft); color: var(--color-text-muted); border-top: 1px solid rgba(212, 175, 55, 0.1); }
+body.theme-light .footer { background: var(--color-white-muted); color: #5a4f3a; }
+
+.footer__partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+.footer__partners a { text-decoration: none; font-weight: 600; color: var(--color-gold); }
+
+.footer__small { font-size: 0.8rem; opacity: 0.75; margin-top: 1rem; }
+
+/* Decorative gold rule */
+.gold-rule {
+  width: 60px; height: 2px;
+  background: var(--color-gold);
+  border: 0;
+  margin: 1rem auto 1.5rem;
+}
+
+/* Tag chip */
+.chip {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Grid helpers */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}

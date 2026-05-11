@@ -1,0 +1,34 @@
+<!--
+  Reusable <head> partial for Bitcoin Đà Nẵng.
+  Copy into each page's <head> (no build step yet — Phase 6 build.js will inline this).
+  Replace {{TITLE}} and {{DESCRIPTION}} per page.
+-->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0D0D0D" />
+<title>{{TITLE}} — Bitcoin Đà Nẵng</title>
+<meta name="description" content="{{DESCRIPTION}}" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{TITLE}} — Bitcoin Đà Nẵng" />
+<meta property="og:description" content="{{DESCRIPTION}}" />
+<meta property="og:image" content="/public/images/og-default.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bitcoindanang.com" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Favicon (placeholder) -->
+<link rel="icon" type="image/png" href="/public/images/logo.png" />
+
+<!-- Styles -->
+<link rel="stylesheet" href="/src/styles/tokens.css" />
+<link rel="stylesheet" href="/src/styles/base.css" />
+<link rel="stylesheet" href="/src/styles/components.css" />

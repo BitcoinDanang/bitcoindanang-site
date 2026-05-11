@@ -1,0 +1,37 @@
+/* Bitcoin Đà Nẵng — Design Tokens */
+:root {
+  /* Brand */
+  --color-gold: #D4AF37;
+  --color-gold-light: #F5D87A;
+  --color-gold-dark: #A07C1E;
+
+  /* Dark theme */
+  --color-black: #0D0D0D;
+  --color-black-soft: #1A1A1A;
+  --color-black-card: #222222;
+
+  /* Light theme */
+  --color-white: #FAF7F0;
+  --color-white-muted: #E8E4DC;
+
+  /* Text */
+  --color-text-on-dark: #F0EAD6;
+  --color-text-muted: #9A9080;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Effects */
+  --shadow-gold: 0 0 24px rgba(212, 175, 55, 0.15);
+  --transition: 0.2s ease;
+
+  /* Layout */
+  --max-width: 1180px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+}
