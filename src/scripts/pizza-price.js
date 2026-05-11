@@ -1,10 +1,10 @@
 /**
- * Pizza Day live price feed — fetches the current BTC/VND rate from BitcoinVN.io
+ * Pizza Day live price feed - fetches the current BTC/VND rate from BitcoinVN.io
  * and renders `10,000 BTC × rate` formatted in Vietnamese number style.
  *
  * Target DOM:
- *   #pizza-price-value     — main large gold price display
- *   #pizza-price-fallback  — hidden by default, shown if the API fails
+ *   #pizza-price-value     - main large gold price display
+ *   #pizza-price-fallback  - hidden by default, shown if the API fails
  *
  * The BitcoinVN public rates endpoint is `https://bitcoinvn.io/api/v1/rates`.
  * The exact JSON shape may shift; this script searches a few common field paths
@@ -15,7 +15,7 @@
   const RATES_URL = 'https://bitcoinvn.io/api/v1/rates';
   const COINS = 10000;
 
-  // Format a number using Vietnamese thousands separator (.) — e.g. 249.340.000.000.000
+  // Format a number using Vietnamese thousands separator (.) - e.g. 249.340.000.000.000
   function formatVnd(n) {
     if (n == null || !isFinite(n)) return '';
     const rounded = Math.round(n);

@@ -1,5 +1,5 @@
 /**
- * Bitcoin Đà Nẵng — bilingual (VI/EN) runtime translator.
+ * Bitcoin Đà Nẵng - bilingual (VI/EN) runtime translator.
  *
  * Usage: mark any element with `data-i18n="key.path"` and provide the matching
  * key in /src/i18n/vi.json + /src/i18n/en.json. For attributes use

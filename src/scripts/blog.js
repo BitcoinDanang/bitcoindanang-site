@@ -3,8 +3,8 @@
 // and renders into any element matching [data-blog-feed].
 //
 // data-blog-feed attribute values:
-//   "homepage" — top 3 published posts, card grid for index.html
-//   "all"      — full list for blog.html
+//   "homepage" - top 3 published posts, card grid for index.html
+//   "all"      - full list for blog.html
 //
 // Each post card uses data-i18n-static="true" so the i18n loop ignores it.
 

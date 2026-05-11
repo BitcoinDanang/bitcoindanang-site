@@ -1,4 +1,4 @@
-# CLAUDE.md — Bitcoin Đà Nẵng Site
+# CLAUDE.md - Bitcoin Đà Nẵng Site
 
 Project memory for Claude Code working on this repo.
 
@@ -13,7 +13,7 @@ Project memory for Claude Code working on this repo.
 
 ```
 /public/                static assets
-  /images/              logo, flags, hero illustrations (placeholders only — user supplies)
+  /images/              logo, flags, hero illustrations (placeholders only - user supplies)
   /data/                build-time JSON (e.g. pizza-day-history.json)
 /src/
   /pages/               HTML pages (index, pizza-day-2026, bitcoin)
@@ -26,29 +26,29 @@ Project memory for Claude Code working on this repo.
   /events/              (Phase 6) event markdown
 /tina/                  TinaCMS config (config.ts)
 /scripts/               build.js (markdown -> dist/, generates /dist/data/posts.json + per-post pages)
-/.github/workflows/     deploy.yml — GH Actions -> Cloudflare Pages
+/.github/workflows/     deploy.yml - GH Actions -> Cloudflare Pages
 /wrangler.toml          Cloudflare Pages project config (name=bitcoindanang, output=dist)
 CLAUDE.md               this file
 README.md
-.env.example            env var keys only — never commit real values
+.env.example            env var keys only - never commit real values
 .gitignore
 ```
 
 ## Source Runbook & Docs
 
-- **Primary spec:** `/Users/bowz/Downloads/bitcoindanang-runbook.md` — every section, line of copy (VI + EN), CSS token, and acceptance criterion comes from here. Always reread before making structural changes.
-- **Obsidian vault:** `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/BitcoinDaNang/` — runbooks, blog drafts, content copy, image prompts, design briefs, partner notes. A parallel agent owns the vault; do **not** edit it from this repo's tooling.
+- **Primary spec:** `/Users/bowz/Downloads/bitcoindanang-runbook.md` - every section, line of copy (VI + EN), CSS token, and acceptance criterion comes from here. Always reread before making structural changes.
+- **Obsidian vault:** `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/BitcoinDaNang/` - runbooks, blog drafts, content copy, image prompts, design briefs, partner notes. A parallel agent owns the vault; do **not** edit it from this repo's tooling.
 
 ## Cloudflare
 
 - API token + account ID are stored in `/Users/bowz/.claude/projects/-Users-bowz/memory/bitcoindanang_project.md`. **Do not paste secrets into this file.**
 - Domains on the same Cloudflare account: `bitcoindanang.com` (primary site) and `bitcoindanang.org` (email primary, also redirects to .com).
 - CF Pages project name: `bitcoindanang`. Production branch: **`main`** (NOT `master`). Default URL: `https://bitcoindanang.pages.dev`.
-- Custom domains `bitcoindanang.com` and `www.bitcoindanang.com` ARE attached to the CF Pages project (added via API 2026-05-11, status `initializing` then `pending` — DNS + SSL provision automatically because the zones are on the same account).
+- Custom domains `bitcoindanang.com` and `www.bitcoindanang.com` ARE attached to the CF Pages project (added via API 2026-05-11, status `initializing` then `pending` - DNS + SSL provision automatically because the zones are on the same account).
 
 ## GitHub
 
-- Repo: `BitcoinDanang/bitcoindanang-site` — https://github.com/BitcoinDanang/bitcoindanang-site
+- Repo: `BitcoinDanang/bitcoindanang-site` - https://github.com/BitcoinDanang/bitcoindanang-site
 - `gh` CLI is already authenticated locally as the `BitcoinDanang` account.
 - Remote is `origin` (HTTPS). `main` is the deploy branch.
 - GitHub Actions secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set (used by `.github/workflows/deploy.yml`). `TINA_CLIENT_ID` + `TINA_TOKEN` still need to be added after the maintainer creates a Tina Cloud project.
@@ -60,9 +60,9 @@ README.md
 
 ## Build / Run
 
-- **Local dev with Tina:** `npm run dev` — runs `tinacms dev` proxying a `npx serve src` static server. Visit `/admin/index.html` for the Tina UI (requires `.env.local` with real TINA_CLIENT_ID + TINA_TOKEN).
-- **Local static preview (no Tina):** `npm run serve:src` — serves `src/` directly.
-- **Build:** `npm run build` — runs `tinacms build` (writes `admin/` into the repo) then `node scripts/build.js` which copies `src/` + `public/` + `admin/` into `dist/`, parses `content/posts/*.md`, writes `/dist/data/posts.json`, and renders `/dist/pages/blog/<slug>.html` from `src/pages/blog-post.html`.
+- **Local dev with Tina:** `npm run dev` - runs `tinacms dev` proxying a `npx serve src` static server. Visit `/admin/index.html` for the Tina UI (requires `.env.local` with real TINA_CLIENT_ID + TINA_TOKEN).
+- **Local static preview (no Tina):** `npm run serve:src` - serves `src/` directly.
+- **Build:** `npm run build` - runs `tinacms build` (writes `admin/` into the repo) then `node scripts/build.js` which copies `src/` + `public/` + `admin/` into `dist/`, parses `content/posts/*.md`, writes `/dist/data/posts.json`, and renders `/dist/pages/blog/<slug>.html` from `src/pages/blog-post.html`.
 - **Deploy:** `git push origin main` triggers `.github/workflows/deploy.yml` → `cloudflare/wrangler-action@v3` (`wrangler pages deploy`) → `bitcoindanang` Pages project. Migrated from the deprecated `cloudflare/pages-action@v1` on 2026-05-11.
 
 ## Tina config
@@ -94,16 +94,20 @@ README.md
 
 These strings appear verbatim in the source and will be replaced in Phase 9:
 
-- `TELEGRAM_HANDLE_TBD` — Telegram group handle (e.g. `@BitcoinDaNang`).
-- `/public/images/logo.png`, `/public/images/logo.svg` — logo files.
-- `/public/images/flag-vn.jpg`, `/public/images/flag-en.jpg` — language switcher flags (copied from trading-platform assets 2026-05-11).
-- `/public/images/hero-pizza-day.jpg`, `laszlo-illustration.jpg`, `bitcoin-vs-gold-hero.jpg`, `vietnamese-family-bitcoin.jpg`, `og-default.jpg` — generated illustrations (prompts in Phase 8 of the runbook, also in the Obsidian vault).
-- `/public/data/pizza-day-history.json` — currently a placeholder array; the Phase 6 build script will fetch the real CoinGecko data.
-- Wallet/QR for Pizza Day donations — placeholder, replace before May 22, 2026.
+- `TELEGRAM_HANDLE_TBD` - Telegram group handle (e.g. `@BitcoinDaNang`).
+- `/public/images/logo.png`, `/public/images/logo.svg` - logo files.
+- `/public/images/flag-vn.jpg`, `/public/images/flag-en.jpg` - language switcher flags (copied from trading-platform assets 2026-05-11).
+- `/public/images/hero-pizza-day.jpg`, `laszlo-illustration.jpg`, `bitcoin-vs-gold-hero.jpg`, `vietnamese-family-bitcoin.jpg`, `og-default.jpg` - generated illustrations (prompts in Phase 8 of the runbook, also in the Obsidian vault).
+- `/public/data/pizza-day-history.json` - currently a placeholder array; the Phase 6 build script will fetch the real CoinGecko data.
+- Wallet/QR for Pizza Day donations - placeholder, replace before May 22, 2026.
 
 ## Useful Don'ts
 
 - Don't paste real secrets (CF token, Tina token) into the repo. `.env.example` keeps keys only; `.env.local` is gitignored.
 - Don't touch the Obsidian vault from this repo.
-- Don't commit `admin/` (Tina build output) or `tina/__generated__/` — both are gitignored.
-- Don't add new custom domains via API without checking with the maintainer first — the existing two (`bitcoindanang.com`, `www.bitcoindanang.com`) are wired.
+- Don't commit `admin/` (Tina build output) or `tina/__generated__/` - both are gitignored.
+- Don't add new custom domains via API without checking with the maintainer first - the existing two (`bitcoindanang.com`, `www.bitcoindanang.com`) are wired.
+
+## House style
+
+- **No em-dashes** (U+2014 character). Use a hyphen (`-`), a colon (`:`), or rephrase. The build script (`scripts/build.js`) lints `src/` and `content/` and will fail the deploy if it finds one. (Project decision 2026-05-11.)

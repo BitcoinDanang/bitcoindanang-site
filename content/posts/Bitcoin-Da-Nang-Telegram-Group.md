@@ -6,7 +6,7 @@ excerpt: |-
   Bitcoin Da Nang is now on Telegram, connect with us at:
 
   https://t.me/+4VDDldma_CRkZWU1
-published: false
+published: true
 ---
 
 Bitcoin Da Nang is now on Telegram, connect with us at:

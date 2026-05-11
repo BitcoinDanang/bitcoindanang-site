@@ -1,4 +1,4 @@
-/* Bitcoin Đà Nẵng — Reusable components */
+/* Bitcoin Đà Nẵng - Reusable components */
 
 /* Buttons */
 .btn-primary,
@@ -230,7 +230,7 @@ body.theme-light .footer { background: var(--color-white-muted); color: #5a4f3a;
   text-transform: uppercase;
 }
 
-/* Eyebrow caption — small uppercase gold label above section H2s.
+/* Eyebrow caption - small uppercase gold label above section H2s.
    Used verbatim from the pencil mockups, e.g. "VỀ CHÚNG TÔI / ABOUT US". */
 .eyebrow {
   display: inline-block;

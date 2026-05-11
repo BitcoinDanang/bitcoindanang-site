@@ -1,4 +1,4 @@
-/* Bitcoin Đà Nẵng — Base reset & typography */
+/* Bitcoin Đà Nẵng - Base reset & typography */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -13,7 +13,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Theme: dark — meetup homepage */
+/* Theme: dark - meetup homepage */
 body.theme-dark {
   background: var(--color-black);
   color: var(--color-text-on-dark);
@@ -22,7 +22,7 @@ body.theme-dark {
 body.theme-dark a { color: var(--color-gold); }
 body.theme-dark a:hover { color: var(--color-gold-light); }
 
-/* Theme: light — education / pizza day pages */
+/* Theme: light - education / pizza day pages */
 body.theme-light {
   background: var(--color-white);
   color: #1f1a12;
