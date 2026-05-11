@@ -19,8 +19,7 @@
     "event_eyebrow": "SỰ KIỆN TIẾP THEO / NEXT EVENT",
     "event_chip": "Sự kiện sắp tới",
     "event_title": "Bitcoin Pizza Day — 22 tháng 5, 2026",
-    "event_subtitle": "Tặng pizza miễn phí tại bãi biển Đà Nẵng · 16:00 – 19:00",
-    "event_en_note": "Free pizza at Da Nang beach · 16:00 – 19:00",
+    "event_subtitle": "Pizza miễn phí tại Bãi tắm Phạm Văn Đồng, Đà Nẵng · 16:00 – 18:00",
     "event_cta": "Xem chi tiết →",
     "about_eyebrow": "VỀ CHÚNG TÔI / ABOUT US",
     "about_title": "Về Bitcoin Đà Nẵng",
@@ -99,11 +98,9 @@
     "cta_meet": "Gặp chúng tôi hôm nay tại Westwood",
     "event_box_eyebrow": "CHI TIẾT SỰ KIỆN / EVENT DETAILS",
     "event_box_title": "Bitcoin Pizza Day Đà Nẵng 2026",
-    "event_box_date": "22 tháng 5, 2026 · 16:00 – 19:00",
-    "event_box_loc": "Bãi biển Đà Nẵng (vị trí chính xác sẽ được thông báo qua Telegram)",
+    "event_box_date": "22 tháng 5, 2026 · 16:00 – 18:00",
+    "event_box_loc": "Bãi tắm Phạm Văn Đồng, Đà Nẵng",
     "event_box_pizza": "Pizza miễn phí — mỗi người một lát",
-    "event_box_donate": "Đóng góp tuỳ tâm bằng Bitcoin (quét mã QR)",
-    "event_box_qr_placeholder": "[Mã QR ví Bitcoin sẽ được thêm sau]",
     "event_box_followup": "Theo dõi Telegram để cập nhật vị trí chính xác."
   },
   "bitcoin": {

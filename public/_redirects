@@ -1,0 +1,19 @@
+# Clean URL aliases for CF Pages.
+# Status 200 = rewrite (URL stays clean), not 301 redirect.
+
+# Home
+/                       /pages/index.html             200
+
+# Top-level page aliases
+/bitcoin                /pages/bitcoin.html           200
+/bitcoin.html           /pages/bitcoin.html           200
+/pizza-day-2026         /pages/pizza-day-2026.html    200
+/pizza-day-2026.html    /pages/pizza-day-2026.html    200
+/blog                   /pages/blog.html              200
+/blog.html              /pages/blog.html              200
+
+# Tina admin (Tina build writes /admin/index.html under dist/)
+/admin                  /admin/index.html             200
+
+# Fallback for unknown paths -> homepage
+/*                      /pages/index.html             200

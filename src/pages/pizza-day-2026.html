@@ -28,7 +28,7 @@
   <!-- NAV -->
   <nav class="nav" aria-label="Primary">
     <div class="nav__inner">
-      <a href="./index.html" class="nav__logo">
+      <a href="/" class="nav__logo">
         <img src="/images/logo.png" alt="Bitcoin Đà Nẵng" onerror="this.style.display='none'" />
         <span>Bitcoin Đà Nẵng</span>
       </a>
@@ -36,8 +36,8 @@
         <span aria-hidden="true">☰</span>
       </button>
       <ul class="nav__links">
-        <li><a href="./index.html" data-i18n="nav.home">Trang chủ</a></li>
-        <li><a href="./bitcoin.html" data-i18n="nav.bitcoin">Bitcoin là gì?</a></li>
+        <li><a href="/" data-i18n="nav.home">Trang chủ</a></li>
+        <li><a href="/bitcoin" data-i18n="nav.bitcoin">Bitcoin là gì?</a></li>
         <li><a href="https://t.me/+4VDDldma_CRkZWU1" data-i18n="nav.join">Tham gia</a></li>
         <li>
           <div class="lang-switcher" role="group" aria-label="Language">
@@ -154,7 +154,7 @@
             </tr>
           </thead>
           <tbody id="returns-tbody">
-            <!-- Rows populated by returns-table.js once /public/data/pizza-day-history.json is loaded. -->
+            <!-- Rows populated by inline script once /data/pizza-day-history.json is loaded. -->
           </tbody>
         </table>
       </div>
@@ -170,7 +170,7 @@
         <h2 data-i18n="pizza.cta_title">Bước tiếp theo của bạn</h2>
       </div>
       <div class="cta-grid">
-        <a class="cta--primary" href="./bitcoin.html" data-i18n="pizza.cta_learn">Tìm hiểu thêm về Bitcoin</a>
+        <a class="cta--primary" href="/bitcoin" data-i18n="pizza.cta_learn">Tìm hiểu thêm về Bitcoin</a>
         <a class="cta--primary" href="https://t.me/+4VDDldma_CRkZWU1" target="_blank" rel="noopener" data-i18n="pizza.cta_join">Tham gia cộng đồng Bitcoin Đà Nẵng</a>
         <a class="cta--outline" href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="pizza.cta_buy">Mua Bitcoin lần đầu</a>
         <a class="cta--outline" href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener" data-i18n="pizza.cta_meet">Gặp chúng tôi hôm nay tại Westwood</a>
@@ -186,12 +186,18 @@
         <h2 data-i18n="pizza.event_box_title">Bitcoin Pizza Day Đà Nẵng 2026</h2>
         <div class="event-box__grid">
           <ul>
-            <li><span class="icon" aria-hidden="true">📅</span><span data-i18n="pizza.event_box_date">22 tháng 5, 2026 · 16:00 – 19:00</span></li>
-            <li><span class="icon" aria-hidden="true">📍</span><span data-i18n="pizza.event_box_loc">Bãi biển Đà Nẵng (vị trí chính xác sẽ được thông báo qua Telegram)</span></li>
+            <li><span class="icon" aria-hidden="true">📅</span><span data-i18n="pizza.event_box_date">22 tháng 5, 2026 · 16:00 – 18:00</span></li>
+            <li><span class="icon" aria-hidden="true">📍</span><span><a href="https://maps.app.goo.gl/FNJ52hZdBRpUQ1qTA" target="_blank" rel="noopener" data-i18n="pizza.event_box_loc">Bãi tắm Phạm Văn Đồng, Đà Nẵng</a></span></li>
             <li><span class="icon" aria-hidden="true">🍕</span><span data-i18n="pizza.event_box_pizza">Pizza miễn phí — mỗi người một lát</span></li>
-            <li><span class="icon" aria-hidden="true">💰</span><span data-i18n="pizza.event_box_donate">Đóng góp tuỳ tâm bằng Bitcoin (quét mã QR)</span></li>
           </ul>
-          <div class="event-box__qr" data-i18n="pizza.event_box_qr_placeholder">[Mã QR ví Bitcoin sẽ được thêm sau]</div>
+          <div class="event-box__map">
+            <iframe
+              src="https://www.google.com/maps?q=B%C3%A3i+t%E1%BA%AFm+Ph%E1%BA%A1m+V%C4%83n+%C4%90%E1%BB%93ng+%C4%90%C3%A0+N%E1%BA%B5ng&output=embed"
+              title="Bãi tắm Phạm Văn Đồng, Đà Nẵng"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
         </div>
         <p class="event-box__caption" data-i18n="pizza.event_box_followup">Theo dõi Telegram để cập nhật vị trí chính xác.</p>
       </div>
@@ -209,7 +215,7 @@
       </div>
       <p>
         <a href="https://t.me/+4VDDldma_CRkZWU1" target="_blank" rel="noopener" data-i18n="footer.telegram">Tham gia Telegram</a>
-        · <a href="./index.html" data-i18n="nav.home">Trang chủ</a>
+        · <a href="/" data-i18n="nav.home">Trang chủ</a>
         · <a href="mailto:contact@bitcoindanang.org">contact@bitcoindanang.org</a>
       </p>
       <p class="footer__small" data-i18n="footer.disclaimer">Chúng tôi không cung cấp tư vấn đầu tư.</p>
@@ -220,7 +226,7 @@
   <script src="../scripts/pizza-price.js"></script>
   <script>
   /**
-   * Returns table renderer. Reads /public/data/pizza-day-history.json. When the
+   * Returns table renderer. Reads /data/pizza-day-history.json. When the
    * placeholder file still has null btc_vnd values it renders a "data pending"
    * row per year. After Phase 6 build.js fetches CoinGecko history, this same
    * code will render real numbers without changes.
@@ -237,8 +243,8 @@
 
     async function load() {
       try {
-        // Resolve relative to /src/pages/ ⟶ ../../public/data/...
-        const res = await fetch('../../public/data/pizza-day-history.json', { cache: 'no-cache' });
+        // Build copies public/ to dist root, so /data/... is the canonical URL.
+        const res = await fetch('/data/pizza-day-history.json', { cache: 'no-cache' });
         const data = await res.json();
         const rates = data.rates || [];
         // Wait for live BTC/VND so we can compute today's value of 1M VND invested.

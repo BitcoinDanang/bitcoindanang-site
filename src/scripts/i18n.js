@@ -16,11 +16,9 @@
 
   // Resolve path to /src/i18n/ regardless of whether the page lives in /src/pages/.
   function dictPath(lang) {
-    const here = window.location.pathname;
-    // If page is served from /src/pages/, the i18n folder is ../i18n/. Otherwise /src/i18n/.
-    if (here.includes('/src/pages/')) return '../i18n/' + lang + '.json';
-    if (here.includes('/pages/')) return '../i18n/' + lang + '.json';
-    return '/src/i18n/' + lang + '.json';
+    // Always use the absolute /i18n/ path. In local dev (npx serve src) this
+    // resolves to src/i18n/; on the deployed dist root it resolves to dist/i18n/.
+    return '/i18n/' + lang + '.json';
   }
 
   async function loadDict(lang) {

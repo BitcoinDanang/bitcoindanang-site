@@ -19,8 +19,7 @@
     "event_eyebrow": "NEXT EVENT",
     "event_chip": "Upcoming event",
     "event_title": "Bitcoin Pizza Day — May 22, 2026",
-    "event_subtitle": "Free pizza at Da Nang Beach · 4:00pm – 7:00pm",
-    "event_en_note": "Free pizza · meet the Bitcoin Da Nang community",
+    "event_subtitle": "Free pizza at Bãi tắm Phạm Văn Đồng, Da Nang · 4:00 PM – 6:00 PM",
     "event_cta": "See details →",
     "about_eyebrow": "ABOUT US",
     "about_title": "About the meetup",
@@ -99,11 +98,9 @@
     "cta_meet": "Meet us today at Westwood",
     "event_box_eyebrow": "EVENT DETAILS",
     "event_box_title": "Bitcoin Pizza Day Da Nang 2026",
-    "event_box_date": "May 22, 2026 · 4:00pm – 7:00pm",
-    "event_box_loc": "Da Nang Beach (exact location announced via Telegram)",
+    "event_box_date": "May 22, 2026 · 4:00 PM – 6:00 PM",
+    "event_box_loc": "Bãi tắm Phạm Văn Đồng, Da Nang",
     "event_box_pizza": "Free pizza — one slice per person",
-    "event_box_donate": "Optional Bitcoin tip (scan the QR)",
-    "event_box_qr_placeholder": "[Bitcoin wallet QR will be added before the event]",
     "event_box_followup": "Follow Telegram for the exact location update."
   },
   "bitcoin": {
