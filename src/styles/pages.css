@@ -181,22 +181,27 @@ body.theme-dark .about-grid h2 { color: var(--color-gold); }
 }
 body.theme-dark .partner-card:hover { border-color: rgba(212, 175, 55, 0.5); }
 .partner-card__logo {
-  width: 100%;
-  aspect-ratio: 16 / 8;
-  max-height: 96px;
-  margin: 0 0 0.5rem;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 0.75rem;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #1A1A1A, #222222);
-  border: 1px dashed rgba(212, 175, 55, 0.25);
+  background: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--color-gold);
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  padding: 0.75rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  overflow: hidden;
 }
+.partner-card__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.partner-card__logo--light { background: var(--color-white); }
 .partner-card h3 {
   margin: 0.25rem 0 0.1rem;
   font-size: 1.35rem;
@@ -1074,15 +1079,11 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
   max-width: 1000px;
   width: 100%;
   aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
   border-radius: var(--radius-lg);
-  border: 1px dashed rgba(160, 124, 30, 0.5);
-  background: linear-gradient(135deg, #F5D87A 0%, #D4AF37 60%, #A07C1E 100%);
-  display: grid;
-  place-items: center;
-  color: rgba(110, 83, 15, 0.75);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.04em;
+  box-shadow: 0 14px 44px rgba(110, 83, 15, 0.18);
+  background: var(--color-white-muted);
 }
 
 /* --- SCAM (clarification) section --- */
