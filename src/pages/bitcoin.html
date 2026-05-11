@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="../styles/components.css" />
   <link rel="stylesheet" href="../styles/pages.css" />
 </head>
-<body class="theme-light">
+<body class="theme-light wib-body">
 
   <!-- NAV -->
   <nav class="nav" aria-label="Primary">
@@ -37,6 +37,7 @@
       </button>
       <ul class="nav__links">
         <li><a href="./index.html" data-i18n="nav.home">Trang chủ</a></li>
+        <li><a href="./bitcoin.html" data-i18n="nav.bitcoin">Bitcoin là gì?</a></li>
         <li><a href="./index.html#events" data-i18n="nav.events">Sự kiện</a></li>
         <li><a href="https://t.me/TELEGRAM_HANDLE_TBD" data-i18n="nav.join">Tham gia</a></li>
         <li>
@@ -49,133 +50,185 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="btc-hero">
-    <h1 data-i18n="bitcoin.hero_title">Bitcoin Là Gì?</h1>
-    <hr class="gold-rule" />
-    <p class="btc-hero__sub" data-i18n="bitcoin.hero_sub">Nếu bạn hiểu vàng, bạn có thể hiểu Bitcoin.</p>
-    <!-- [IMAGE PLACEHOLDER: bitcoin_vs_gold_hero] -->
-    <div class="btc-hero__image" role="img" aria-label="Bitcoin vs gold hero illustration placeholder">
-      <span>Gold &nbsp;⇄&nbsp; Bitcoin · bitcoin-vs-gold-hero.jpg</span>
+  <!-- HERO — two-column desktop, stacked mobile -->
+  <header class="wib-hero">
+    <div class="wib-hero__inner">
+      <div class="wib-hero__copy">
+        <span class="eyebrow" data-i18n="bitcoin.hero_eyebrow">BÀI GIẢI THÍCH / EXPLAINER</span>
+        <h1 data-i18n="bitcoin.hero_title">Bitcoin Là Gì?</h1>
+        <p class="wib-hero__title-en" data-i18n="bitcoin.hero_title_en">What is Bitcoin?</p>
+        <hr class="gold-rule wib-hero__rule" />
+        <p class="wib-hero__sub" data-i18n="bitcoin.hero_sub">Nếu bạn hiểu vàng, bạn có thể hiểu Bitcoin.</p>
+        <p class="wib-hero__sub-en" data-i18n="bitcoin.hero_sub_en">If you understand gold, you can understand Bitcoin.</p>
+        <a href="#wib-intro" class="wib-hero__scroll" data-i18n="bitcoin.hero_scroll">Cuộn xuống ↓</a>
+      </div>
+      <div class="wib-hero__image-wrap">
+        <!-- [IMAGE PLACEHOLDER: bitcoin-vs-gold-hero.jpg] 16:9 cream → gold → dark -->
+        <div class="wib-hero__image" role="img" aria-label="Bitcoin vs gold hero illustration placeholder">
+          <span>bitcoin-vs-gold-hero.jpg</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- INTRO -->
-  <section class="section">
+  <!-- INTRO — The Gold Analogy -->
+  <section id="wib-intro" class="section section--muted">
     <div class="container">
-      <article class="intro">
-        <h2 data-i18n="bitcoin.intro_title">Vàng kỹ thuật số</h2>
-        <hr class="gold-rule" />
-        <p data-i18n="bitcoin.intro_p1">Từ hàng nghìn năm nay, người Việt Nam coi vàng là cách bảo vệ tài sản tốt nhất. Không ai có thể in thêm vàng. Không ai có thể làm giả vàng dễ dàng. Vàng giữ giá trị qua nhiều thế hệ.</p>
-        <p data-i18n="bitcoin.intro_p2">Bitcoin được tạo ra dựa trên những nguyên tắc tương tự — nhưng ở dạng kỹ thuật số. Tổng số Bitcoin tối đa chỉ là 21 triệu — không ai có thể tạo thêm, kể cả những người tạo ra nó.</p>
-        <p data-i18n="bitcoin.intro_p3">Nhưng Bitcoin còn làm được những điều mà vàng không thể: bạn có thể gửi Bitcoin cho người thân ở nước ngoài trong vài phút, không cần ngân hàng, không mất phí cao.</p>
+      <article class="wib-intro">
+        <div class="wib-intro__head">
+          <span class="eyebrow" data-i18n="bitcoin.intro_eyebrow">KHỞI ĐIỂM / STARTING POINT</span>
+          <h2 data-i18n="bitcoin.intro_title">Vàng và Bitcoin — chung một nguyên lý</h2>
+          <p class="wib-intro__title-en" data-i18n="bitcoin.intro_title_en">Gold and Bitcoin — the same principle</p>
+        </div>
+        <p class="wib-intro__para" data-i18n="bitcoin.intro_p1">Từ hàng nghìn năm nay, người Việt Nam coi vàng là cách bảo vệ tài sản tốt nhất. Không ai có thể in thêm vàng. Không ai có thể làm giả vàng dễ dàng. Vàng giữ giá trị qua nhiều thế hệ.</p>
+        <p class="wib-intro__para-en" data-i18n="bitcoin.intro_p1_en">For thousands of years, Vietnamese people have seen gold as the best way to protect wealth. No one can print more gold. No one can easily counterfeit gold. Gold holds its value across generations.</p>
+
+        <p class="wib-intro__para" data-i18n="bitcoin.intro_p2">Bitcoin được tạo ra dựa trên những nguyên tắc tương tự — nhưng ở dạng kỹ thuật số. Tổng số Bitcoin tối đa chỉ là 21 triệu — không ai có thể tạo thêm, kể cả những người tạo ra nó.</p>
+        <p class="wib-intro__para-en" data-i18n="bitcoin.intro_p2_en">Bitcoin was created based on the same principles — but in digital form. The maximum supply of Bitcoin is only 21 million — no one can create more, not even its creators.</p>
+
+        <p class="wib-intro__para" data-i18n="bitcoin.intro_p3">Nhưng Bitcoin còn làm được những điều mà vàng không thể: bạn có thể gửi Bitcoin cho người thân ở nước ngoài trong vài phút, không cần ngân hàng, không mất phí cao.</p>
+        <p class="wib-intro__para-en" data-i18n="bitcoin.intro_p3_en">But Bitcoin can do things gold cannot: you can send Bitcoin to family abroad in minutes, without a bank, without high fees.</p>
       </article>
     </div>
   </section>
 
-  <!-- MATRIX -->
-  <section class="section">
+  <!-- MATRIX — centrepiece -->
+  <section class="section wib-matrix-section">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head wib-matrix__head">
+        <span class="eyebrow" data-i18n="bitcoin.matrix_eyebrow">SO SÁNH / COMPARISON</span>
         <h2 data-i18n="bitcoin.matrix_title">Bitcoin vs Vàng</h2>
+        <p class="wib-matrix__title-en" data-i18n="bitcoin.matrix_title_en">Bitcoin vs Gold</p>
         <hr class="gold-rule" />
+        <p class="wib-matrix__caption" data-i18n="bitcoin.matrix_caption">11 tiêu chí · từ tính khan hiếm đến rủi ro kiểm định</p>
       </div>
-      <div class="matrix-wrap">
-        <table class="matrix" id="matrix">
+
+      <!-- Desktop table -->
+      <div class="wib-matrix-wrap">
+        <table class="wib-matrix" id="matrix">
           <thead>
             <tr>
-              <th data-i18n="bitcoin.matrix_th_criteria">Tiêu chí</th>
-              <th data-i18n="bitcoin.matrix_th_gold">Vàng</th>
-              <th data-i18n="bitcoin.matrix_th_btc">Bitcoin</th>
+              <th class="wib-matrix__th wib-matrix__th--criteria" data-i18n="bitcoin.matrix_th_criteria">Tiêu chí</th>
+              <th class="wib-matrix__th wib-matrix__th--gold" data-i18n="bitcoin.matrix_th_gold">Vàng</th>
+              <th class="wib-matrix__th wib-matrix__th--btc" data-i18n="bitcoin.matrix_th_btc">Bitcoin</th>
             </tr>
           </thead>
           <tbody id="matrix-body">
-            <!-- Rows injected from matrixRows array below -->
+            <!-- Rows injected by inline script below -->
           </tbody>
         </table>
       </div>
-      <p class="matrix-summary" data-i18n="bitcoin.matrix_summary">Bitcoin không thay thế vàng — nó là phiên bản kỹ thuật số tốt hơn của vàng.</p>
+
+      <!-- Mobile card list -->
+      <div class="wib-matrix-cards" id="matrix-cards" role="region" aria-label="Bitcoin vs Vàng — 11 tiêu chí">
+        <!-- Cards injected by inline script below -->
+      </div>
+
+      <blockquote class="wib-matrix__quote">
+        <p data-i18n="bitcoin.matrix_summary">Bitcoin không thay thế vàng — nó là phiên bản kỹ thuật số tốt hơn của vàng.</p>
+        <p class="wib-matrix__quote-en" data-i18n="bitcoin.matrix_summary_en">Bitcoin doesn't replace gold — it's a better digital version of gold.</p>
+      </blockquote>
     </div>
   </section>
 
-  <!-- SOLVES -->
-  <section class="section">
+  <!-- SOLVES — what Bitcoin solves for Vietnamese people -->
+  <section class="section section--muted">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow" data-i18n="bitcoin.solves_eyebrow">Ý NGHĨA VỚI NGƯỜI VIỆT / WHY IT MATTERS HERE</span>
         <h2 data-i18n="bitcoin.solves_title">Bitcoin giải quyết vấn đề gì cho người Việt?</h2>
+        <p class="wib-section__title-en" data-i18n="bitcoin.solves_title_en">What does Bitcoin solve for Vietnamese people?</p>
         <hr class="gold-rule" />
       </div>
-      <div class="solves-grid">
-        <article class="card solve-card">
-          <span class="icon" aria-hidden="true">💸</span>
+      <div class="wib-solves-grid">
+        <article class="card wib-solve-card">
+          <span class="wib-solve-card__icon" aria-hidden="true">💸</span>
           <h3 data-i18n="bitcoin.solves_1_title">Gửi tiền về quê / cho gia đình ở nước ngoài</h3>
           <p data-i18n="bitcoin.solves_1_body">Không cần Western Union, không cần ngân hàng, không mất 5–10% phí. Gửi 1 triệu hay 100 triệu — cùng một mức phí thấp, đến trong vài phút.</p>
+          <p class="wib-en" data-i18n="bitcoin.solves_1_body_en">Sending money home or to family abroad · No Western Union, no bank, no 5–10% fees. Same low fee, arrives in minutes.</p>
         </article>
-        <article class="card solve-card">
-          <span class="icon" aria-hidden="true">🔒</span>
+        <article class="card wib-solve-card">
+          <span class="wib-solve-card__icon" aria-hidden="true">🔒</span>
           <h3 data-i18n="bitcoin.solves_2_title">Bảo vệ tài sản dài hạn</h3>
           <p data-i18n="bitcoin.solves_2_body">Bitcoin có lịch sử tăng giá dài hạn mạnh hơn vàng. Không ai có thể in thêm Bitcoin làm loãng giá trị của bạn.</p>
+          <p class="wib-en" data-i18n="bitcoin.solves_2_body_en">Long-term wealth protection · Bitcoin has historically grown faster than gold. No one can print more Bitcoin to dilute your value.</p>
         </article>
-        <article class="card solve-card">
-          <span class="icon" aria-hidden="true">🛡️</span>
+        <article class="card wib-solve-card">
+          <span class="wib-solve-card__icon" aria-hidden="true">🛡️</span>
           <h3 data-i18n="bitcoin.solves_3_title">Không cần tin tưởng ai</h3>
           <p data-i18n="bitcoin.solves_3_body">Bạn không cần tin vào một ngân hàng, một tiệm vàng, hay một chính phủ nào. Bitcoin là của bạn, do bạn nắm giữ.</p>
+          <p class="wib-en" data-i18n="bitcoin.solves_3_body_en">No need to trust anyone · You don't need to trust a bank, a gold shop, or any government. Bitcoin is yours, held by you.</p>
         </article>
       </div>
-      <!-- [IMAGE PLACEHOLDER: vietnamese_family_bitcoin] -->
-      <div class="img-placeholder" style="margin-top:2rem;" role="img" aria-label="Vietnamese family bitcoin illustration placeholder">
-        👨‍👩‍👧 Family illustration · vietnamese-family-bitcoin.jpg
+      <!-- [IMAGE PLACEHOLDER: vietnamese-family-bitcoin.jpg] 16:9 warm gradient -->
+      <div class="wib-family-image" role="img" aria-label="Vietnamese family bitcoin illustration placeholder">
+        <span>vietnamese-family-bitcoin.jpg</span>
       </div>
     </div>
   </section>
 
-  <!-- NOT SCAM CRYPTO -->
+  <!-- NOT-CRYPTO clarification -->
   <section class="section">
     <div class="container">
-      <div class="scam-block">
+      <div class="wib-scam">
+        <span class="eyebrow" data-i18n="bitcoin.scam_eyebrow">LƯU Ý QUAN TRỌNG / IMPORTANT NOTE</span>
         <h2 data-i18n="bitcoin.scam_title">Bitcoin khác gì với các loại tiền điện tử khác?</h2>
-        <hr class="gold-rule" />
-        <ul>
-          <li data-i18n="bitcoin.scam_1">Bitcoin ra đời năm 2009 — là đồng tiền điện tử đầu tiên và lớn nhất</li>
-          <li data-i18n="bitcoin.scam_2">Không có công ty, không có CEO, không có người kiểm soát</li>
-          <li data-i18n="bitcoin.scam_3">Hàng nghìn tin tức lừa đảo ở Việt Nam liên quan đến các đồng coin khác — không phải Bitcoin</li>
-          <li data-i18n="bitcoin.scam_4">Cộng đồng Bitcoin Đà Nẵng chỉ nói về Bitcoin — chúng tôi không khuyến cáo bất kỳ coin nào khác</li>
+        <p class="wib-section__title-en wib-section__title-en--left" data-i18n="bitcoin.scam_title_en">How is Bitcoin different from other cryptocurrencies?</p>
+        <ul class="wib-scam__list">
+          <li>
+            <span data-i18n="bitcoin.scam_1">Bitcoin ra đời năm 2009 — là đồng tiền điện tử đầu tiên và lớn nhất</span>
+            <span class="wib-en" data-i18n="bitcoin.scam_1_en">Bitcoin was born in 2009 — the first and largest cryptocurrency</span>
+          </li>
+          <li>
+            <span data-i18n="bitcoin.scam_2">Không có công ty, không có CEO, không có người kiểm soát</span>
+            <span class="wib-en" data-i18n="bitcoin.scam_2_en">No company, no CEO, no one in control</span>
+          </li>
+          <li>
+            <span data-i18n="bitcoin.scam_3">Hàng nghìn tin tức lừa đảo ở Việt Nam liên quan đến các đồng coin khác — không phải Bitcoin</span>
+            <span class="wib-en" data-i18n="bitcoin.scam_3_en">Thousands of scam stories in Vietnam involve other coins — not Bitcoin</span>
+          </li>
+          <li>
+            <span data-i18n="bitcoin.scam_4">Cộng đồng Bitcoin Đà Nẵng chỉ nói về Bitcoin — chúng tôi không khuyến cáo bất kỳ coin nào khác</span>
+            <span class="wib-en" data-i18n="bitcoin.scam_4_en">Bitcoin Da Nang only talks about Bitcoin — we don't recommend any other coin</span>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- HOW TO START -->
-  <section class="section">
+  <!-- HOW TO START — 3 step cards with big gold numerals -->
+  <section class="section section--muted">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow" data-i18n="bitcoin.start_eyebrow">BẮT ĐẦU / GET STARTED</span>
         <h2 data-i18n="bitcoin.start_title">Bắt đầu như thế nào?</h2>
+        <p class="wib-section__title-en" data-i18n="bitcoin.start_title_en">How do I start?</p>
         <hr class="gold-rule" />
       </div>
-      <div class="steps">
-        <article class="step">
-          <div class="step__num">1</div>
-          <div>
-            <h3 data-i18n="bitcoin.start_1_title">Tìm hiểu thêm</h3>
-            <p data-i18n="bitcoin.start_1_body">Tham gia nhóm Bitcoin Đà Nẵng trên Telegram để hỏi và thảo luận.</p>
-            <a href="https://t.me/TELEGRAM_HANDLE_TBD" target="_blank" rel="noopener" data-i18n="nav.join">Tham gia</a>
-          </div>
+      <div class="wib-steps">
+        <article class="card wib-step">
+          <div class="wib-step__num" aria-hidden="true">1</div>
+          <h3 data-i18n="bitcoin.start_1_title">Tìm hiểu thêm</h3>
+          <p class="wib-step__title-en" data-i18n="bitcoin.start_1_title_en">Learn more</p>
+          <p data-i18n="bitcoin.start_1_body">Tham gia nhóm Bitcoin Đà Nẵng trên Telegram để hỏi và thảo luận.</p>
+          <p class="wib-en" data-i18n="bitcoin.start_1_body_en">Join the Bitcoin Da Nang group on Telegram</p>
+          <a class="wib-step__link" href="https://t.me/TELEGRAM_HANDLE_TBD" target="_blank" rel="noopener">Telegram →</a>
         </article>
-        <article class="step">
-          <div class="step__num">2</div>
-          <div>
-            <h3 data-i18n="bitcoin.start_2_title">Mua Bitcoin đầu tiên</h3>
-            <p data-i18n="bitcoin.start_2_body">Dùng BitcoinVN.io hoặc máy ATM tại Westwood Đà Nẵng.</p>
-            <a href="https://bitcoinvn.io" target="_blank" rel="noopener">BitcoinVN.io →</a>
-          </div>
+        <article class="card wib-step">
+          <div class="wib-step__num" aria-hidden="true">2</div>
+          <h3 data-i18n="bitcoin.start_2_title">Mua Bitcoin đầu tiên</h3>
+          <p class="wib-step__title-en" data-i18n="bitcoin.start_2_title_en">Buy your first Bitcoin</p>
+          <p data-i18n="bitcoin.start_2_body">Dùng BitcoinVN.io hoặc máy ATM tại Westwood Đà Nẵng.</p>
+          <p class="wib-en" data-i18n="bitcoin.start_2_body_en">Use BitcoinVN.io or the ATM at Westwood</p>
+          <a class="wib-step__link" href="https://bitcoinvn.io" target="_blank" rel="noopener">BitcoinVN.io →</a>
         </article>
-        <article class="step">
-          <div class="step__num">3</div>
-          <div>
-            <h3 data-i18n="bitcoin.start_3_title">Gặp gỡ cộng đồng</h3>
-            <p data-i18n="bitcoin.start_3_body">Đến sự kiện hàng tháng của chúng tôi tại Westwood.</p>
-            <a href="./index.html#events" data-i18n="nav.events">Sự kiện →</a>
-          </div>
+        <article class="card wib-step">
+          <div class="wib-step__num" aria-hidden="true">3</div>
+          <h3 data-i18n="bitcoin.start_3_title">Gặp gỡ cộng đồng</h3>
+          <p class="wib-step__title-en" data-i18n="bitcoin.start_3_title_en">Meet the community</p>
+          <p data-i18n="bitcoin.start_3_body">Đến sự kiện hàng tháng của chúng tôi tại Westwood.</p>
+          <p class="wib-en" data-i18n="bitcoin.start_3_body_en">Come to our monthly meetup</p>
+          <a class="wib-step__link" href="./index.html#events" data-i18n="bitcoin.start_3_link">Xem sự kiện →</a>
         </article>
       </div>
     </div>
@@ -202,26 +255,52 @@
   <script src="../scripts/i18n.js"></script>
   <script>
   /**
-   * Data-driven Bitcoin vs Gold matrix. Each row references i18n keys so the
-   * language switcher works seamlessly. Add a row by appending to matrixRows
-   * and adding matching keys to /src/i18n/vi.json + en.json under "matrix".
+   * Data-driven Bitcoin vs Gold matrix. Renders both the desktop <table>
+   * and the mobile card list from the same row array. Each row references
+   * i18n keys under "matrix.*" so the language switcher works for both
+   * presentations. Pencil mockup page 2 (mobile) drives the card layout:
+   * #N ordinal + criterion title, then a "VÀNG / GOLD" pill + body, then
+   * a "BITCOIN ✓" pill + body.
    */
   (function () {
-    const matrixRows = [
-      'r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7', 'r8', 'r9', 'r10', 'r11'
-    ];
-    const tbody = document.getElementById('matrix-body');
-    if (!tbody) return;
-    tbody.innerHTML = matrixRows.map(function (r) {
-      return (
-        '<tr>' +
-          '<td data-i18n="matrix.' + r + '_label"></td>' +
-          '<td data-i18n="matrix.' + r + '_gold"></td>' +
-          '<td data-i18n="matrix.' + r + '_btc"></td>' +
-        '</tr>'
-      );
-    }).join('');
-    // i18n.js will pick these new elements up on the next setLang() call.
+    var matrixRows = ['r1','r2','r3','r4','r5','r6','r7','r8','r9','r10','r11'];
+
+    var tbody = document.getElementById('matrix-body');
+    if (tbody) {
+      tbody.innerHTML = matrixRows.map(function (r) {
+        return (
+          '<tr>' +
+            '<td class="wib-matrix__td-criteria" data-i18n="matrix.' + r + '_label"></td>' +
+            '<td class="wib-matrix__td-gold" data-i18n="matrix.' + r + '_gold"></td>' +
+            '<td class="wib-matrix__td-btc" data-i18n="matrix.' + r + '_btc"></td>' +
+          '</tr>'
+        );
+      }).join('');
+    }
+
+    var cards = document.getElementById('matrix-cards');
+    if (cards) {
+      cards.innerHTML = matrixRows.map(function (r, i) {
+        var n = i + 1;
+        return (
+          '<article class="wib-mcard">' +
+            '<header class="wib-mcard__head">' +
+              '<span class="wib-mcard__ord">#' + n + '</span>' +
+              '<h3 class="wib-mcard__title" data-i18n="matrix.' + r + '_label"></h3>' +
+            '</header>' +
+            '<div class="wib-mcard__row wib-mcard__row--gold">' +
+              '<span class="wib-mcard__pill wib-mcard__pill--gold">VÀNG / GOLD</span>' +
+              '<p class="wib-mcard__body" data-i18n="matrix.' + r + '_gold"></p>' +
+            '</div>' +
+            '<div class="wib-mcard__row wib-mcard__row--btc">' +
+              '<span class="wib-mcard__pill wib-mcard__pill--btc">BITCOIN ✓</span>' +
+              '<p class="wib-mcard__body wib-mcard__body--btc" data-i18n="matrix.' + r + '_btc"></p>' +
+            '</div>' +
+          '</article>'
+        );
+      }).join('');
+    }
+
     if (window.i18n) window.i18n.setLang(window.i18n.getLang());
   })();
   </script>

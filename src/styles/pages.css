@@ -724,3 +724,487 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
   padding: 1rem;
   min-height: 200px;
 }
+
+/* ============================================================
+   WIB — "What is Bitcoin" page (bitcoin.html), light theme.
+   All rules namespaced `.wib-*` so they cannot clash with the
+   homepage / pizza-day styles owned by the parallel agent.
+   Layout follows the pencil mockup
+   (_images/bitcoindn-what-is-bitcoin-pencils.pdf).
+   ============================================================ */
+
+/* Body — subtle gold-dot texture overlay per the pencil prompt */
+.wib-body {
+  background-color: var(--color-white);
+  background-image: radial-gradient(circle at 1px 1px, rgba(212, 175, 55, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* --- HERO: 2-col desktop, stacked mobile --- */
+.wib-hero {
+  position: relative;
+  padding: clamp(3rem, 8vw, 6rem) var(--gutter) clamp(3rem, 8vw, 5rem);
+}
+.wib-hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 56% 44%;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.wib-hero__copy { display: flex; flex-direction: column; }
+.wib-hero h1 {
+  color: var(--color-black);
+  margin: 0.35rem 0 0.1rem;
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+.wib-hero__title-en {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  color: var(--color-black);
+  opacity: 0.55;
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+  font-style: italic;
+}
+.wib-hero__rule { margin: 1rem 0 1.25rem; }
+.wib-hero__sub {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  color: var(--color-gold-dark);
+  margin: 0 0 0.45rem;
+  line-height: 1.3;
+}
+.wib-hero__sub-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: var(--color-gold-dark);
+  opacity: 0.6;
+  margin: 0 0 1.75rem;
+}
+.wib-hero__scroll {
+  align-self: flex-start;
+  text-decoration: none;
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  font-size: 0.98rem;
+  border-bottom: 1px solid rgba(160, 124, 30, 0.35);
+  padding-bottom: 0.15rem;
+  transition: var(--transition);
+}
+.wib-hero__scroll:hover { color: var(--color-gold); border-color: var(--color-gold); }
+
+.wib-hero__image-wrap { width: 100%; }
+.wib-hero__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(90deg, #F5D87A 0%, #D4AF37 50%, #0D0D0D 100%);
+  border-radius: var(--radius-lg);
+  border: 1px dashed rgba(160, 124, 30, 0.5);
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 860px) {
+  .wib-hero__inner { grid-template-columns: 1fr; gap: 1.75rem; }
+  .wib-hero__image-wrap { order: -1; }
+  .wib-hero h1 { font-size: clamp(2.25rem, 9vw, 2.75rem); }
+}
+
+/* --- INTRO: gold analogy reading block --- */
+.wib-intro {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+.wib-intro__head { text-align: center; margin-bottom: 2rem; }
+.wib-intro__head h2 {
+  font-family: var(--font-display);
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  font-size: clamp(1.85rem, 4vw, 3rem);
+  margin: 0.65rem 0 0.25rem;
+  line-height: 1.15;
+}
+.wib-intro__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold-dark);
+  opacity: 0.55;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  margin: 0;
+}
+.wib-intro__para {
+  font-size: clamp(1rem, 1.1vw, 1.06rem);
+  line-height: 1.75;
+  color: var(--color-black);
+  margin: 0 0 0.5rem;
+}
+.wib-intro__para-en {
+  font-size: clamp(0.92rem, 1vw, 0.98rem);
+  line-height: 1.65;
+  color: var(--color-black);
+  opacity: 0.55;
+  margin: 0 0 1.6rem;
+  font-style: italic;
+}
+.wib-intro__para-en:last-child { margin-bottom: 0; }
+
+/* --- MATRIX section --- */
+.wib-matrix-section { background: var(--color-white); }
+.wib-matrix__head h2 {
+  font-family: var(--font-display);
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0.5rem 0 0.2rem;
+}
+.wib-matrix__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold-dark);
+  opacity: 0.55;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+.wib-matrix__caption {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0.85rem auto 0;
+}
+
+.wib-matrix-wrap {
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 22px rgba(110, 83, 15, 0.08);
+}
+.wib-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  table-layout: fixed;
+}
+.wib-matrix__th {
+  padding: 0.9rem 1.25rem;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.wib-matrix__th--criteria {
+  background: var(--color-white);
+  color: var(--color-black);
+  width: 30%;
+}
+.wib-matrix__th--gold {
+  background: rgba(245, 216, 122, 0.33);
+  color: var(--color-gold-dark);
+  width: 35%;
+}
+.wib-matrix__th--btc {
+  background: var(--color-gold);
+  color: var(--color-black);
+  width: 35%;
+}
+.wib-matrix tbody td {
+  padding: 1.1rem 1.25rem;
+  vertical-align: top;
+  font-size: 0.97rem;
+  line-height: 1.5;
+  color: var(--color-black);
+}
+.wib-matrix tbody tr:nth-child(even) { background: #F5F1E7; }
+.wib-matrix__td-criteria { font-weight: 600; }
+.wib-matrix__td-gold { background: rgba(245, 216, 122, 0.18); }
+.wib-matrix__td-btc {
+  background: rgba(212, 175, 55, 0.13);
+  font-weight: 500;
+}
+.wib-matrix tbody tr:nth-child(even) .wib-matrix__td-gold { background: rgba(245, 216, 122, 0.26); }
+.wib-matrix tbody tr:nth-child(even) .wib-matrix__td-btc { background: rgba(212, 175, 55, 0.2); }
+.wib-matrix tbody tr:last-child td:first-child { border-bottom-left-radius: var(--radius-md); }
+.wib-matrix tbody tr:last-child td:last-child { border-bottom-right-radius: var(--radius-md); }
+
+/* Mobile card list — shown <= 720px instead of the table */
+.wib-matrix-cards { display: none; }
+
+@media (max-width: 720px) {
+  .wib-matrix-wrap { display: none; }
+  .wib-matrix-cards {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+  .wib-mcard {
+    background: #fff;
+    border: 1px solid var(--color-gold);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.15rem;
+    box-shadow: 0 2px 12px rgba(110, 83, 15, 0.06);
+  }
+  .wib-mcard__head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    margin-bottom: 0.85rem;
+  }
+  .wib-mcard__ord {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-gold);
+    font-size: 1.15rem;
+  }
+  .wib-mcard__title {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-black);
+    line-height: 1.3;
+  }
+  .wib-mcard__row { margin-bottom: 0.75rem; }
+  .wib-mcard__row:last-child { margin-bottom: 0; }
+  .wib-mcard__pill {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+  .wib-mcard__pill--gold {
+    background: rgba(245, 216, 122, 0.33);
+    color: var(--color-gold-dark);
+  }
+  .wib-mcard__pill--btc {
+    background: var(--color-gold);
+    color: var(--color-black);
+  }
+  .wib-mcard__body {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--color-black);
+  }
+  .wib-mcard__body--btc { font-weight: 500; }
+}
+
+.wib-matrix__quote {
+  margin: 2.5rem auto 0;
+  max-width: 720px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold-dark);
+  border: 0;
+  padding: 0;
+}
+.wib-matrix__quote p {
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.4;
+}
+.wib-matrix__quote-en {
+  margin-top: 0.5rem !important;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem) !important;
+  opacity: 0.6;
+}
+
+/* --- SOLVES grid --- */
+.wib-section__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold-dark);
+  opacity: 0.55;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  margin: 0.25rem 0 0;
+}
+.wib-section__title-en--left { text-align: left; margin-bottom: 1.25rem; }
+
+.wib-solves-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 860px) {
+  .wib-solves-grid { grid-template-columns: 1fr; gap: 1rem; }
+}
+.wib-solve-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.65rem;
+}
+.wib-solve-card__icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  margin-bottom: 0.9rem;
+}
+.wib-solve-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-black);
+  margin: 0 0 0.6rem;
+  line-height: 1.25;
+}
+.wib-solve-card p {
+  margin: 0 0 0.6rem;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--color-black);
+}
+.wib-solve-card p:last-child { margin-bottom: 0; }
+
+/* Light, secondary EN translation pattern used in cards, lists, steps */
+.wib-en {
+  opacity: 0.55;
+  font-size: 0.88rem !important;
+  font-style: italic;
+}
+
+.wib-family-image {
+  margin: 3rem auto 0;
+  max-width: 1000px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  border: 1px dashed rgba(160, 124, 30, 0.5);
+  background: linear-gradient(135deg, #F5D87A 0%, #D4AF37 60%, #A07C1E 100%);
+  display: grid;
+  place-items: center;
+  color: rgba(110, 83, 15, 0.75);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+/* --- SCAM (clarification) section --- */
+.wib-scam { max-width: 760px; margin: 0 auto; }
+.wib-scam .eyebrow { display: block; margin-bottom: 0.6rem; }
+.wib-scam h2 {
+  font-family: var(--font-display);
+  color: var(--color-black);
+  font-weight: 600;
+  font-size: clamp(1.65rem, 3.5vw, 2.4rem);
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+.wib-scam__list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+.wib-scam__list li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-black);
+}
+.wib-scam__list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  top: -0.15rem;
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.wib-scam__list .wib-en {
+  display: block;
+  margin-top: 0.1rem;
+}
+
+/* --- STEPS / how-to-start --- */
+.wib-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 860px) {
+  .wib-steps { grid-template-columns: 1fr; gap: 1rem; }
+}
+.wib-step {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 1.85rem 1.65rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.wib-step__num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-gold);
+  font-size: 4rem;
+  line-height: 0.9;
+  margin-bottom: 0.5rem;
+}
+.wib-step h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--color-black);
+  margin: 0 0 0.15rem;
+}
+.wib-step__title-en {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-black);
+  opacity: 0.55;
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+}
+.wib-step p:not(.wib-step__title-en):not(.wib-en) {
+  margin: 0 0 0.5rem;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+.wib-step .wib-en { margin: 0 0 1rem; }
+.wib-step__link {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--color-gold-dark);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(160, 124, 30, 0.35);
+  padding-bottom: 0.1rem;
+  font-size: 0.97rem;
+  transition: var(--transition);
+}
+.wib-step__link:hover { color: var(--color-gold); border-color: var(--color-gold); }
+
+@media (max-width: 860px) {
+  .wib-step__num { font-size: 3rem; }
+}
+
