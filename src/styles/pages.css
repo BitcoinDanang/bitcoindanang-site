@@ -1261,3 +1261,20 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
 .wib-matrix__td-criteria { font-weight: 600; color: var(--color-gold-dark); }
 .wib-matrix__td-gold { color: #5C2E1E; }
 .wib-matrix__td-btc { color: var(--color-black); font-weight: 500; background: rgba(245, 216, 122, 0.18); }
+
+
+/* 2026 'live' row in the returns table - highlights the current price. */
+.returns-row--live { background: rgba(212, 175, 55, 0.12); }
+.returns-row--live td { font-weight: 600; }
+.returns-live {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: var(--color-gold-dark);
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}

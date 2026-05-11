@@ -1,5 +1,5 @@
 {
-  "_note": "Historical Bitcoin close prices on May 22 of each year. BTC/USD from CryptoCompare histoday close; USD/VND from SBV reference rates (mid-market); btc_vnd = btc_usd * usd_vnd, rounded. Live BTC/VND comes from CoinGecko simple/price at runtime.",
+  "_note": "Historical Bitcoin close prices on May 22 of each year. BTC/USD from CryptoCompare histoday close; USD/VND from SBV reference rates (mid-market); btc_vnd = btc_usd * usd_vnd, rounded. The 2026 row is 'live: true' until snapshotted by scripts/snapshot-pizza-2026.mjs on or after Pizza Day.",
   "source_btc_usd": "https://min-api.cryptocompare.com (histoday close)",
   "source_usd_vnd": "State Bank of Vietnam reference rate (mid-market, approximate)",
   "generated_at": "2026-05-11",
@@ -73,6 +73,22 @@
       "btc_usd": 109699.86,
       "usd_vnd": 25790,
       "btc_vnd": 2829159389
+    },
+    {
+      "year": 2026,
+      "date": "2026-05-22",
+      "btc_usd": null,
+      "usd_vnd": null,
+      "btc_vnd": null,
+      "live": true,
+      "note": "Live BTC/VND from BitcoinVN until snapshotted on Pizza Day."
     }
-  ]
+  ],
+  "live_source": {
+    "primary": "https://bitcoindanang.com/api/btc-vnd (CF Pages Function -> BitcoinVN)",
+    "fallback": [
+      "CoinGecko simple/price",
+      "CryptoCompare BTC/USD x open.er-api.com USD/VND"
+    ]
+  }
 }
