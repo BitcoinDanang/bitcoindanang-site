@@ -33,7 +33,7 @@
   z-index: 1;
 }
 
-/* Logo placeholder: when /public/images/logo.png is absent, the disc shows.
+/* Logo placeholder: when /images/logo.png is absent, the disc shows.
    When the real PNG loads it covers this disc. */
 .home-hero__logo-wrap {
   position: relative;
