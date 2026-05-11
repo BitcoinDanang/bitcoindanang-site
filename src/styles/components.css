@@ -230,6 +230,20 @@ body.theme-light .footer { background: var(--color-white-muted); color: #5a4f3a;
   text-transform: uppercase;
 }
 
+/* Eyebrow caption — small uppercase gold label above section H2s.
+   Used verbatim from the pencil mockups, e.g. "VỀ CHÚNG TÔI / ABOUT US". */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.85rem;
+}
+body.theme-light .eyebrow { color: var(--color-gold-dark); }
+
 /* Grid helpers */
 .grid-2 {
   display: grid;

@@ -49,31 +49,44 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO — two-column on desktop, illustration-first on mobile -->
   <header class="pizza-hero">
-    <span class="chip" data-i18n="pizza.hero_chip">22 tháng 5, 2026</span>
-    <h1 data-i18n="pizza.hero_title">Ngày Pizza Bitcoin</h1>
-    <p class="pizza-hero__date" data-i18n="pizza.hero_date">22 tháng 5, 2026</p>
-    <p class="pizza-hero__sub" data-i18n="pizza.hero_subtitle">Kỷ niệm giao dịch Bitcoin đầu tiên trên thế giới</p>
-    <!-- [IMAGE PLACEHOLDER: hero_pizza_day] — see Phase 8 of the runbook for the prompt. -->
-    <div class="pizza-hero__image" role="img" aria-label="Hero pizza day illustration placeholder">
-      🍕 Hero illustration · hero-pizza-day.jpg
+    <div class="pizza-hero__inner">
+      <div class="pizza-hero__copy">
+        <span class="eyebrow" data-i18n="pizza.hero_eyebrow">BITCOIN PIZZA DAY · ĐÀ NẴNG 2026</span>
+        <h1 data-i18n="pizza.hero_title">Ngày Pizza Bitcoin</h1>
+        <hr class="pizza-hero__date-rule" aria-hidden="true" />
+        <p class="pizza-hero__date" data-i18n="pizza.hero_date">22 tháng 5, 2026</p>
+        <p class="pizza-hero__sub" data-i18n="pizza.hero_subtitle">Kỷ niệm giao dịch Bitcoin đầu tiên trên thế giới</p>
+        <div class="pizza-hero__ctas">
+          <a class="btn-primary" href="#event-details" data-i18n="pizza.hero_cta_primary">Xem chi tiết bên dưới ↓</a>
+          <a class="btn-outline" href="https://t.me/TELEGRAM_HANDLE_TBD" target="_blank" rel="noopener" data-i18n="pizza.hero_cta_secondary">Tham gia Telegram</a>
+        </div>
+      </div>
+      <!-- [IMAGE PLACEHOLDER: hero_pizza_day] — see Phase 8 of the runbook for the prompt. -->
+      <div class="pizza-hero__image-wrap">
+        <div class="pizza-hero__image" role="img" aria-label="Hero pizza day illustration placeholder">
+          hero-pizza-day.jpg
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- STORY -->
-  <section class="section">
+  <section class="section section--muted">
     <div class="container">
-      <article class="story">
-        <h2 data-i18n="pizza.story_title">Câu chuyện bắt đầu từ một chiếc pizza</h2>
-        <hr class="gold-rule" />
-        <p data-i18n="pizza.story_p1">Ngày 22 tháng 5 năm 2010, một lập trình viên tên Laszlo Hanyecz đã thực hiện giao dịch thương mại đầu tiên bằng Bitcoin trong lịch sử. Ông đã trả 10.000 Bitcoin để mua hai chiếc pizza — tổng trị giá khoảng 41 đô la Mỹ lúc đó.</p>
+      <div class="story-grid">
+        <article class="story">
+          <span class="eyebrow" data-i18n="pizza.story_eyebrow">CÂU CHUYỆN / THE STORY</span>
+          <h2 data-i18n="pizza.story_title">Câu chuyện bắt đầu từ một chiếc pizza</h2>
+          <p data-i18n="pizza.story_p1">Ngày 22 tháng 5 năm 2010, một lập trình viên tên Laszlo Hanyecz đã thực hiện giao dịch thương mại đầu tiên bằng Bitcoin trong lịch sử. Ông đã trả 10.000 Bitcoin để mua hai chiếc pizza — tổng trị giá khoảng 41 đô la Mỹ lúc đó.</p>
+          <p data-i18n="pizza.story_p2">Đây không phải câu chuyện về một người đã 'mất' tiền. Đây là câu chuyện về một người đã dũng cảm sử dụng Bitcoin như một loại tiền tệ thực sự — không qua ngân hàng, không qua trung gian, không cần ai cho phép.</p>
+        </article>
         <!-- [IMAGE PLACEHOLDER: laszlo_illustration] -->
         <div class="story__image" role="img" aria-label="Laszlo illustration placeholder">
-          💻 Laszlo illustration · laszlo-illustration.jpg
+          laszlo-illustration.jpg
         </div>
-        <p data-i18n="pizza.story_p2">Đây không phải câu chuyện về một người đã 'mất' tiền. Đây là câu chuyện về một người đã dũng cảm sử dụng Bitcoin như một loại tiền tệ thực sự — không qua ngân hàng, không qua trung gian, không cần ai cho phép.</p>
-      </article>
+      </div>
     </div>
   </section>
 
@@ -81,15 +94,13 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow" data-i18n="pizza.price_eyebrow">GIÁ HÔM NAY / PRICE TODAY</span>
         <h2 data-i18n="pizza.price_title">Giá hôm nay</h2>
-        <hr class="gold-rule" />
       </div>
       <div class="price-callout">
-        <p class="price-then">
-          <strong data-i18n="pizza.price_then_label">10.000 Bitcoin năm 2010</strong>
-          <span data-i18n="pizza.price_then_value">= 41 USD</span>
-        </p>
-        <p class="price-now-label" data-i18n="pizza.price_now_label">10.000 Bitcoin hôm nay</p>
+        <p class="price-then" data-i18n="pizza.price_then_label">10.000 Bitcoin năm 2010 =</p>
+        <span class="price-then-value" data-i18n="pizza.price_then_value">41 USD</span>
+        <p class="price-now-label" data-i18n="pizza.price_now_label">10.000 Bitcoin hôm nay =</p>
         <p class="price-now-value" id="pizza-price-value" aria-live="polite">
           <span data-i18n="pizza.price_loading">Đang tải giá…</span>
         </p>
@@ -107,8 +118,8 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow" data-i18n="pizza.why_eyebrow">Ý NGHĨA / WHY</span>
         <h2 data-i18n="pizza.why_title">Tại sao điều này quan trọng?</h2>
-        <hr class="gold-rule" />
       </div>
       <div class="why-grid">
         <article class="card why-card">
@@ -131,11 +142,11 @@
   </section>
 
   <!-- RETURNS TABLE -->
-  <section class="section">
+  <section class="section section--muted">
     <div class="container">
       <div class="section-head">
+        <span class="eyebrow" data-i18n="pizza.returns_eyebrow">LỊCH SỬ GIÁ / PRICE HISTORY</span>
         <h2 data-i18n="pizza.returns_title">Nếu bạn đã mua 1.000.000 ₫ Bitcoin vào ngày Pizza Day mỗi năm…</h2>
-        <hr class="gold-rule" />
       </div>
       <div class="returns-wrap">
         <table class="returns-table" id="returns-table">
@@ -160,30 +171,34 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <h2 data-i18n="pizza.cta_title">Bước tiếp theo</h2>
-        <hr class="gold-rule" />
+        <span class="eyebrow" data-i18n="pizza.cta_eyebrow">BƯỚC TIẾP THEO / NEXT STEP</span>
+        <h2 data-i18n="pizza.cta_title">Bước tiếp theo của bạn</h2>
       </div>
       <div class="cta-grid">
-        <a href="./bitcoin.html" data-i18n="pizza.cta_learn">Muốn biết thêm về Bitcoin?</a>
-        <a href="https://t.me/TELEGRAM_HANDLE_TBD" target="_blank" rel="noopener" data-i18n="pizza.cta_join">Tham gia cộng đồng Bitcoin Đà Nẵng</a>
-        <a href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="pizza.cta_buy">Mua Bitcoin lần đầu</a>
-        <a href="https://linktr.ee/westwood.danang" target="_blank" rel="noopener" data-i18n="pizza.cta_meet">Gặp chúng tôi hôm nay tại Westwood</a>
+        <a class="cta--primary" href="./bitcoin.html" data-i18n="pizza.cta_learn">Tìm hiểu thêm về Bitcoin</a>
+        <a class="cta--primary" href="https://t.me/TELEGRAM_HANDLE_TBD" target="_blank" rel="noopener" data-i18n="pizza.cta_join">Tham gia cộng đồng Bitcoin Đà Nẵng</a>
+        <a class="cta--outline" href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="pizza.cta_buy">Mua Bitcoin lần đầu</a>
+        <a class="cta--outline" href="https://linktr.ee/westwood.danang" target="_blank" rel="noopener" data-i18n="pizza.cta_meet">Gặp chúng tôi hôm nay tại Westwood</a>
       </div>
     </div>
   </section>
 
   <!-- EVENT BOX -->
-  <section class="section">
+  <section id="event-details" class="section section--muted">
     <div class="container">
       <div class="event-box">
+        <span class="eyebrow" data-i18n="pizza.event_box_eyebrow" style="display:block;text-align:center;">CHI TIẾT SỰ KIỆN / EVENT DETAILS</span>
         <h2 data-i18n="pizza.event_box_title">Bitcoin Pizza Day Đà Nẵng 2026</h2>
-        <ul>
-          <li><span class="icon" aria-hidden="true">📅</span><span data-i18n="pizza.event_box_date">22 tháng 5, 2026 · 16:00 – 19:00</span></li>
-          <li><span class="icon" aria-hidden="true">📍</span><span data-i18n="pizza.event_box_loc">Bãi biển Đà Nẵng (vị trí chính xác sẽ được thông báo qua Telegram)</span></li>
-          <li><span class="icon" aria-hidden="true">🍕</span><span data-i18n="pizza.event_box_pizza">Pizza miễn phí — mỗi người một lát</span></li>
-          <li><span class="icon" aria-hidden="true">💰</span><span data-i18n="pizza.event_box_donate">Đóng góp tuỳ tâm bằng Bitcoin (quét mã QR)</span></li>
-        </ul>
-        <div class="event-box__qr" data-i18n="pizza.event_box_qr_placeholder">[Mã QR ví Bitcoin sẽ được thêm sau]</div>
+        <div class="event-box__grid">
+          <ul>
+            <li><span class="icon" aria-hidden="true">📅</span><span data-i18n="pizza.event_box_date">22 tháng 5, 2026 · 16:00 – 19:00</span></li>
+            <li><span class="icon" aria-hidden="true">📍</span><span data-i18n="pizza.event_box_loc">Bãi biển Đà Nẵng (vị trí chính xác sẽ được thông báo qua Telegram)</span></li>
+            <li><span class="icon" aria-hidden="true">🍕</span><span data-i18n="pizza.event_box_pizza">Pizza miễn phí — mỗi người một lát</span></li>
+            <li><span class="icon" aria-hidden="true">💰</span><span data-i18n="pizza.event_box_donate">Đóng góp tuỳ tâm bằng Bitcoin (quét mã QR)</span></li>
+          </ul>
+          <div class="event-box__qr" data-i18n="pizza.event_box_qr_placeholder">[Mã QR ví Bitcoin sẽ được thêm sau]</div>
+        </div>
+        <p class="event-box__caption" data-i18n="pizza.event_box_followup">Theo dõi Telegram để cập nhật vị trí chính xác.</p>
       </div>
     </div>
   </section>
