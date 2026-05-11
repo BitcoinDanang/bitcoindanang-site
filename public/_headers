@@ -1,0 +1,14 @@
+# Force browsers + CF edge to revalidate our JS/JSON quickly so a fix lands
+# on next page-load instead of waiting for a cached file to expire.
+/scripts/*
+  Cache-Control: public, max-age=60, must-revalidate
+
+/data/*
+  Cache-Control: public, max-age=60, must-revalidate
+
+/api/*
+  Cache-Control: public, max-age=60, stale-while-revalidate=300
+
+# HTML cache is short so updated copy lands quickly.
+/*.html
+  Cache-Control: public, max-age=60, must-revalidate

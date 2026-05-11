@@ -49,6 +49,9 @@
     var fallbackEl = document.getElementById("pizza-price-fallback");
     if (!valueEl) return;
 
+    // Show a low-key loading hint immediately so the box is never empty.
+    if (!valueEl.textContent.trim()) valueEl.textContent = "…";
+
     try {
       var hit = await fetchBitcoinVN();
       var total = hit.rate * COINS;
