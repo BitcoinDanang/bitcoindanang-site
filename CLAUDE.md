@@ -63,7 +63,7 @@ README.md
 - **Local dev with Tina:** `npm run dev` — runs `tinacms dev` proxying a `npx serve src` static server. Visit `/admin/index.html` for the Tina UI (requires `.env.local` with real TINA_CLIENT_ID + TINA_TOKEN).
 - **Local static preview (no Tina):** `npm run serve:src` — serves `src/` directly.
 - **Build:** `npm run build` — runs `tinacms build` (writes `admin/` into the repo) then `node scripts/build.js` which copies `src/` + `public/` + `admin/` into `dist/`, parses `content/posts/*.md`, writes `/dist/data/posts.json`, and renders `/dist/pages/blog/<slug>.html` from `src/pages/blog-post.html`.
-- **Deploy:** `git push origin main` triggers `.github/workflows/deploy.yml` → `cloudflare/pages-action@v1` → `bitcoindanang` Pages project.
+- **Deploy:** `git push origin main` triggers `.github/workflows/deploy.yml` → `cloudflare/wrangler-action@v3` (`wrangler pages deploy`) → `bitcoindanang` Pages project. Migrated from the deprecated `cloudflare/pages-action@v1` on 2026-05-11.
 
 ## Tina config
 
