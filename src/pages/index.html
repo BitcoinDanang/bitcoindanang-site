@@ -35,7 +35,7 @@
         <span>Bitcoin Đà Nẵng</span>
       </a>
       <button class="nav__toggle" type="button" data-nav-toggle aria-label="Menu">
-        <span aria-hidden="true">☰</span>
+        <i data-lucide="menu" aria-hidden="true"></i>
       </button>
       <ul class="nav__links">
         <li><a href="/" data-i18n="nav.home">Trang chủ</a></li>
@@ -94,28 +94,28 @@
           <span class="eyebrow" data-i18n="home.about_facts_eyebrow">THÔNG TIN NHANH / QUICK FACTS</span>
           <ul class="facts">
             <li>
-              <span class="facts__icon" aria-hidden="true">📍</span>
+              <i class="facts__icon" data-lucide="map-pin" aria-hidden="true"></i>
               <div>
                 <span class="facts__label" data-i18n="home.fact_location_label">Địa điểm / Location</span>
                 <span class="facts__value"><a href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener" data-i18n="home.fact_location">Westwood Đà Nẵng</a></span>
               </div>
             </li>
             <li>
-              <span class="facts__icon" aria-hidden="true">📅</span>
+              <i class="facts__icon" data-lucide="calendar" aria-hidden="true"></i>
               <div>
                 <span class="facts__label" data-i18n="home.fact_frequency_label">Tần suất / Cadence</span>
                 <span class="facts__value" data-i18n="home.fact_frequency">Hàng tháng</span>
               </div>
             </li>
             <li>
-              <span class="facts__icon" aria-hidden="true">💬</span>
+              <i class="facts__icon" data-lucide="message-circle" aria-hidden="true"></i>
               <div>
                 <span class="facts__label" data-i18n="home.fact_telegram_label">Telegram</span>
                 <span class="facts__value"><a href="https://t.me/+4VDDldma_CRkZWU1" target="_blank" rel="noopener" data-i18n="home.fact_telegram">+4VDDldma_CRkZWU1</a></span>
               </div>
             </li>
             <li>
-              <span class="facts__icon" aria-hidden="true">₿</span>
+              <i class="facts__icon" data-lucide="bitcoin" aria-hidden="true"></i>
               <div>
                 <span class="facts__label" data-i18n="home.fact_buy_label">Mua Bitcoin / Buy Bitcoin</span>
                 <span class="facts__value"><a href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="home.fact_buy">BitcoinVN.io →</a></span>
@@ -209,5 +209,8 @@
   </footer>
 
   <script src="../scripts/i18n.js"></script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(window.lucide)window.lucide.createIcons();});</script>
 </body>
 </html>

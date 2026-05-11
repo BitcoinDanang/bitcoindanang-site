@@ -1223,3 +1223,25 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
   .wib-step__num { font-size: 3rem; }
 }
 
+
+/* Lucide icon defaults: keep them inline-sized to their parent's font. */
+.lucide, [data-lucide] { width: 1em; height: 1em; vertical-align: -0.18em; stroke-width: 1.75; display: inline-block; }
+.facts__icon.lucide, .facts__icon[data-lucide] { width: 1.15rem; height: 1.15rem; color: var(--color-gold); }
+.wib-solve-card__icon.lucide, .wib-solve-card__icon[data-lucide] { width: 2.25rem; height: 2.25rem; color: var(--color-gold-dark); margin-bottom: 0.6rem; }
+.btn-icon[data-lucide], .btn-icon.lucide { width: 1.15rem; height: 1.15rem; }
+.icon[data-lucide], .icon.lucide { width: 1.1rem; height: 1.1rem; color: var(--color-gold-dark); margin-right: 0.45rem; vertical-align: -0.2em; }
+.why-icon[data-lucide], .why-icon.lucide { width: 1.6rem; height: 1.6rem; color: var(--color-gold-dark); }
+
+/* Matrix table: horizontal scroll on small screens, never card-list fallback. */
+.wib-matrix-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-md); border: 1px solid rgba(160, 124, 30, 0.18); }
+.wib-matrix { width: 100%; min-width: 720px; border-collapse: collapse; background: #fff; }
+.wib-matrix th, .wib-matrix td { padding: 1rem 1.15rem; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(160, 124, 30, 0.12); font-size: 0.97rem; line-height: 1.45; }
+.wib-matrix tbody tr:nth-child(odd) { background: rgba(245, 216, 122, 0.05); }
+.wib-matrix tbody tr:last-child td { border-bottom: 0; }
+.wib-matrix__th { background: var(--color-gold-dark); color: #fff; font-weight: 600; letter-spacing: 0.02em; }
+.wib-matrix__th--criteria { width: 30%; background: #5C2E1E; }
+.wib-matrix__th--gold { width: 35%; background: #C97B2E; }
+.wib-matrix__th--btc { width: 35%; background: var(--color-gold-dark); }
+.wib-matrix__td-criteria { font-weight: 600; color: var(--color-gold-dark); }
+.wib-matrix__td-gold { color: #5C2E1E; }
+.wib-matrix__td-btc { color: var(--color-black); font-weight: 500; background: rgba(245, 216, 122, 0.18); }

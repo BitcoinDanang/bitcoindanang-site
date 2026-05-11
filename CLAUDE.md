@@ -111,3 +111,4 @@ These strings appear verbatim in the source and will be replaced in Phase 9:
 ## House style
 
 - **No em-dashes** (U+2014 character). Use a hyphen (`-`), a colon (`:`), or rephrase. The build script (`scripts/build.js`) lints `src/` and `content/` and will fail the deploy if it finds one. (Project decision 2026-05-11.)
+- **No emojis in markup or copy.** Use [Lucide](https://lucide.dev) icons via the CDN tag and `<i data-lucide="icon-name"></i>`. The CDN + `lucide.createIcons()` boot is wired into every page; `i18n.js` re-runs it after each language swap.

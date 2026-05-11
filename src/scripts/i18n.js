@@ -59,6 +59,7 @@
     document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
       btn.classList.toggle('is-active', btn.getAttribute('data-lang-btn') === currentLang);
     });
+    if (window.lucide) try { window.lucide.createIcons(); } catch (_e) {}
     document.dispatchEvent(new CustomEvent('i18n:applied', { detail: { lang: currentLang } }));
   }
 

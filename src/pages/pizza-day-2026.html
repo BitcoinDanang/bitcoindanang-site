@@ -33,7 +33,7 @@
         <span>Bitcoin Đà Nẵng</span>
       </a>
       <button class="nav__toggle" type="button" data-nav-toggle aria-label="Menu">
-        <span aria-hidden="true">☰</span>
+        <i data-lucide="menu" aria-hidden="true"></i>
       </button>
       <ul class="nav__links">
         <li><a href="/" data-i18n="nav.home">Trang chủ</a></li>
@@ -118,17 +118,17 @@
       </div>
       <div class="why-grid">
         <article class="card why-card">
-          <span class="icon" aria-hidden="true">🚫</span>
+          <span class="icon" aria-hidden="true"><i class="why-icon" data-lucide="ban" aria-hidden="true"></i></span>
           <h3 data-i18n="pizza.why_1_title">Không cần ngân hàng</h3>
           <p data-i18n="pizza.why_1_body">Lần đầu tiên trong lịch sử, hai người có thể trao đổi giá trị mà không cần bên thứ ba.</p>
         </article>
         <article class="card why-card">
-          <span class="icon" aria-hidden="true">✅</span>
+          <span class="icon" aria-hidden="true"><i class="why-icon" data-lucide="check" aria-hidden="true"></i></span>
           <h3 data-i18n="pizza.why_2_title">Minh bạch hoàn toàn</h3>
           <p data-i18n="pizza.why_2_body">Giao dịch được ghi lại mãi mãi trên blockchain - không ai có thể xoá hay làm giả.</p>
         </article>
         <article class="card why-card">
-          <span class="icon" aria-hidden="true">🌐</span>
+          <span class="icon" aria-hidden="true"><i class="why-icon" data-lucide="globe" aria-hidden="true"></i></span>
           <h3 data-i18n="pizza.why_3_title">Toàn cầu, tức thì</h3>
           <p data-i18n="pizza.why_3_body">Không biên giới, không phí chuyển khoản quốc tế, không cần hỏi ai.</p>
         </article>
@@ -186,9 +186,9 @@
         <h2 data-i18n="pizza.event_box_title">Bitcoin Pizza Day Đà Nẵng 2026</h2>
         <div class="event-box__grid">
           <ul>
-            <li><span class="icon" aria-hidden="true">📅</span><span data-i18n="pizza.event_box_date">22 tháng 5, 2026 · 16:00 – 18:00</span></li>
-            <li><span class="icon" aria-hidden="true">📍</span><span><a href="https://maps.app.goo.gl/FNJ52hZdBRpUQ1qTA" target="_blank" rel="noopener" data-i18n="pizza.event_box_loc">Bãi tắm Phạm Văn Đồng, Đà Nẵng</a></span></li>
-            <li><span class="icon" aria-hidden="true">🍕</span><span data-i18n="pizza.event_box_pizza">Pizza miễn phí - mỗi người một lát</span></li>
+            <li><i class="icon" data-lucide="calendar" aria-hidden="true"></i><span data-i18n="pizza.event_box_date">22 tháng 5, 2026 · 16:00 – 18:00</span></li>
+            <li><i class="icon" data-lucide="map-pin" aria-hidden="true"></i><span><a href="https://maps.app.goo.gl/FNJ52hZdBRpUQ1qTA" target="_blank" rel="noopener" data-i18n="pizza.event_box_loc">Bãi tắm Phạm Văn Đồng, Đà Nẵng</a></span></li>
+            <li><i class="icon" data-lucide="pizza" aria-hidden="true"></i><span data-i18n="pizza.event_box_pizza">Pizza miễn phí - mỗi người một lát</span></li>
           </ul>
           <div class="event-box__map">
             <iframe
@@ -279,5 +279,8 @@
     window.addEventListener('load', function () { setTimeout(load, 200); });
   })();
   </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>document.addEventListener("DOMContentLoaded",function(){if(window.lucide)window.lucide.createIcons();});</script>
 </body>
 </html>
