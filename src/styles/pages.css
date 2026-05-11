@@ -420,16 +420,29 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
   margin-bottom: 0.25rem;
 }
 .price-now-value {
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 6vw, 4.25rem);
+  font-family: var(--font-body);
+  font-size: clamp(1.9rem, 5.5vw, 3.5rem);
   color: var(--color-gold-dark);
   font-weight: 700;
-  margin: 0.4rem 0 0.75rem;
-  letter-spacing: 0.005em;
+  margin: 0.4rem 0 0.4rem;
+  letter-spacing: -0.01em;
   min-height: 1.1em;
   line-height: 1.05;
-  word-break: break-word;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
+.price-now-words {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  color: var(--color-text-muted);
+  margin: 0 auto 0.75rem;
+  max-width: 36rem;
+  line-height: 1.4;
+}
+body.theme-light .price-now-words { color: #6a5b3a; }
 .price-source { font-size: 0.9rem; margin-top: 1rem; }
 
 /* Why-it-matters cards */
