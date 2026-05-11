@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin tức & Hoạt động — Bitcoin Đà Nẵng</title>
+    <meta
+      name="description"
+      content="Tin tức, ghi chú sự kiện và bài viết từ cộng đồng Bitcoin Đà Nẵng."
+    />
+    <meta property="og:title" content="Bitcoin Đà Nẵng — Tin tức & Hoạt động" />
+    <meta
+      property="og:description"
+      content="Tin tức và ghi chú sự kiện từ cộng đồng Bitcoin Đà Nẵng."
+    />
+    <meta property="og:image" content="/images/og-default.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/components.css" />
+  </head>
+  <body class="theme-dark">
+    <header class="nav">
+      <a href="/" class="nav__brand">
+        <img src="/images/logo.png" alt="Bitcoin Đà Nẵng" class="nav__logo" />
+        <span class="nav__name">Bitcoin Đà Nẵng</span>
+      </a>
+      <nav class="nav__links">
+        <a href="/" data-i18n="nav.home">Trang chủ</a>
+        <a href="/#events" data-i18n="nav.events">Sự kiện</a>
+        <a href="/pages/bitcoin.html" data-i18n="nav.bitcoin">Bitcoin là gì?</a>
+        <a href="/pages/blog.html" data-i18n="nav.blog">Tin tức</a>
+      </nav>
+      <div class="lang-switcher">
+        <button data-lang="vi" aria-label="Tiếng Việt">
+          <img src="/images/flag-vn.svg" alt="VI" />
+        </button>
+        <button data-lang="en" aria-label="English">
+          <img src="/images/flag-en.svg" alt="EN" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--hero-blog">
+        <h1 class="display" data-i18n="blog.title">Tin tức & Hoạt động</h1>
+        <p class="muted" data-i18n="blog.subtitle">
+          Ghi chú sự kiện, bài viết và cập nhật từ cộng đồng Bitcoin Đà Nẵng.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="blog-grid" data-blog-feed="all">
+          <!-- populated by /scripts/blog.js -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copy">
+        Bitcoin Đà Nẵng — Cộng đồng Bitcoin tại Đà Nẵng
+      </p>
+      <p class="footer__partners">
+        <a href="https://bitcoinvn.io" target="_blank" rel="noopener">BitcoinVN.io</a>
+        ·
+        <a href="https://bitcoinsaigon.org" target="_blank" rel="noopener">Bitcoin Saigon</a>
+        ·
+        <a href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener">Westwood Da Nang</a>
+      </p>
+      <p class="footer__disclaimer" data-i18n="footer.disclaimer">
+        Chúng tôi không cung cấp tư vấn đầu tư.
+      </p>
+    </footer>
+
+    <script src="/scripts/i18n.js"></script>
+    <script src="/scripts/blog.js"></script>
+  </body>
+</html>

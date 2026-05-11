@@ -1,0 +1,28 @@
+{
+  "name": "bitcoindanang-site",
+  "version": "1.0.0",
+  "description": "Static website for the Bitcoin Đà Nẵng meetup community — the first Bitcoin-only community in Đà Nẵng, Việt Nam.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tinacms dev -c \"npx serve src\"",
+    "build": "tinacms build && node scripts/build.js",
+    "start": "npx serve dist",
+    "serve:src": "npx serve src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitcoinDanang/bitcoindanang-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BitcoinDanang/bitcoindanang-site/issues"
+  },
+  "homepage": "https://github.com/BitcoinDanang/bitcoindanang-site#readme",
+  "dependencies": {
+    "@tinacms/cli": "^2.2.6",
+    "tinacms": "^3.7.6"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bitcoin Đà Nẵng — Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <!--
+      TinaCMS builds its admin UI into /admin/index.html via `tinacms build`
+      (configured in tina/config.ts with build.outputFolder = "admin",
+      publicFolder = "src"). This page just redirects /admin (the legacy
+      path users may bookmark) to /admin/index.html.
+    -->
+    <meta http-equiv="refresh" content="0; url=/admin/index.html" />
+    <link rel="canonical" href="/admin/index.html" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #0d0d0d;
+        color: #f0ead6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+        padding: 1rem;
+      }
+      a {
+        color: #d4af37;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Đang chuyển đến trang quản trị Tina…</p>
+      <p>
+        Nếu không tự chuyển, hãy bấm
+        <a href="/admin/index.html">vào đây</a>.
+      </p>
+    </div>
+    <script>
+      window.location.replace("/admin/index.html");
+    </script>
+  </body>
+</html>
