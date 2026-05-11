@@ -300,19 +300,12 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
 }
 .pizza-hero__image {
   width: 100%;
-  aspect-ratio: 4/5;
-  background: linear-gradient(135deg, #F5D87A 0%, #D4AF37 60%, #A07C1E 100%);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
   border-radius: var(--radius-lg);
-  border: 1px dashed rgba(160, 124, 30, 0.35);
-  box-shadow: 0 14px 44px rgba(110, 83, 15, 0.18);
-  display: grid;
-  place-items: center;
-  color: rgba(110, 83, 15, 0.7);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-align: center;
-  padding: 1rem;
+  box-shadow: 0 14px 44px rgba(110, 83, 15, 0.22);
+  background: var(--color-white-muted);
 }
 
 /* Story section — two-column on desktop, image-right */
@@ -328,17 +321,12 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
 .story p { margin-bottom: 1.2rem; line-height: 1.7; }
 .story__image {
   width: 100%;
-  aspect-ratio: 1/1;
-  background: linear-gradient(135deg, #F5D87A 0%, #D4AF37 60%, #A07C1E 100%);
-  border: 1px dashed rgba(160, 124, 30, 0.35);
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  display: block;
   border-radius: var(--radius-lg);
-  display: grid;
-  place-items: center;
-  color: rgba(110, 83, 15, 0.7);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem;
+  box-shadow: 0 14px 44px rgba(110, 83, 15, 0.18);
+  background: var(--color-white-muted);
 }
 
 /* Alternating section background for the warm story slab */
