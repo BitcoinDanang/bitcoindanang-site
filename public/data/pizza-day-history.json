@@ -85,10 +85,7 @@
     }
   ],
   "live_source": {
-    "primary": "https://bitcoindanang.com/api/btc-vnd (CF Pages Function -> BitcoinVN)",
-    "fallback": [
-      "CoinGecko simple/price",
-      "CryptoCompare BTC/USD x open.er-api.com USD/VND"
-    ]
+    "primary": "https://bitcoindanang.com/api/btc-vnd (CF Pages Function -> BitcoinVN.io)",
+    "note": "BitcoinVN is the only live source. The 2026 row stays live until snapshot-pizza-2026.mjs runs."
   }
 }
