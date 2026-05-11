@@ -6,3 +6,5 @@ dist/
 .DS_Store
 Thumbs.db
 .tina/__generated__/
+tina/__generated__/
+admin/

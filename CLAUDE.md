@@ -24,9 +24,10 @@ Project memory for Claude Code working on this repo.
 /content/
   /posts/               (Phase 6) TinaCMS markdown blog posts
   /events/              (Phase 6) event markdown
-/tina/                  (Phase 6) TinaCMS config
-/scripts/               (Phase 6) build.js
-/.github/workflows/     (Phase 7) deploy.yml
+/tina/                  TinaCMS config (config.ts)
+/scripts/               build.js (markdown -> dist/, generates /dist/data/posts.json + per-post pages)
+/.github/workflows/     deploy.yml — GH Actions -> Cloudflare Pages
+/wrangler.toml          Cloudflare Pages project config (name=bitcoindanang, output=dist)
 CLAUDE.md               this file
 README.md
 .env.example            env var keys only — never commit real values
@@ -42,13 +43,15 @@ README.md
 
 - API token + account ID are stored in `/Users/bowz/.claude/projects/-Users-bowz/memory/bitcoindanang_project.md`. **Do not paste secrets into this file.**
 - Domains on the same Cloudflare account: `bitcoindanang.com` (primary site) and `bitcoindanang.org` (email primary, also redirects to .com).
-- CF Pages project name (Phase 7): `bitcoindanang`. Production branch: **`main`** (NOT `master`).
+- CF Pages project name: `bitcoindanang`. Production branch: **`main`** (NOT `master`). Default URL: `https://bitcoindanang.pages.dev`.
+- Custom domain (`bitcoindanang.com`, `www.bitcoindanang.com`) is NOT yet attached — the maintainer adds it manually in the CF Pages dashboard after the first successful deploy.
 
 ## GitHub
 
-- Repo: `BitcoinDanang/bitcoindanang-site`
+- Repo: `BitcoinDanang/bitcoindanang-site` — https://github.com/BitcoinDanang/bitcoindanang-site
 - `gh` CLI is already authenticated locally as the `BitcoinDanang` account.
-- Remote is set (`origin`), but pushes are gated — confirm with the maintainer before pushing.
+- Remote is `origin` (HTTPS). `main` is the deploy branch.
+- GitHub Actions secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are set (used by `.github/workflows/deploy.yml`). `TINA_CLIENT_ID` + `TINA_TOKEN` still need to be added after the maintainer creates a Tina Cloud project.
 
 ## Tina.io
 
@@ -57,9 +60,16 @@ README.md
 
 ## Build / Run
 
-- **Phases 1-5 (current):** No build step. Open `src/pages/*.html` directly, or `npx serve src` if you want a local server.
-- **Phase 6 onward:** `npm run dev` (Tina + static serve), `npm run build` (Tina + `node scripts/build.js` → `dist/`).
-- **Deploy:** `git push origin main` triggers the GitHub Actions workflow → CF Pages (after Phase 7 is set up).
+- **Local dev with Tina:** `npm run dev` — runs `tinacms dev` proxying a `npx serve src` static server. Visit `/admin/index.html` for the Tina UI (requires `.env.local` with real TINA_CLIENT_ID + TINA_TOKEN).
+- **Local static preview (no Tina):** `npm run serve:src` — serves `src/` directly.
+- **Build:** `npm run build` — runs `tinacms build` (writes `admin/` into the repo) then `node scripts/build.js` which copies `src/` + `public/` + `admin/` into `dist/`, parses `content/posts/*.md`, writes `/dist/data/posts.json`, and renders `/dist/pages/blog/<slug>.html` from `src/pages/blog-post.html`.
+- **Deploy:** `git push origin main` triggers `.github/workflows/deploy.yml` → `cloudflare/pages-action@v1` → `bitcoindanang` Pages project.
+
+## Tina config
+
+- Schema in `tina/config.ts`: single `post` collection at `content/posts`. Fields: title, date, author, tags[], excerpt, published (boolean), body (rich-text).
+- `tinacms build` output goes to `admin/` (gitignored), then `scripts/build.js` copies it into `dist/admin`.
+- Auth: `TINA_CLIENT_ID` + `TINA_TOKEN` from `.env.local` locally and from GitHub Actions secrets in CI. Both still need to be filled in by the maintainer after creating the Tina Cloud project at tina.io.
 
 ## Brand Tokens
 
@@ -93,7 +103,7 @@ These strings appear verbatim in the source and will be replaced in Phase 9:
 
 ## Useful Don'ts
 
-- Don't push to GitHub without explicit maintainer approval.
-- Don't paste real secrets (CF token, Tina token) into the repo. `.env.example` keeps keys only.
+- Don't paste real secrets (CF token, Tina token) into the repo. `.env.example` keeps keys only; `.env.local` is gitignored.
 - Don't touch the Obsidian vault from this repo.
-- Don't install npm packages until Phase 6 — Phases 1-5 are pure static HTML/CSS/JS.
+- Don't commit `admin/` (Tina build output) or `tina/__generated__/` — both are gitignored.
+- Don't add the custom domain via API — the maintainer does it in the CF Pages dashboard after first deploy.
