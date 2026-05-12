@@ -81,20 +81,31 @@
     setLang(btn.getAttribute('data-lang-btn'));
   });
 
-  // Hamburger menu (mobile)
+  // Hamburger menu (mobile). The slide-in panel covers the hamburger button,
+  // so we close on item click, outside-click, and Escape - otherwise users
+  // get trapped behind the overlay after switching VI/EN.
+  function closeNavMenu() {
+    const links = document.querySelector('.nav__links');
+    if (links) links.classList.remove('is-open');
+  }
   document.addEventListener('click', function (e) {
-    const toggle = e.target.closest('[data-nav-toggle]');
-    if (toggle) {
+    const links = document.querySelector('.nav__links');
+    if (!links) return;
+    if (e.target.closest('[data-nav-toggle]')) {
       e.preventDefault();
-      const links = document.querySelector('.nav__links');
-      if (links) links.classList.toggle('is-open');
+      links.classList.toggle('is-open');
       return;
     }
-    // Close menu when a link inside it is clicked
-    if (e.target.closest('.nav__links a')) {
-      const links = document.querySelector('.nav__links');
-      if (links) links.classList.remove('is-open');
+    if (e.target.closest('.nav__links a, .nav__links [data-lang-btn]')) {
+      closeNavMenu();
+      return;
     }
+    if (links.classList.contains('is-open') && !e.target.closest('.nav__links')) {
+      closeNavMenu();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNavMenu();
   });
 
   // Boot

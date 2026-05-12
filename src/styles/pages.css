@@ -409,12 +409,16 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
 }
 .price-then strong { color: #5a4a26; font-weight: 600; }
 .price-then-value {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: clamp(1.9rem, 5.5vw, 3.5rem);
+  font-weight: 700;
   color: var(--color-black);
   display: block;
-  margin: 0.25rem 0 1.75rem;
+  margin: 0.4rem 0 1.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
 }
 .price-now-label {
   color: var(--color-text-muted);
@@ -1294,3 +1298,54 @@ body.theme-light .price-now-words { color: #6a5b3a; }
   text-transform: uppercase;
   vertical-align: middle;
 }
+
+/* Pizza Day - Roadhouse partner block */
+.partner-block {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.partner-block p { margin: 0 0 1.25rem; word-wrap: break-word; }
+.partner-block__note {
+  display: block;
+  max-width: 100%;
+  background: rgba(212, 175, 55, 0.10);
+  border-left: 3px solid var(--color-gold-dark);
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  text-align: left;
+  color: inherit;
+}
+.partner-block__facts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+.partner-block__facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: inherit;
+  max-width: 100%;
+  text-align: left;
+  word-wrap: break-word;
+}
+.partner-block__facts li > a,
+.partner-block__facts li > span {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.partner-block__facts .icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-gold-dark);
+}
+.partner-block .cta-grid { margin-top: 0.5rem; }
