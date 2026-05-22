@@ -79,9 +79,12 @@
       "date": "2026-05-22",
       "btc_usd": null,
       "usd_vnd": null,
-      "btc_vnd": null,
-      "live": true,
-      "note": "Live BTC/VND from BitcoinVN until snapshotted on Pizza Day."
+      "btc_vnd": 1986377763,
+      "live": false,
+      "note": "Live BTC/VND from BitcoinVN until snapshotted on Pizza Day.",
+      "locked_at": "2026-05-22T19:15:44.045Z",
+      "source": "bitcoinvn.io ticker/BTC/VND",
+      "volume24h": 699116425
     }
   ],
   "live_source": {
