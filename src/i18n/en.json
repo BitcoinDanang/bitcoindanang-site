@@ -2,12 +2,10 @@
   "nav": {
     "home": "Home",
     "events": "Events",
-    "bitcoin": "What is Bitcoin?",
-    "join": "Join Us"
+    "bitcoin": "What is Bitcoin?"
   },
   "footer": {
     "copyright": "Bitcoin Da Nang - Bitcoin community in Đà Nẵng",
-    "telegram": "Join Telegram",
     "disclaimer": "We do not provide investment advice.",
     "partners_label": "Partners:"
   },
@@ -29,8 +27,6 @@
     "fact_location": "Westwood Da Nang",
     "fact_frequency_label": "Cadence",
     "fact_frequency": "Monthly",
-    "fact_telegram_label": "Telegram",
-    "fact_telegram": "Join →",
     "fact_buy_label": "Buy Bitcoin",
     "fact_buy": "BitcoinVN.io →",
     "blog_eyebrow": "LATEST",
@@ -60,7 +56,7 @@
     "hero_date": "May 22, 2026",
     "hero_subtitle": "Celebrating the world's first Bitcoin transaction",
     "hero_cta_primary": "See details below ↓",
-    "hero_cta_secondary": "Join Telegram",
+    "hero_cta_secondary": "What is Bitcoin?",
     "story_eyebrow": "THE STORY",
     "story_title": "It all started with a pizza",
     "story_p1": "On May 22nd, 2010, a programmer named Laszlo Hanyecz made the first-ever commercial Bitcoin transaction. He paid 10,000 Bitcoin for two pizzas - worth about $41 at the time.",
@@ -91,7 +87,6 @@
     "cta_eyebrow": "NEXT STEP",
     "cta_title": "Your next step",
     "cta_learn": "Learn more about Bitcoin",
-    "cta_join": "Join the Bitcoin Da Nang community",
     "cta_buy": "Buy your first Bitcoin",
     "cta_meet": "Meet us today at Westwood",
     "event_box_eyebrow": "EVENT DETAILS",
@@ -147,7 +142,8 @@
     "start_eyebrow": "GET STARTED",
     "start_title": "How to start",
     "start_1_title": "Learn more",
-    "start_1_body": "Join the Bitcoin Da Nang Telegram group to ask questions.",
+    "start_1_body": "Email us with your questions - we'll get back to you.",
+    "start_1_link": "Email →",
     "start_2_title": "Buy your first Bitcoin",
     "start_2_body": "Use BitcoinVN.io or the ATM at Westwood Da Nang.",
     "start_3_title": "Meet the community",

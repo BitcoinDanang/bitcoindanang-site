@@ -2,12 +2,10 @@
   "nav": {
     "home": "Trang chủ",
     "events": "Sự kiện",
-    "bitcoin": "Bitcoin là gì?",
-    "join": "Tham gia"
+    "bitcoin": "Bitcoin là gì?"
   },
   "footer": {
     "copyright": "Bitcoin Đà Nẵng - Cộng đồng Bitcoin tại Đà Nẵng",
-    "telegram": "Tham gia Telegram",
     "disclaimer": "Chúng tôi không cung cấp tư vấn đầu tư.",
     "partners_label": "Đối tác:"
   },
@@ -29,8 +27,6 @@
     "fact_location": "Westwood Đà Nẵng",
     "fact_frequency_label": "Tần suất",
     "fact_frequency": "Hàng tháng",
-    "fact_telegram_label": "Telegram",
-    "fact_telegram": "Tham gia →",
     "fact_buy_label": "Mua Bitcoin",
     "fact_buy": "BitcoinVN.io →",
     "blog_eyebrow": "TIN MỚI",
@@ -60,7 +56,7 @@
     "hero_date": "22 tháng 5, 2026",
     "hero_subtitle": "Kỷ niệm giao dịch Bitcoin đầu tiên trên thế giới",
     "hero_cta_primary": "Xem chi tiết bên dưới ↓",
-    "hero_cta_secondary": "Tham gia Telegram",
+    "hero_cta_secondary": "Bitcoin là gì?",
     "story_eyebrow": "CÂU CHUYỆN",
     "story_title": "Câu chuyện bắt đầu từ một chiếc pizza",
     "story_p1": "Ngày 22 tháng 5 năm 2010, một lập trình viên tên Laszlo Hanyecz đã thực hiện giao dịch thương mại đầu tiên bằng Bitcoin trong lịch sử. Ông đã trả 10.000 Bitcoin để mua hai chiếc pizza - tổng trị giá khoảng 41 đô la Mỹ lúc đó.",
@@ -91,7 +87,6 @@
     "cta_eyebrow": "BƯỚC TIẾP THEO",
     "cta_title": "Bước tiếp theo của bạn",
     "cta_learn": "Tìm hiểu thêm về Bitcoin",
-    "cta_join": "Tham gia cộng đồng Bitcoin Đà Nẵng",
     "cta_buy": "Mua Bitcoin lần đầu",
     "cta_meet": "Gặp chúng tôi hôm nay tại Westwood",
     "event_box_eyebrow": "CHI TIẾT SỰ KIỆN",
@@ -147,7 +142,8 @@
     "start_eyebrow": "BẮT ĐẦU",
     "start_title": "Bắt đầu như thế nào?",
     "start_1_title": "Tìm hiểu thêm",
-    "start_1_body": "Tham gia nhóm Bitcoin Đà Nẵng trên Telegram để hỏi và thảo luận.",
+    "start_1_body": "Gửi email cho chúng tôi - chúng tôi sẽ trả lời câu hỏi của bạn.",
+    "start_1_link": "Email →",
     "start_2_title": "Mua Bitcoin đầu tiên",
     "start_2_body": "Dùng BitcoinVN.io hoặc máy ATM tại Westwood Đà Nẵng.",
     "start_3_title": "Gặp gỡ cộng đồng",
