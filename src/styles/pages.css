@@ -1363,7 +1363,7 @@ body.theme-light .facts__label { color: #6b6353; }
 */
 .meetup-banner {
   width: 100%;
-  aspect-ratio: 16 / 7;
+  height: clamp(200px, 30vh, 340px);
   overflow: hidden;
   background: var(--color-black-soft);
 }
@@ -1375,7 +1375,7 @@ body.theme-light .facts__label { color: #6b6353; }
   display: block;
 }
 @media (max-width: 640px) {
-  .meetup-banner { aspect-ratio: 4 / 3; }
+  .meetup-banner { height: clamp(170px, 28vh, 240px); }
 }
 
 .meetup-map {
@@ -1393,6 +1393,22 @@ body.theme-light .facts__label { color: #6b6353; }
   height: 100%;
   border: 0;
   display: block;
+}
+/* Red pin overlay - position approximated from the OSM bbox, since the
+   iframe export shows the area but the OSM default marker is small/yellow.
+   Marker at lat 16.1041544, lon 108.2594395 within bbox
+   [108.20, 16.06, 108.32, 16.15] → ~49.5% across, ~51% down. */
+.meetup-map__pin {
+  position: absolute;
+  left: 49.5%;
+  top: 51%;
+  width: 28px;
+  height: 36px;
+  transform: translate(-50%, -100%);
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 32'><path d='M12 0c6.627 0 12 5.373 12 12 0 8-12 20-12 20S0 20 0 12C0 5.373 5.373 0 12 0z' fill='%23DC2626' stroke='%23ffffff' stroke-width='1.5'/><circle cx='12' cy='12' r='4' fill='%23ffffff'/></svg>") center/contain no-repeat;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+  z-index: 1;
 }
 
 .meetup-dishes {
