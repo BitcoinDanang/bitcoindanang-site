@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="../styles/tokens.css?v=8e2a1f30" />
   <link rel="stylesheet" href="../styles/base.css?v=7a5c9e21" />
   <link rel="stylesheet" href="../styles/components.css?v=f063a0b9" />
-  <link rel="stylesheet" href="../styles/pages.css?v=ad7f3e44" />
+  <link rel="stylesheet" href="../styles/pages.css?v=ad7f3e45" />
 </head>
 <body class="theme-light">
 
@@ -49,6 +49,11 @@
       </ul>
     </div>
   </nav>
+
+  <!-- BANNER PHOTO -->
+  <div class="meetup-banner" aria-hidden="false">
+    <img src="/images/meetup-bitcoffee-storefront.jpg" alt="₿itCoffee storefront with the orange BitCoffee sign and Bitcoin logo, outdoor seating with orange chairs" loading="eager" />
+  </div>
 
   <!-- HERO -->
   <header class="pizza-hero">
@@ -141,6 +146,13 @@
         <p>
           <a class="btn-primary" href="mailto:contact@bitcoindanang.org?subject=RSVP%20-%20Meetup%20at%20%E2%82%BFitCoffee%20-%20June%2027" data-i18n="meetup.rsvp_cta">Gửi email xác nhận →</a>
         </p>
+        <div class="meetup-telegram" role="note">
+          <i data-lucide="send" aria-hidden="true"></i>
+          <p style="margin: 0;">
+            <span data-i18n="meetup.telegram_note">Người mới muốn tham gia có thể nhắn trực tiếp cho mình qua Telegram - handle</span>
+            <span class="meetup-telegram__handle">@BitcoinDaNang</span><span data-i18n="meetup.telegram_note_tail">. Vui lòng gõ tay (không phải link để tránh spam).</span>
+          </p>
+        </div>
       </article>
     </div>
   </section>
@@ -158,10 +170,34 @@
           <strong data-i18n="meetup.venue_addr_label">Địa chỉ:</strong>
           <span data-i18n="meetup.venue_addr">1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000</span>
         </p>
+        <div class="meetup-map">
+          <iframe
+            title="₿itCoffee location map - Sơn Trà, Đà Nẵng"
+            src="https://www.google.com/maps?q=1+Nguyen+Dang+Giai,+Son+Tra,+Da+Nang&z=13&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
         <p>
           <a class="btn-outline" href="https://maps.app.goo.gl/bg3dgiwHZGxk2oFS9?g_st=ac" target="_blank" rel="noopener" data-i18n="meetup.venue_cta_directions">Chỉ đường trên Google Maps →</a>
         </p>
       </article>
+
+      <!-- A taste of the menu -->
+      <div class="section-head" style="margin-top: 2.5rem;">
+        <span class="eyebrow" data-i18n="meetup.dishes_eyebrow">MỘT CHÚT THỰC ĐƠN</span>
+        <h3 data-i18n="meetup.dishes_title">Vài món Thái tại ₿itCoffee</h3>
+      </div>
+      <div class="meetup-dishes">
+        <figure>
+          <img class="meetup-dishes__img" src="/images/meetup-dish-pad-thai.jpg" alt="Pad Thai - bánh phở Thái xào với giá, hẹ, ớt, chanh và đậu phộng rang" loading="lazy" />
+          <figcaption data-i18n="meetup.dishes_pad_thai">Pad Thai</figcaption>
+        </figure>
+        <figure>
+          <img class="meetup-dishes__img" src="/images/meetup-dish-pad-krapao.jpg" alt="Pad Kra Pao - thịt xào húng quế Thái với cơm trắng, trứng ốp la và dưa leo" loading="lazy" />
+          <figcaption data-i18n="meetup.dishes_pad_krapao">Pad Kra Pao - thịt xào húng quế &amp; trứng ốp la</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 

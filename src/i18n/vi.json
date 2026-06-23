@@ -84,7 +84,13 @@
     "venue_body": "₿itCoffee là quán cà phê kiêm nhà hàng Thái Lan mới khai trương, nằm ngay dưới chân núi Sơn Trà ở Đà Nẵng. Quán do một thành viên của cộng đồng Bitcoin Đà Nẵng tự tay điều hành.",
     "venue_addr_label": "Địa chỉ",
     "venue_addr": "1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000",
-    "venue_cta_directions": "Chỉ đường trên Google Maps →"
+    "venue_cta_directions": "Chỉ đường trên Google Maps →",
+    "telegram_note": "Người mới muốn tham gia có thể nhắn trực tiếp cho mình qua Telegram - handle",
+    "telegram_note_tail": ". Vui lòng gõ tay (không phải link để tránh spam).",
+    "dishes_eyebrow": "MỘT CHÚT THỰC ĐƠN",
+    "dishes_title": "Vài món Thái tại ₿itCoffee",
+    "dishes_pad_thai": "Pad Thai",
+    "dishes_pad_krapao": "Pad Kra Pao - thịt xào húng quế & trứng ốp la"
   },
   "pizza": {
     "hero_eyebrow": "BITCOIN PIZZA DAY · ĐÀ NẴNG 2026",

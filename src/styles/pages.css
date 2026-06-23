@@ -1349,3 +1349,97 @@ body.theme-light .price-now-words { color: #6a5b3a; }
   color: var(--color-gold-dark);
 }
 .partner-block .cta-grid { margin-top: 0.5rem; }
+
+/* ---------------------------------------------------------------------------
+   Light-theme contrast fix for facts/details list.
+   .facts__value defaults to --color-text-on-dark for dark hero cards; on
+   theme-light cards the cream-on-cream is illegible.
+*/
+body.theme-light .facts__value { color: #1f1a12; }
+body.theme-light .facts__label { color: #6b6353; }
+
+/* ---------------------------------------------------------------------------
+   Meetup page components: hero banner photo, embedded map, dish grid.
+*/
+.meetup-banner {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: var(--color-black-soft);
+}
+.meetup-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+@media (max-width: 640px) {
+  .meetup-banner { aspect-ratio: 4 / 3; }
+}
+
+.meetup-map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(160, 124, 30, 0.25);
+  margin: 0.75rem 0 1rem;
+  background: #e8e4dc;
+}
+.meetup-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.meetup-dishes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 56rem;
+  margin: 1rem auto 0;
+}
+.meetup-dishes figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.meetup-dishes .meetup-dishes__img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--color-black-soft);
+  display: block;
+}
+.meetup-dishes figcaption {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+@media (max-width: 540px) {
+  .meetup-dishes { gap: 0.6rem; }
+}
+
+.meetup-telegram {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px dashed rgba(160, 124, 30, 0.45);
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+.meetup-telegram i { color: var(--color-gold-dark); flex-shrink: 0; margin-top: 0.15rem; }
+.meetup-telegram .meetup-telegram__handle {
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+  user-select: all;
+  white-space: nowrap;
+}

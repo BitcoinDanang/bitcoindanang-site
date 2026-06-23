@@ -84,7 +84,13 @@
     "venue_body": "₿itCoffee is a newly opened Thai restaurant and cafe at the base of Son Tra Mountain in Da Nang. It is run by one of our Bitcoin Da Nang community members.",
     "venue_addr_label": "Address",
     "venue_addr": "1 Nguyễn Đăng Giai, Sơn Trà, Da Nang 550000",
-    "venue_cta_directions": "Get directions on Google Maps →"
+    "venue_cta_directions": "Get directions on Google Maps →",
+    "telegram_note": "Newcomers can reach out directly on Telegram - handle",
+    "telegram_note_tail": ". Please type it by hand (left unlinked on purpose to keep the spam bots away).",
+    "dishes_eyebrow": "A TASTE OF THE MENU",
+    "dishes_title": "A few Thai dishes at ₿itCoffee",
+    "dishes_pad_thai": "Pad Thai",
+    "dishes_pad_krapao": "Pad Kra Pao - basil stir-fry with rice & fried egg"
   },
   "pizza": {
     "hero_eyebrow": "BITCOIN PIZZA DAY · DA NANG 2026",
