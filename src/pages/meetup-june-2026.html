@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="../styles/tokens.css?v=8e2a1f30" />
   <link rel="stylesheet" href="../styles/base.css?v=7a5c9e21" />
   <link rel="stylesheet" href="../styles/components.css?v=f063a0b9" />
-  <link rel="stylesheet" href="../styles/pages.css?v=ad7f3e46" />
+  <link rel="stylesheet" href="../styles/pages.css?v=c81d4a07" />
 </head>
-<body class="theme-light">
+<body class="theme-light meetup-page">
 
   <!-- NAV -->
   <nav class="nav" aria-label="Primary">
@@ -93,12 +93,59 @@
     </div>
   </section>
 
+  <!-- VENUE + MAP -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="meetup.venue_eyebrow">ĐỊA ĐIỂM</span>
+        <h2 data-i18n="meetup.venue_title">Về ₿itCoffee</h2>
+      </div>
+      <article class="card" style="max-width: 56rem; margin: 0 auto;">
+        <p data-i18n="meetup.venue_body">₿itCoffee là quán cà phê kiêm nhà hàng Thái Lan mới khai trương, nằm ngay dưới chân núi Sơn Trà ở Đà Nẵng. Quán do một thành viên của cộng đồng Bitcoin Đà Nẵng tự tay điều hành.</p>
+        <p>
+          <strong data-i18n="meetup.venue_addr_label">Địa chỉ:</strong>
+          <span data-i18n="meetup.venue_addr">1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000</span>
+        </p>
+        <div class="meetup-map">
+          <iframe
+            title="₿itCoffee location map - Sơn Trà, Đà Nẵng"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=108.2000%2C16.0600%2C108.3200%2C16.1500&layer=mapnik"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <span class="meetup-map__pin" aria-hidden="true"></span>
+        </div>
+        <p>
+          <a class="btn-outline" href="https://maps.app.goo.gl/bg3dgiwHZGxk2oFS9?g_st=ac" target="_blank" rel="noopener" data-i18n="meetup.venue_cta_directions">Chỉ đường trên Google Maps →</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- DISHES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="meetup.dishes_eyebrow">MỘT CHÚT THỰC ĐƠN</span>
+        <h2 data-i18n="meetup.dishes_title">Vài món Thái tại ₿itCoffee</h2>
+      </div>
+      <div class="meetup-dishes">
+        <figure>
+          <img class="meetup-dishes__img" src="/images/meetup-dish-pad-thai.jpg" alt="Pad Thai - bánh phở Thái xào với giá, hẹ, ớt, chanh và đậu phộng rang" loading="lazy" />
+          <figcaption data-i18n="meetup.dishes_pad_thai">Pad Thai</figcaption>
+        </figure>
+        <figure>
+          <img class="meetup-dishes__img" src="/images/meetup-dish-pad-krapao.jpg" alt="Pad Kra Pao - thịt xào húng quế Thái với cơm trắng, trứng ốp la và dưa leo" loading="lazy" />
+          <figcaption data-i18n="meetup.dishes_pad_krapao">Pad Kra Pao - thịt xào húng quế &amp; trứng ốp la</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- EVENT DETAILS -->
   <section id="event-details" class="section">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow" data-i18n="meetup.details_eyebrow">CHI TIẾT SỰ KIỆN</span>
-        <h2 data-i18n="meetup.details_title">Chi tiết</h2>
       </div>
       <aside class="card" style="max-width: 56rem; margin: 0 auto;">
         <ul class="facts">
@@ -127,50 +174,6 @@
           </li>
         </ul>
       </aside>
-    </div>
-  </section>
-
-  <!-- VENUE -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow" data-i18n="meetup.venue_eyebrow">ĐỊA ĐIỂM</span>
-        <h2 data-i18n="meetup.venue_title">Về ₿itCoffee</h2>
-      </div>
-      <article class="card" style="max-width: 56rem; margin: 0 auto;">
-        <p data-i18n="meetup.venue_body">₿itCoffee là quán cà phê kiêm nhà hàng Thái Lan mới khai trương, nằm ngay dưới chân núi Sơn Trà ở Đà Nẵng. Quán do một thành viên của cộng đồng Bitcoin Đà Nẵng tự tay điều hành.</p>
-        <p>
-          <strong data-i18n="meetup.venue_addr_label">Địa chỉ:</strong>
-          <span data-i18n="meetup.venue_addr">1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000</span>
-        </p>
-        <div class="meetup-map">
-          <iframe
-            title="₿itCoffee location map - Sơn Trà, Đà Nẵng"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=108.2000%2C16.0600%2C108.3200%2C16.1500&layer=mapnik"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <span class="meetup-map__pin" aria-hidden="true"></span>
-        </div>
-        <p>
-          <a class="btn-outline" href="https://maps.app.goo.gl/bg3dgiwHZGxk2oFS9?g_st=ac" target="_blank" rel="noopener" data-i18n="meetup.venue_cta_directions">Chỉ đường trên Google Maps →</a>
-        </p>
-      </article>
-
-      <!-- A taste of the menu -->
-      <div class="section-head" style="margin-top: 2.5rem;">
-        <span class="eyebrow" data-i18n="meetup.dishes_eyebrow">MỘT CHÚT THỰC ĐƠN</span>
-        <h3 data-i18n="meetup.dishes_title">Vài món Thái tại ₿itCoffee</h3>
-      </div>
-      <div class="meetup-dishes">
-        <figure>
-          <img class="meetup-dishes__img" src="/images/meetup-dish-pad-thai.jpg" alt="Pad Thai - bánh phở Thái xào với giá, hẹ, ớt, chanh và đậu phộng rang" loading="lazy" />
-          <figcaption data-i18n="meetup.dishes_pad_thai">Pad Thai</figcaption>
-        </figure>
-        <figure>
-          <img class="meetup-dishes__img" src="/images/meetup-dish-pad-krapao.jpg" alt="Pad Kra Pao - thịt xào húng quế Thái với cơm trắng, trứng ốp la và dưa leo" loading="lazy" />
-          <figcaption data-i18n="meetup.dishes_pad_krapao">Pad Kra Pao - thịt xào húng quế &amp; trứng ốp la</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 

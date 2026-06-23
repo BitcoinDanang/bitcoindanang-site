@@ -1363,7 +1363,7 @@ body.theme-light .facts__label { color: #6b6353; }
 */
 .meetup-banner {
   width: 100%;
-  height: clamp(200px, 30vh, 340px);
+  height: clamp(400px, 60vh, 680px);
   overflow: hidden;
   background: var(--color-black-soft);
 }
@@ -1371,12 +1371,17 @@ body.theme-light .facts__label { color: #6b6353; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 18%;
   display: block;
 }
 @media (max-width: 640px) {
-  .meetup-banner { height: clamp(170px, 28vh, 240px); }
+  .meetup-banner { height: clamp(340px, 52vh, 480px); }
 }
+
+/* Tighten the rhythm on the meetup page - the runbook default of
+   clamp(3rem, 8vw, 6rem) is way too airy for this short single-event page. */
+.meetup-page .section { padding: clamp(1.75rem, 4vw, 2.75rem) 0; }
+.meetup-page .pizza-hero { padding-bottom: clamp(1.5rem, 4vw, 2.5rem); }
 
 .meetup-map {
   position: relative;
