@@ -23,7 +23,21 @@
     <link rel="stylesheet" href="/styles/tokens.css?v=8e2a1f30" />
     <link rel="stylesheet" href="/styles/base.css?v=7a5c9e21" />
     <link rel="stylesheet" href="/styles/components.css?v=f063a0b9" />
-  </head>
+  
+  <!-- Google Analytics 4 (cookieless, DNT-respecting, per-domain) -->
+  <script>
+    if (navigator.doNotTrack !== "1") {
+      var GA_ID = location.hostname.indexOf('.org') !== -1 ? 'G-XRVFYQEFCC' : 'G-4GRRLJM597';
+      var s = document.createElement('script');
+      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GA_ID, { anonymize_ip: true, client_storage: 'none' });
+    }
+  </script>
+</head>
   <body class="theme-dark">
     <header class="nav">
       <a href="/" class="nav__brand">
