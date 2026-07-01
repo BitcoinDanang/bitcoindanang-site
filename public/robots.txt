@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /pages/blog-post.html
+
+Sitemap: https://bitcoindanang.com/sitemap.xml
