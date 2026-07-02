@@ -1,0 +1,16 @@
+# Bitcoin Đà Nẵng
+
+Bitcoin Đà Nẵng is the first Bitcoin-only community in Đà Nẵng, Việt Nam. It hosts monthly, family-friendly meetups and publishes plain-language, jargon-free Bitcoin explainers in Vietnamese for newcomers.
+
+## Key pages
+
+- [Home](https://bitcoindanang.com/): Community overview and how to join the next meetup.
+- [Bitcoin Là Gì? (What is Bitcoin?)](https://bitcoindanang.com/bitcoin): Simple, no-jargon explanation of Bitcoin for Vietnamese readers ("if you understand gold, you can understand Bitcoin").
+- [Ngày Pizza Bitcoin 2026 (Bitcoin Pizza Day)](https://bitcoindanang.com/pizza-day-2026): Bitcoin Pizza Day celebration in Đà Nẵng, 22 May 2026.
+- [Gặp gỡ tháng 6, 2026 (June 2026 meetup)](https://bitcoindanang.com/meetup-june-2026): Community meetup at ₿itCoffee near Sơn Trà, Saturday 27 June 2026.
+- [Blog (Tin tức & Hoạt động)](https://bitcoindanang.com/blog): News, event notes, and posts from the community.
+
+## Blog posts
+
+- [Chào mừng đến với Bitcoin Đà Nẵng (Welcome)](https://bitcoindanang.com/pages/blog/welcome.html): Recap of the community's first meetup at Westwood, home of the city's first Bitcoin ATM.
+- [Bitcoin Da Nang Telegram Group](https://bitcoindanang.com/pages/blog/bitcoin-da-nang-telegram-group.html): How to connect with the community on Telegram.

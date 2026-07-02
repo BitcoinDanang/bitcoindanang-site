@@ -17,6 +17,36 @@
 <meta property="og:url" content="https://bitcoindanang.com" />
 <meta name="twitter:card" content="summary_large_image" />
 
+<!-- Canonical: self-referential per page. Replace {{CANONICAL_URL}} with the
+     page's absolute URL (e.g. https://bitcoindanang.com/ for the homepage). -->
+<link rel="canonical" href="{{CANONICAL_URL}}" />
+
+<!-- Structured data: site-wide Organization + WebSite (truthful; safe on every page) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bitcoindanang.com/#organization",
+      "name": "Bitcoin Đà Nẵng",
+      "url": "https://bitcoindanang.com",
+      "logo": "https://bitcoindanang.com/images/logo.png",
+      "description": "Cộng đồng Bitcoin đầu tiên tại Đà Nẵng, Việt Nam. Gặp gỡ hàng tháng, thân thiện với người mới.",
+      "sameAs": ["https://t.me/+4VDDldma_CRkZWU1"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bitcoindanang.com/#website",
+      "name": "Bitcoin Đà Nẵng",
+      "url": "https://bitcoindanang.com",
+      "inLanguage": "vi",
+      "publisher": { "@id": "https://bitcoindanang.com/#organization" }
+    }
+  ]
+}
+</script>
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
