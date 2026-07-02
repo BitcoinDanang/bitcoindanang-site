@@ -19,3 +19,5 @@ Bitcoin Đà Nẵng is the first Bitcoin-only community in Đà Nẵng, Việt N
 
 - [Gửi Vàng (guivang.com)](https://guivang.com): Sister site presenting Bitcoin savings in Vietnamese through the familiar lens of storing value like gold.
 - [Zap.Tips (zap.tips)](https://zap.tips): Sister site about Lightning tips and zaps for sending small Bitcoin payments.
+
+Created by Xeniteian — nostr: npub1xentean545cu7xq53s9dsnuj53tpk2xgz60cehjxkksf8vk0mjyqeyzshf

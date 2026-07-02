@@ -32,6 +32,6 @@ TBD — Phase 6 will add the TinaCMS build pipeline. For now the pages under `/s
 
 The full build specification lives at `/Users/bowz/Downloads/bitcoindanang-runbook.md` on the maintainer's machine. The Obsidian vault (`BitcoinDaNang` in iCloud) holds runbooks, image prompts, content copy, and design briefs.
 
-## License
+## Attribution
 
-Content © Bitcoin Đà Nẵng. Code released under MIT (TBD — confirm before launch).
+Created by Xeniteian.
