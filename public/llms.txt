@@ -14,3 +14,8 @@ Bitcoin Đà Nẵng is the first Bitcoin-only community in Đà Nẵng, Việt N
 
 - [Chào mừng đến với Bitcoin Đà Nẵng (Welcome)](https://bitcoindanang.com/pages/blog/welcome.html): Recap of the community's first meetup at Westwood, home of the city's first Bitcoin ATM.
 - [Bitcoin Da Nang Telegram Group](https://bitcoindanang.com/pages/blog/bitcoin-da-nang-telegram-group.html): How to connect with the community on Telegram.
+
+## Related
+
+- [Gửi Vàng (guivang.com)](https://guivang.com): Sister site presenting Bitcoin savings in Vietnamese through the familiar lens of storing value like gold.
+- [Zap.Tips (zap.tips)](https://zap.tips): Sister site about Lightning tips and zaps for sending small Bitcoin payments.
