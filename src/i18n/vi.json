@@ -47,7 +47,32 @@
     "partner_bitcoinvn_cta": "Đến BitcoinVN →",
     "partner_saigon_tagline": "Nhóm chị em tại TP.HCM",
     "partner_saigon_cta": "Xem Bitcoin Saigon →",
-    "partner_visit": "Truy cập"
+    "partner_visit": "Truy cập",
+    "hero_meta": "Đà Nẵng · Việt Nam · Cộng đồng Bitcoin đầu tiên",
+    "hero_cta_primary": "Tham gia cộng đồng",
+    "past_eyebrow": "LƯU TRỮ",
+    "past_title": "Các buổi gặp đã qua",
+    "past_body": "Xem lại những lần cộng đồng gặp mặt trước đây. Mỗi khi có buổi mới, buổi cũ được lưu lại tại đây.",
+    "past_link": "Xem tất cả buổi gặp →",
+    "connect_eyebrow": "KẾT NỐI",
+    "connect_title": "Tham gia cộng đồng",
+    "connect_body": "Người mới luôn được chào đón. Nhắn cho chúng tôi trên Telegram hoặc gửi email - chúng tôi rất vui được trả lời câu hỏi của bạn.",
+    "connect_telegram": "Nhắn qua Telegram",
+    "connect_email": "Gửi email"
+  },
+  "events": {
+    "hero_eyebrow": "LƯU TRỮ SỰ KIỆN",
+    "hero_title": "Các buổi gặp mặt",
+    "hero_sub": "Cộng đồng Bitcoin Đà Nẵng gặp nhau hàng tháng. Đây là những buổi đã và sắp diễn ra.",
+    "upcoming_eyebrow": "SẮP TỚI",
+    "upcoming_title": "Buổi gặp tiếp theo",
+    "past_eyebrow": "ĐÃ DIỄN RA",
+    "past_title": "Các buổi trước đây",
+    "card_cta": "Xem chi tiết →",
+    "june_2026_date": "27 tháng 6, 2026",
+    "june_2026_title": "Gặp gỡ tại ₿itCoffee",
+    "june_2026_excerpt": "Buổi gặp thân thiện với gia đình tại ₿itCoffee, dưới chân núi Sơn Trà - quán Thái do một thành viên cộng đồng điều hành.",
+    "empty_past": "Chưa có buổi gặp nào trong kho lưu trữ. Buổi đầu tiên sẽ xuất hiện ở đây sau khi diễn ra."
   },
   "meetup": {
     "hero_eyebrow": "GẶP GỠ THÁNG 6 · BITCOIN ĐÀ NẴNG",

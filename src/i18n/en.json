@@ -47,7 +47,32 @@
     "partner_bitcoinvn_cta": "Visit BitcoinVN →",
     "partner_saigon_tagline": "Sister community in Saigon",
     "partner_saigon_cta": "Visit Bitcoin Saigon →",
-    "partner_visit": "Visit"
+    "partner_visit": "Visit",
+    "hero_meta": "Da Nang · Vietnam · The first Bitcoin-only community",
+    "hero_cta_primary": "Join the community",
+    "past_eyebrow": "ARCHIVE",
+    "past_title": "Past meetups",
+    "past_body": "Look back at previous community meetups. When a new one is posted, the previous one is archived here.",
+    "past_link": "See all meetups →",
+    "connect_eyebrow": "CONNECT",
+    "connect_title": "Join the community",
+    "connect_body": "Newcomers are always welcome. Message us on Telegram or send an email - we are happy to answer your questions.",
+    "connect_telegram": "Message on Telegram",
+    "connect_email": "Send an email"
+  },
+  "events": {
+    "hero_eyebrow": "EVENT ARCHIVE",
+    "hero_title": "Meetups",
+    "hero_sub": "The Bitcoin Da Nang community meets monthly. Here are our past and upcoming gatherings.",
+    "upcoming_eyebrow": "UPCOMING",
+    "upcoming_title": "Next meetup",
+    "past_eyebrow": "PAST",
+    "past_title": "Previous meetups",
+    "card_cta": "See details →",
+    "june_2026_date": "June 27, 2026",
+    "june_2026_title": "Meetup at ₿itCoffee",
+    "june_2026_excerpt": "A family-friendly gathering at ₿itCoffee, at the base of Son Tra Mountain - a Thai cafe run by a community member.",
+    "empty_past": "No meetups in the archive yet. The first one will appear here after it takes place."
   },
   "meetup": {
     "hero_eyebrow": "JUNE MEETUP · BITCOIN DA NANG",

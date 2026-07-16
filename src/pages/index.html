@@ -52,10 +52,10 @@
 
   <link rel="icon" type="image/png" href="/images/logo.png" />
 
-  <link rel="stylesheet" href="../styles/tokens.css?v=8e2a1f30" />
-  <link rel="stylesheet" href="../styles/base.css?v=7a5c9e21" />
-  <link rel="stylesheet" href="../styles/components.css?v=f063a0b9" />
-  <link rel="stylesheet" href="../styles/pages.css?v=ad7f3e45" />
+  <link rel="stylesheet" href="../styles/tokens.css?v=9c1b2a01" />
+  <link rel="stylesheet" href="../styles/base.css?v=8b6d1f22" />
+  <link rel="stylesheet" href="../styles/components.css?v=a17e4c33" />
+  <link rel="stylesheet" href="../styles/pages.css?v=be24f901" />
 
   <!-- Google Analytics 4 (cookieless, DNT-respecting, per-domain) -->
   <script>
@@ -85,7 +85,7 @@
       </button>
       <ul class="nav__links">
         <li><a href="/" data-i18n="nav.home">Trang chủ</a></li>
-        <li><a href="#events" data-i18n="nav.events">Sự kiện</a></li>
+        <li><a href="/events" data-i18n="nav.events">Sự kiện</a></li>
         <li><a href="/bitcoin" data-i18n="nav.bitcoin">Bitcoin là gì?</a></li>
         <li>
           <div class="lang-switcher" role="group" aria-label="Language">
@@ -107,21 +107,26 @@
       </div>
       <h1 data-i18n="home.hero_title">Bitcoin Đà Nẵng</h1>
       <p class="home-hero__tagline" data-i18n="home.hero_tagline">Cộng đồng Bitcoin của bạn tại Đà Nẵng</p>
+      <p class="home-hero__meta" data-i18n="home.hero_meta">Đà Nẵng · Việt Nam · Cộng đồng Bitcoin đầu tiên</p>
       <div class="home-hero__ctas">
+        <a class="btn-primary" href="#connect" data-i18n="home.hero_cta_primary">Tham gia cộng đồng</a>
         <a class="btn-outline" href="#events" data-i18n="home.hero_cta_secondary">Sự kiện tiếp theo</a>
       </div>
     </div>
   </header>
 
   <!-- NEXT EVENT BANNER -->
-  <section id="events" class="section">
+  <section id="events" class="section section--tight">
     <div class="container">
       <div class="event-banner">
-        <span class="eyebrow" data-i18n="home.event_eyebrow">SỰ KIỆN TIẾP THEO</span>
+        <span class="chip" data-i18n="home.event_chip">Sự kiện sắp tới</span>
         <h2 data-i18n="home.event_title">Gặp gỡ Bitcoin Đà Nẵng - 27 tháng 6, 2026</h2>
         <p data-i18n="home.event_subtitle">₿itCoffee · Thứ Bảy 27/6 · từ 16:00 · Thân thiện với gia đình, dưới chân núi Sơn Trà</p>
         <a class="event-banner__cta" href="/meetup-june-2026" data-i18n="home.event_cta">Xem chi tiết →</a>
       </div>
+      <p class="events-archive-link">
+        <a href="/events" data-i18n="home.past_link">Xem tất cả buổi gặp →</a>
+      </p>
     </div>
   </section>
 
@@ -221,6 +226,21 @@
           <p data-i18n="home.partner_saigon_tagline">Nhóm chị em tại TP.HCM</p>
           <a class="btn-outline" href="https://bitcoinsaigon.org/" target="_blank" rel="noopener" data-i18n="home.partner_saigon_cta">Xem Bitcoin Saigon →</a>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect" class="section section--connect">
+    <div class="container">
+      <div class="connect-band">
+        <span class="eyebrow" data-i18n="home.connect_eyebrow">KẾT NỐI</span>
+        <h2 data-i18n="home.connect_title">Tham gia cộng đồng</h2>
+        <p data-i18n="home.connect_body">Người mới luôn được chào đón. Nhắn cho chúng tôi trên Telegram hoặc gửi email - chúng tôi rất vui được trả lời câu hỏi của bạn.</p>
+        <div class="connect-band__ctas">
+          <a class="btn-primary" href="https://t.me/+4VDDldma_CRkZWU1" target="_blank" rel="noopener" data-i18n="home.connect_telegram">Nhắn qua Telegram</a>
+          <a class="btn-outline" href="mailto:contact@bitcoindanang.org" data-i18n="home.connect_email">Gửi email</a>
+        </div>
       </div>
     </div>
   </section>

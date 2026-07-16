@@ -5,7 +5,7 @@
 .home-hero {
   position: relative;
   text-align: center;
-  padding: clamp(4rem, 12vw, 8rem) var(--gutter) clamp(3rem, 8vw, 5rem);
+  padding: clamp(3rem, 8vw, 5.5rem) var(--gutter) clamp(2rem, 5vw, 3rem);
   overflow: hidden;
   background:
     radial-gradient(ellipse at top, rgba(212, 175, 55, 0.10), transparent 65%),
@@ -62,10 +62,18 @@
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   color: var(--color-text-on-dark);
   opacity: 0.92;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.6rem;
   max-width: 32rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.home-hero__meta {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
 }
 
 .home-hero__ctas {
@@ -277,6 +285,97 @@ body.theme-light .partner-card h3 { color: var(--color-gold-dark); }
 .section-head h2 { color: var(--color-gold); margin-bottom: 0.4rem; }
 body.theme-light .section-head h2 { color: var(--color-gold-dark); }
 .section-head .gold-rule { margin: 0.5rem auto 0; }
+
+/* ---------- REDESIGN 2026-07: tighter rhythm, connect, events archive ---------- */
+
+/* Pull the featured event up close to the hero (kills the dead gap). */
+.section--tight { padding-top: clamp(1.5rem, 4vw, 2.5rem); }
+
+/* Chip sits above the eyebrow inside the featured-event card. */
+.event-banner .chip { margin-bottom: 0.9rem; }
+
+/* "See all meetups" link under the featured event. */
+.events-archive-link { text-align: center; margin: 1.5rem 0 0; }
+.events-archive-link a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-gold);
+  font-size: 0.98rem;
+  transition: var(--transition);
+}
+.events-archive-link a:hover { color: var(--color-gold-light); }
+
+/* Connect band - primary "join the community" call to action. */
+.section--connect { padding-top: clamp(2.5rem, 6vw, 4rem); }
+.connect-band {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.07), transparent);
+}
+.connect-band h2 { color: var(--color-gold); margin-bottom: 0.5rem; }
+.connect-band p {
+  color: var(--color-text-on-dark);
+  opacity: 0.9;
+  max-width: 34rem;
+  margin: 0 auto 1.75rem;
+}
+.connect-band__ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+  .connect-band__ctas { flex-direction: column; align-items: stretch; }
+  .connect-band__ctas .btn-primary,
+  .connect-band__ctas .btn-outline { justify-content: center; }
+}
+
+/* ---------- EVENTS ARCHIVE PAGE ---------- */
+.events-list {
+  display: grid;
+  /* min(100%, 300px) so a single card never forces the track wider than the
+     container on a narrow phone (no horizontal scroll). */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 1.5rem;
+}
+.event-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+.event-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-black-soft);
+}
+.event-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.event-card__body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+.event-card__date {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.event-card h3 { margin: 0.1rem 0 0.2rem; }
+body.theme-dark .event-card h3 { color: var(--color-gold); }
+.event-card p { font-size: 0.97rem; opacity: 0.9; margin-bottom: 1rem; }
+.event-card__cta { margin-top: auto; font-weight: 600; text-decoration: none; color: var(--color-gold); }
+.event-card__cta:hover { color: var(--color-gold-light); }
+.event-card--featured { border: 2px solid var(--color-gold); }
+
+.events-empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  border: 1px dashed rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.5rem;
+}
 
 /* ---------- PIZZA DAY (theme-light) ---------- */
 
