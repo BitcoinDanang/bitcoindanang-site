@@ -9,3 +9,21 @@ Thumbs.db
 tina/__generated__/
 admin/
 _images/
+
+# local agent config — never publish
+CLAUDE.md
+.claude/
+
+# process / journey docs — local only, not published
+docs/
+runbooks/
+architecture/
+*RUNBOOK*.md
+*runbook*.md
+COMPETITIVE-ANALYSIS*.md
+competitive-analysis*.md
+DESIGN_PLAN*.md
+ROADMAP.md
+GUARDRAILS.md
+source-brief*.md
+reports/
