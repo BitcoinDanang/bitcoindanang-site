@@ -1477,6 +1477,160 @@ body.theme-light .facts__label { color: #6b6353; }
   .meetup-banner { height: clamp(340px, 52vh, 480px); }
 }
 
+/* ===========================================================================
+   EDITORIAL HOMEPAGE (theme-light) - 2026-07 redesign
+   Type-led, airy, gold as accent not background. Prefix: .ed-
+   =========================================================================== */
+
+.ed { --ed-ink: #211b10; --ed-muted: #6b6252; --ed-line: rgba(33,27,16,0.10); }
+
+body.theme-light.ed-body {
+  background:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(212,175,55,0.10), transparent 60%),
+    var(--color-white);
+}
+
+/* Generous editorial section rhythm + hairline dividers instead of card walls. */
+.ed-section { padding: clamp(3.5rem, 9vw, 7rem) 0; }
+.ed-section--hair { border-top: 1px solid var(--ed-line); }
+
+.ed-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin: 0 0 1.1rem;
+}
+.ed-rule { width: 68px; height: 2px; background: var(--color-gold); border: 0; margin: 0; }
+
+/* ---------- HERO: type-led, left-aligned, big whitespace ---------- */
+.ed-hero { position: relative; overflow: hidden; padding: clamp(4rem, 11vw, 8.5rem) 0 clamp(3rem, 7vw, 5rem); }
+.ed-hero__glyph {
+  position: absolute;
+  right: -3vw; top: 50%; transform: translateY(-50%);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(20rem, 40vw, 44rem); line-height: 1;
+  color: var(--color-gold); opacity: 0.06; pointer-events: none; user-select: none;
+}
+.ed-hero__inner { position: relative; z-index: 1; max-width: 52rem; }
+.ed-hero__brand {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+.ed-hero__brand img { width: 40px; height: 40px; }
+.ed-hero__brand span {
+  font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--ed-ink);
+}
+.ed-hero h1 {
+  font-size: clamp(3rem, 8.5vw, 6rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+  margin: 0 0 1.25rem;
+}
+.ed-hero h1 em { font-style: italic; color: var(--color-gold-dark); }
+.ed-hero__lead {
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--ed-muted);
+  max-width: 34rem;
+  margin: 0 0 2rem;
+}
+.ed-hero__ctas { display: flex; align-items: center; gap: 1.5rem 2rem; flex-wrap: wrap; margin-top: 2.25rem; }
+.ed-textlink {
+  font-weight: 600; text-decoration: none; color: var(--color-gold-dark);
+  border-bottom: 2px solid transparent; padding-bottom: 2px; transition: var(--transition);
+}
+.ed-textlink:hover { border-bottom-color: var(--color-gold); color: #6e530f; }
+
+/* ---------- FEATURED NEXT MEETUP: asymmetric editorial split ---------- */
+.ed-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+}
+.ed-featured__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 24px 60px -28px rgba(33,27,16,0.35);
+}
+.ed-featured__media img { width: 100%; height: 100%; object-fit: cover; }
+.ed-featured__date {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.05; color: var(--ed-ink); margin: 0.2rem 0 0.5rem;
+}
+.ed-featured h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-gold-dark); margin: 0 0 0.6rem; }
+.ed-featured p { color: var(--ed-muted); max-width: 30rem; margin: 0 0 1.5rem; }
+.ed-featured__chip {
+  display: inline-block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 600; color: var(--color-gold-dark);
+  border: 1px solid var(--color-gold); border-radius: 999px; padding: 0.25rem 0.7rem; margin-bottom: 1.1rem;
+}
+@media (max-width: 760px) {
+  .ed-featured { grid-template-columns: 1fr; }
+  .ed-featured__media { order: -1; }
+}
+
+/* ---------- ABOUT: narrow heading column + body + inline facts ---------- */
+.ed-about { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(1.75rem, 5vw, 4rem); align-items: start; }
+.ed-about h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); color: var(--ed-ink); margin: 0; line-height: 1.05; }
+.ed-about__body p { font-size: 1.08rem; color: #3a3226; line-height: 1.7; margin: 0 0 1.5rem; }
+.ed-facts { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0; }
+.ed-facts li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.9rem 0; border-top: 1px solid var(--ed-line); }
+.ed-facts li:last-child { border-bottom: 1px solid var(--ed-line); }
+.ed-facts__label { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ed-muted); }
+.ed-facts__value { font-weight: 600; color: var(--ed-ink); text-align: right; }
+.ed-facts__value a { color: var(--color-gold-dark); text-decoration: none; }
+.ed-facts__value a:hover { text-decoration: underline; }
+@media (max-width: 760px) { .ed-about { grid-template-columns: 1fr; } }
+
+/* ---------- NEWS: editorial list with hairline dividers, no boxes ---------- */
+.ed-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.ed-head h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--ed-ink); margin: 0; }
+.ed-posts { display: grid; gap: 0; }
+.ed-post {
+  display: grid; grid-template-columns: 10rem 1fr; gap: 1.5rem;
+  padding: 1.75rem 0; border-top: 1px solid var(--ed-line);
+}
+.ed-post:last-child { border-bottom: 1px solid var(--ed-line); }
+.ed-post__date { font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ed-muted); padding-top: 0.35rem; }
+.ed-post h3 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); color: var(--ed-ink); margin: 0 0 0.4rem; }
+.ed-post p { color: var(--ed-muted); margin: 0 0 0.6rem; max-width: 42rem; }
+.ed-post__more { font-weight: 600; color: var(--color-gold-dark); text-decoration: none; }
+.ed-post__more:hover { text-decoration: underline; }
+@media (max-width: 620px) {
+  .ed-post { grid-template-columns: 1fr; gap: 0.5rem; }
+  .ed-post__date { padding-top: 0; }
+}
+
+/* ---------- PARTNERS: understated logo row ---------- */
+.ed-partners__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); }
+.ed-partner { text-align: center; padding: 1.5rem 1rem; border: 1px solid var(--ed-line); border-radius: var(--radius-lg); background: #fff; transition: var(--transition); }
+.ed-partner:hover { border-color: rgba(212,175,55,0.55); box-shadow: 0 12px 30px -18px rgba(33,27,16,0.3); }
+.ed-partner__logo { height: 64px; display: grid; place-items: center; margin-bottom: 1rem; }
+.ed-partner__logo img { max-height: 64px; width: auto; object-fit: contain; }
+.ed-partner h3 { font-size: 1.2rem; color: var(--ed-ink); margin: 0 0 0.3rem; }
+.ed-partner p { font-size: 0.92rem; color: var(--ed-muted); margin: 0 0 0.9rem; min-height: 2.4em; }
+.ed-partner a { font-weight: 600; color: var(--color-gold-dark); text-decoration: none; font-size: 0.92rem; }
+.ed-partner a:hover { text-decoration: underline; }
+
+/* ---------- CONNECT: calm full-width band ---------- */
+.ed-connect { text-align: center; padding: clamp(4rem, 9vw, 7rem) 0; }
+.ed-connect__glyph { display: none; }
+.ed-connect h2 { font-size: clamp(2.2rem, 5.5vw, 4rem); color: var(--ed-ink); margin: 0.5rem 0 0.75rem; line-height: 1.05; }
+.ed-connect p { color: var(--ed-muted); max-width: 34rem; margin: 0 auto 2rem; font-size: 1.1rem; }
+.ed-connect__ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+@media (max-width: 460px) {
+  .ed-connect__ctas { flex-direction: column; align-items: stretch; }
+  .ed-connect__ctas .btn-primary, .ed-connect__ctas .btn-outline { justify-content: center; }
+}
+
 /* Tighten the rhythm on the meetup page - the runbook default of
    clamp(3rem, 8vw, 6rem) is way too airy for this short single-event page. */
 .meetup-page .section { padding: clamp(1.75rem, 4vw, 2.75rem) 0; }

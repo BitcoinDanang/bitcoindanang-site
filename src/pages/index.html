@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0D0D0D" />
+  <meta name="theme-color" content="#FAF7F0" />
   <meta name="author" content="Xeniteian" />
   <title>Bitcoin Đà Nẵng - Cộng đồng Bitcoin tại Đà Nẵng</title>
   <meta name="description" content="Cộng đồng Bitcoin của bạn tại Đà Nẵng. Gặp gỡ hàng tháng tại Westwood. Tham gia ngay." />
@@ -48,14 +48,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/png" href="/images/logo.png" />
 
   <link rel="stylesheet" href="../styles/tokens.css?v=9c1b2a01" />
   <link rel="stylesheet" href="../styles/base.css?v=8b6d1f22" />
   <link rel="stylesheet" href="../styles/components.css?v=a17e4c33" />
-  <link rel="stylesheet" href="../styles/pages.css?v=be24f901" />
+  <link rel="stylesheet" href="../styles/pages.css?v=e5f70c12" />
 
   <!-- Google Analytics 4 (cookieless, DNT-respecting, per-domain) -->
   <script>
@@ -71,7 +71,7 @@
     }
   </script>
 </head>
-<body class="theme-dark">
+<body class="theme-light ed-body ed">
 
   <!-- NAV -->
   <nav class="nav" aria-label="Primary">
@@ -97,150 +97,141 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="home-hero">
-    <!-- CSS-only oversized ₿ glyph centred behind the logo (per pencil prompt). -->
-    <div class="home-hero__glyph" aria-hidden="true">₿</div>
-    <div class="home-hero__inner container">
-      <div class="home-hero__logo-wrap">
-        <img src="/images/logo.png" alt="Bitcoin Đà Nẵng logo" class="home-hero__logo" onerror="this.style.display='none'" />
-      </div>
-      <h1 data-i18n="home.hero_title">Bitcoin Đà Nẵng</h1>
-      <p class="home-hero__tagline" data-i18n="home.hero_tagline">Cộng đồng Bitcoin của bạn tại Đà Nẵng</p>
-      <p class="home-hero__meta" data-i18n="home.hero_meta">Đà Nẵng · Việt Nam · Cộng đồng Bitcoin đầu tiên</p>
-      <div class="home-hero__ctas">
+  <!-- HERO (type-led, airy) -->
+  <header class="ed-hero">
+    <div class="ed-hero__glyph" aria-hidden="true">₿</div>
+    <div class="ed-hero__inner container">
+      <span class="ed-eyebrow" data-i18n="home.hero_eyebrow">CỘNG ĐỒNG BITCOIN ĐẦU TIÊN · ĐÀ NẴNG</span>
+      <h1 data-i18n="home.hero_tagline">Cộng đồng Bitcoin của bạn tại Đà Nẵng</h1>
+      <p class="ed-hero__lead" data-i18n="home.hero_lead">Gặp gỡ hàng tháng, thân thiện với người mới. Không crypto, không shitcoin - chỉ Bitcoin.</p>
+      <hr class="ed-rule" />
+      <div class="ed-hero__ctas">
         <a class="btn-primary" href="#connect" data-i18n="home.hero_cta_primary">Tham gia cộng đồng</a>
-        <a class="btn-outline" href="#events" data-i18n="home.hero_cta_secondary">Sự kiện tiếp theo</a>
+        <a class="ed-textlink" href="#next" data-i18n="home.hero_cta_secondary">Sự kiện tiếp theo</a>
       </div>
     </div>
   </header>
 
-  <!-- NEXT EVENT BANNER -->
-  <section id="events" class="section section--tight">
+  <!-- FEATURED NEXT MEETUP -->
+  <section id="next" class="ed-section ed-section--hair">
     <div class="container">
-      <div class="event-banner">
-        <span class="chip" data-i18n="home.event_chip">Sự kiện sắp tới</span>
-        <h2 data-i18n="home.event_title">Gặp gỡ Bitcoin Đà Nẵng - 27 tháng 6, 2026</h2>
-        <p data-i18n="home.event_subtitle">₿itCoffee · Thứ Bảy 27/6 · từ 16:00 · Thân thiện với gia đình, dưới chân núi Sơn Trà</p>
-        <a class="event-banner__cta" href="/meetup-june-2026" data-i18n="home.event_cta">Xem chi tiết →</a>
+      <div class="ed-featured" id="events">
+        <div class="ed-featured__text">
+          <span class="ed-featured__chip" data-i18n="home.event_chip">Sự kiện sắp tới</span>
+          <p class="ed-featured__date" data-i18n="home.event_title">Gặp gỡ Bitcoin Đà Nẵng - 27 tháng 6, 2026</p>
+          <p data-i18n="home.event_subtitle">₿itCoffee · Thứ Bảy 27/6 · từ 16:00 · Thân thiện với gia đình, dưới chân núi Sơn Trà</p>
+          <div class="ed-hero__ctas" style="margin-top:0.5rem">
+            <a class="btn-primary" href="/meetup-june-2026" data-i18n="home.event_cta">Xem chi tiết →</a>
+            <a class="ed-textlink" href="/events" data-i18n="home.past_link">Xem tất cả buổi gặp →</a>
+          </div>
+        </div>
+        <a class="ed-featured__media" href="/meetup-june-2026" aria-label="₿itCoffee">
+          <img src="/images/meetup-bitcoffee-storefront.jpg" alt="Mặt tiền quán ₿itCoffee tại Sơn Trà, Đà Nẵng" loading="lazy" />
+        </a>
       </div>
-      <p class="events-archive-link">
-        <a href="/events" data-i18n="home.past_link">Xem tất cả buổi gặp →</a>
-      </p>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="section">
+  <section class="ed-section ed-section--hair">
     <div class="container">
-      <div class="about-grid">
+      <div class="ed-about">
         <div>
-          <span class="eyebrow" data-i18n="home.about_eyebrow">VỀ CHÚNG TÔI</span>
+          <span class="ed-eyebrow" data-i18n="home.about_eyebrow">VỀ CHÚNG TÔI</span>
           <h2 data-i18n="home.about_title">Về Bitcoin Đà Nẵng</h2>
-          <p data-i18n="home.about_body">Bitcoin Đà Nẵng là nhóm gặp gỡ hàng tháng dành cho những người quan tâm đến Bitcoin - không phải crypto, không phải shitcoin. Chúng tôi gặp nhau tại Westwood, nơi đặt máy ATM Bitcoin đầu tiên của Đà Nẵng.</p>
         </div>
-        <aside class="card">
-          <span class="eyebrow" data-i18n="home.about_facts_eyebrow">THÔNG TIN NHANH</span>
-          <ul class="facts">
+        <div class="ed-about__body">
+          <p data-i18n="home.about_body">Bitcoin Đà Nẵng là nhóm gặp gỡ hàng tháng dành cho những người quan tâm đến Bitcoin - không phải crypto, không phải shitcoin. Chúng tôi gặp nhau tại Westwood, nơi đặt máy ATM Bitcoin đầu tiên của Đà Nẵng.</p>
+          <ul class="ed-facts">
             <li>
-              <i class="facts__icon" data-lucide="map-pin" aria-hidden="true"></i>
-              <div>
-                <span class="facts__label" data-i18n="home.fact_location_label">Địa điểm</span>
-                <span class="facts__value"><a href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener" data-i18n="home.fact_location">Westwood Đà Nẵng</a></span>
-              </div>
+              <span class="ed-facts__label" data-i18n="home.fact_location_label">Địa điểm</span>
+              <span class="ed-facts__value"><a href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener" data-i18n="home.fact_location">Westwood Đà Nẵng</a></span>
             </li>
             <li>
-              <i class="facts__icon" data-lucide="calendar" aria-hidden="true"></i>
-              <div>
-                <span class="facts__label" data-i18n="home.fact_frequency_label">Tần suất</span>
-                <span class="facts__value" data-i18n="home.fact_frequency">Hàng tháng</span>
-              </div>
+              <span class="ed-facts__label" data-i18n="home.fact_frequency_label">Tần suất</span>
+              <span class="ed-facts__value" data-i18n="home.fact_frequency">Hàng tháng</span>
             </li>
             <li>
-              <i class="facts__icon" data-lucide="bitcoin" aria-hidden="true"></i>
-              <div>
-                <span class="facts__label" data-i18n="home.fact_buy_label">Mua Bitcoin</span>
-                <span class="facts__value"><a href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="home.fact_buy">BitcoinVN.io →</a></span>
-              </div>
+              <span class="ed-facts__label" data-i18n="home.fact_buy_label">Mua Bitcoin</span>
+              <span class="ed-facts__value"><a href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="home.fact_buy">BitcoinVN.io →</a></span>
             </li>
           </ul>
-        </aside>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BLOG -->
-  <section class="section">
+  <!-- NEWS -->
+  <section class="ed-section ed-section--hair">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow" data-i18n="home.blog_eyebrow">TIN MỚI</span>
-        <h2 data-i18n="home.blog_title">Tin tức & Hoạt động</h2>
+      <div class="ed-head">
+        <div>
+          <span class="ed-eyebrow" data-i18n="home.blog_eyebrow">TIN MỚI</span>
+          <h2 data-i18n="home.blog_title">Tin tức & Hoạt động</h2>
+        </div>
       </div>
-      <div class="grid-2" id="blog-feed">
-        <!-- Placeholder cards until TinaCMS-driven feed (Phase 6) replaces them -->
-        <article class="card blog-card">
-          <span class="blog-card__date" data-i18n="home.blog_sample_1_date">10 tháng 5, 2026</span>
-          <h3 data-i18n="home.blog_sample_1_title">Buổi gặp mặt đầu tiên của Bitcoin Đà Nẵng</h3>
-          <p data-i18n="home.blog_sample_1_excerpt">Hơn 30 người đã đến Westwood để cùng tìm hiểu về Bitcoin và sử dụng máy ATM đầu tiên của Đà Nẵng.</p>
-          <a href="#" class="blog-card__more" data-i18n="home.blog_read_more">Đọc thêm →</a>
+      <div class="ed-posts" id="blog-feed">
+        <article class="ed-post">
+          <span class="ed-post__date" data-i18n="home.blog_sample_1_date">10 tháng 5, 2026</span>
+          <div>
+            <h3 data-i18n="home.blog_sample_1_title">Buổi gặp mặt đầu tiên của Bitcoin Đà Nẵng</h3>
+            <p data-i18n="home.blog_sample_1_excerpt">Hơn 30 người đã đến Westwood để cùng tìm hiểu về Bitcoin và sử dụng máy ATM đầu tiên của Đà Nẵng.</p>
+            <a href="#" class="ed-post__more" data-i18n="home.blog_read_more">Đọc thêm →</a>
+          </div>
         </article>
-        <article class="card blog-card">
-          <span class="blog-card__date" data-i18n="home.blog_sample_2_date">1 tháng 5, 2026</span>
-          <h3 data-i18n="home.blog_sample_2_title">Vì sao chúng tôi chỉ nói về Bitcoin?</h3>
-          <p data-i18n="home.blog_sample_2_excerpt">Một bài viết ngắn giải thích lý do cộng đồng tập trung vào Bitcoin chứ không phải altcoin.</p>
-          <a href="#" class="blog-card__more" data-i18n="home.blog_read_more">Đọc thêm →</a>
+        <article class="ed-post">
+          <span class="ed-post__date" data-i18n="home.blog_sample_2_date">1 tháng 5, 2026</span>
+          <div>
+            <h3 data-i18n="home.blog_sample_2_title">Vì sao chúng tôi chỉ nói về Bitcoin?</h3>
+            <p data-i18n="home.blog_sample_2_excerpt">Một bài viết ngắn giải thích lý do cộng đồng tập trung vào Bitcoin chứ không phải altcoin.</p>
+            <a href="#" class="ed-post__more" data-i18n="home.blog_read_more">Đọc thêm →</a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
   <!-- PARTNERS -->
-  <section class="section">
+  <section class="ed-section ed-section--hair">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow" data-i18n="home.partners_eyebrow">ĐỐI TÁC</span>
-        <h2 data-i18n="home.partners_title">Đối tác & Liên kết</h2>
+      <div class="ed-head">
+        <div>
+          <span class="ed-eyebrow" data-i18n="home.partners_eyebrow">ĐỐI TÁC</span>
+          <h2 data-i18n="home.partners_title">Đối tác & Liên kết</h2>
+        </div>
       </div>
-      <div class="grid-3">
-        <article class="card partner-card">
-          <div class="partner-card__logo">
-            <img src="/images/partner-westwood.jpg" alt="Westwood Đà Nẵng logo" loading="lazy" />
-          </div>
+      <div class="ed-partners__grid">
+        <article class="ed-partner">
+          <div class="ed-partner__logo"><img src="/images/partner-westwood.jpg" alt="Westwood Đà Nẵng logo" loading="lazy" /></div>
           <h3>Westwood Đà Nẵng</h3>
           <p data-i18n="home.partner_westwood_tagline">Ngôi nhà ấm cúng của cộng đồng Bitcoin Đà Nẵng</p>
-          <a class="btn-outline" href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener" data-i18n="home.partner_westwood_cta">Xem Westwood →</a>
+          <a href="https://linktr.ee/westwooddanang" target="_blank" rel="noopener" data-i18n="home.partner_westwood_cta">Xem Westwood →</a>
         </article>
-        <article class="card partner-card">
-          <div class="partner-card__logo partner-card__logo--light">
-            <img src="/images/partner-bitcoinvn.png" alt="BitcoinVN logo" loading="lazy" />
-          </div>
+        <article class="ed-partner">
+          <div class="ed-partner__logo"><img src="/images/partner-bitcoinvn.png" alt="BitcoinVN logo" loading="lazy" /></div>
           <h3>BitcoinVN.io</h3>
           <p data-i18n="home.partner_bitcoinvn_tagline">Mua &amp; bán Bitcoin tại Việt Nam</p>
-          <a class="btn-outline" href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="home.partner_bitcoinvn_cta">Đến BitcoinVN →</a>
+          <a href="https://bitcoinvn.io" target="_blank" rel="noopener" data-i18n="home.partner_bitcoinvn_cta">Đến BitcoinVN →</a>
         </article>
-        <article class="card partner-card">
-          <div class="partner-card__logo">
-            <img src="/images/partner-bitcoin-saigon.webp" alt="Bitcoin Saigon logo" loading="lazy" />
-          </div>
+        <article class="ed-partner">
+          <div class="ed-partner__logo"><img src="/images/partner-bitcoin-saigon.webp" alt="Bitcoin Saigon logo" loading="lazy" /></div>
           <h3>Bitcoin Saigon</h3>
           <p data-i18n="home.partner_saigon_tagline">Nhóm chị em tại TP.HCM</p>
-          <a class="btn-outline" href="https://bitcoinsaigon.org/" target="_blank" rel="noopener" data-i18n="home.partner_saigon_cta">Xem Bitcoin Saigon →</a>
+          <a href="https://bitcoinsaigon.org/" target="_blank" rel="noopener" data-i18n="home.partner_saigon_cta">Xem Bitcoin Saigon →</a>
         </article>
       </div>
     </div>
   </section>
 
   <!-- CONNECT -->
-  <section id="connect" class="section section--connect">
+  <section id="connect" class="ed-connect ed-section--hair">
     <div class="container">
-      <div class="connect-band">
-        <span class="eyebrow" data-i18n="home.connect_eyebrow">KẾT NỐI</span>
-        <h2 data-i18n="home.connect_title">Tham gia cộng đồng</h2>
-        <p data-i18n="home.connect_body">Người mới luôn được chào đón. Nhắn cho chúng tôi trên Telegram hoặc gửi email - chúng tôi rất vui được trả lời câu hỏi của bạn.</p>
-        <div class="connect-band__ctas">
-          <a class="btn-primary" href="https://t.me/+4VDDldma_CRkZWU1" target="_blank" rel="noopener" data-i18n="home.connect_telegram">Nhắn qua Telegram</a>
-          <a class="btn-outline" href="mailto:contact@bitcoindanang.org" data-i18n="home.connect_email">Gửi email</a>
-        </div>
+      <span class="ed-eyebrow" data-i18n="home.connect_eyebrow">KẾT NỐI</span>
+      <h2 data-i18n="home.connect_title">Tham gia cộng đồng</h2>
+      <p data-i18n="home.connect_body">Người mới luôn được chào đón. Nhắn cho chúng tôi trên Telegram hoặc gửi email - chúng tôi rất vui được trả lời câu hỏi của bạn.</p>
+      <div class="ed-connect__ctas">
+        <a class="btn-primary" href="https://t.me/+4VDDldma_CRkZWU1" target="_blank" rel="noopener" data-i18n="home.connect_telegram">Nhắn qua Telegram</a>
+        <a class="btn-outline" href="mailto:contact@bitcoindanang.org" data-i18n="home.connect_email">Gửi email</a>
       </div>
     </div>
   </section>
