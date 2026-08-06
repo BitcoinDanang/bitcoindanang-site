@@ -23,5 +23,13 @@
 # Tina admin (Tina build writes /admin/index.html under dist/)
 /admin                  /admin/index.html             200
 
+# Language-prefixed URLs - share EN or VI directly; i18n.js reads the /en/ or /vi/ prefix.
+/en                     /pages/index.html             200
+/en/                    /pages/index.html             200
+/vi                     /pages/index.html             200
+/vi/                    /pages/index.html             200
+/en/*                   /pages/:splat                 200
+/vi/*                   /pages/:splat                 200
+
 # Fallback for unknown paths -> homepage
 /*                      /pages/index.html             200

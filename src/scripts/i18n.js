@@ -12,7 +12,25 @@
   const DEFAULT_LANG = 'vi';
 
   const dictionaries = {};
-  let currentLang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
+
+  // Language can be pinned in the URL as a /en/ or /vi/ path prefix so a shared
+  // link opens in the intended language regardless of the recipient's saved pref.
+  function langFromPath() {
+    const m = location.pathname.match(/^\/(en|vi)(?=\/|$)/);
+    return m ? m[1] : null;
+  }
+  function stripLangPrefix(path) {
+    return path.replace(/^\/(en|vi)(?=\/|$)/, '') || '/';
+  }
+  // Build the language-prefixed URL for the current page (switcher + sharing).
+  function urlForLang(lang) {
+    const rest = stripLangPrefix(location.pathname);
+    const path = '/' + lang + (rest === '/' ? '/' : rest);
+    return path + location.search + location.hash;
+  }
+
+  // Priority: URL prefix > saved preference > default.
+  let currentLang = langFromPath() || localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
 
   // Resolve path to /src/i18n/ regardless of whether the page lives in /src/pages/.
   function dictPath(lang) {
@@ -78,7 +96,17 @@
     const btn = e.target.closest('[data-lang-btn]');
     if (!btn) return;
     e.preventDefault();
-    setLang(btn.getAttribute('data-lang-btn'));
+    const lang = btn.getAttribute('data-lang-btn');
+    if (lang !== 'vi' && lang !== 'en') return;
+    // Reflect the choice in the URL (path prefix) so copy/paste shares this language.
+    try { history.pushState({ lang: lang }, '', urlForLang(lang)); } catch (_e) {}
+    setLang(lang);
+  });
+
+  // Keep language in sync with back/forward navigation between /en/ and /vi/.
+  window.addEventListener('popstate', function () {
+    const lang = langFromPath();
+    if (lang && lang !== currentLang) setLang(lang);
   });
 
   // Hamburger menu (mobile). The slide-in panel covers the hamburger button,
