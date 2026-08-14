@@ -364,9 +364,12 @@ body.theme-light .section-head h2 { color: var(--color-gold-dark); }
 }
 .event-card h3 { margin: 0.1rem 0 0.2rem; }
 body.theme-dark .event-card h3 { color: var(--color-gold); }
+body.theme-light .event-card h3 { color: #211b10; }
 .event-card p { font-size: 0.97rem; opacity: 0.9; margin-bottom: 1rem; }
 .event-card__cta { margin-top: auto; font-weight: 600; text-decoration: none; color: var(--color-gold); }
+body.theme-light .event-card__cta { color: var(--color-gold-dark); }
 .event-card__cta:hover { color: var(--color-gold-light); }
+body.theme-light .event-card__cta:hover { color: #6e530f; }
 .event-card--featured { border: 2px solid var(--color-gold); }
 
 .events-empty {
@@ -1577,6 +1580,17 @@ body.theme-light.ed-body {
   .ed-featured__media { order: -1; }
 }
 
+/* Text-forward "next event" card (used when there is no venue photo yet). */
+.ed-next {
+  max-width: 60rem;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.07), transparent);
+}
+.ed-next .ed-featured__date { margin: 0.35rem 0 0.5rem; }
+.ed-next > p { color: var(--ed-muted); max-width: 40rem; margin: 0; }
+
 /* ---------- ABOUT: narrow heading column + body + inline facts ---------- */
 .ed-about { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(1.75rem, 5vw, 4rem); align-items: start; }
 .ed-about h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); color: var(--ed-ink); margin: 0; line-height: 1.05; }
@@ -1716,4 +1730,31 @@ body.theme-light.ed-body {
   letter-spacing: 0.01em;
   user-select: all;
   white-space: nowrap;
+}
+
+/* ---------- FULL-WIDTH PAGE BANNER (cropped horizontal photo) ---------- */
+.page-banner {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  line-height: 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+}
+.page-banner img {
+  display: block;
+  width: 100%;
+  height: clamp(200px, 34vw, 400px);
+  object-fit: cover;
+  object-position: center 42%;
+}
+/* soft gold-tinted vignette so the banner blends into the hero below */
+.page-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, transparent 22%),
+    linear-gradient(0deg, rgba(250, 247, 240, 0.55) 0%, transparent 30%);
 }
