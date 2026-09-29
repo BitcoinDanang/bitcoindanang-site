@@ -15,8 +15,8 @@
     "hero_cta_secondary": "Sự kiện tiếp theo",
     "event_eyebrow": "SỰ KIỆN TIẾP THEO",
     "event_chip": "Sự kiện sắp tới",
-    "event_title": "Dã ngoại bãi biển tại Simple Beach Tiên Sa - 6 tháng 9, 2026",
-    "event_subtitle": "Simple Beach Tiên Sa, Sơn Trà · Chủ Nhật 6/9 · từ 16:00 · thân thiện với gia đình, mang đồ bơi",
+    "event_title": "Gặp gỡ tại Draft Beer Danang Downtown - 4 tháng 10, 2026",
+    "event_subtitle": "Draft Beer Danang Downtown, Bạch Đằng · Chủ Nhật 4/10 · từ 16:00 · bên sông ở trung tâm Đà Nẵng, ở lại dùng bữa tối",
     "event_cta": "Xem chi tiết →",
     "about_eyebrow": "VỀ CHÚNG TÔI",
     "about_title": "Về Bitcoin Đà Nẵng",
@@ -80,7 +80,10 @@
     "june_2026_date": "27 tháng 6, 2026",
     "june_2026_title": "Gặp gỡ tại ₿itCoffee",
     "june_2026_excerpt": "Buổi gặp thân thiện với gia đình tại ₿itCoffee, dưới chân núi Sơn Trà - quán Thái do một thành viên cộng đồng điều hành.",
-    "empty_past": "Chưa có buổi gặp nào trong kho lưu trữ. Buổi đầu tiên sẽ xuất hiện ở đây sau khi diễn ra."
+    "empty_past": "Chưa có buổi gặp nào trong kho lưu trữ. Buổi đầu tiên sẽ xuất hiện ở đây sau khi diễn ra.",
+    "oct_2026_title": "Gặp gỡ tại Draft Beer Danang Downtown",
+    "oct_2026_date": "4 tháng 10, 2026",
+    "oct_2026_excerpt": "Trở lại bên sông Hàn ở trung tâm Đà Nẵng - buổi gặp thư giãn bên sông tại Draft Beer trên đường Bạch Đằng. Từ 16:00, chào đón tất cả Bitcoiner, ở lại dùng bữa tối nếu muốn."
   },
   "meetup": {
     "hero_eyebrow": "GẶP GỠ THÁNG 6 · BITCOIN ĐÀ NẴNG",
@@ -304,5 +307,32 @@
     "r11_label": "Rủi ro kiểm định sai",
     "r11_gold": "Có - cân sai, tuổi vàng sai",
     "r11_btc": "Không - blockchain minh bạch"
+  },
+  "meetup_oct": {
+    "hero_eyebrow": "GẶP GỠ HÀNG THÁNG · BITCOIN ĐÀ NẴNG",
+    "hero_title": "Gặp gỡ tại Draft Beer Danang Downtown",
+    "hero_date": "Chủ Nhật, 4 tháng 10, 2026 · từ 16:00",
+    "hero_subtitle": "Bên bờ sông Hàn, ngay trung tâm Đà Nẵng · từ 16:00, đến trễ hơn cũng được",
+    "hero_cta_primary": "Chỉ đường",
+    "invite_eyebrow": "LỜI MỜI",
+    "invite_title": "Trở lại bên sông Hàn, ngay trung tâm thành phố",
+    "invite_p1": "Gửi các bạn Bitcoiner,",
+    "invite_p2": "Sau buổi dã ngoại gia đình bên biển tháng trước, lần này chúng ta quay về trung tâm Đà Nẵng, bên bờ sông Hàn. Buổi gặp sẽ diễn ra tại Draft Beer Danang Downtown, một không gian rộng rãi, thoáng đãng ngay trên đường Bạch Đằng sát bờ sông.",
+    "invite_p3": "Có rất nhiều điều để cùng trò chuyện sau những gì diễn ra trong vài tuần qua, vậy nên hãy đến và tham gia nhé. Chào đón tất cả các bạn quan tâm đến Bitcoin. Chúng ta bắt đầu gặp nhau từ 16:00, bạn cứ ghé lúc nào thuận tiện, và ở lại dùng bữa tối nếu muốn.",
+    "invite_menu": "Xem thực đơn của Draft Beer →",
+    "venue_eyebrow": "ĐỊA ĐIỂM",
+    "venue_title": "Về Draft Beer Danang Downtown",
+    "venue_body": "Draft Beer Danang Downtown là một nhà hàng kiêm vườn bia rộng rãi bên sông, phục vụ ẩm thực Việt và hải sản, ngay trên đường Bạch Đằng cạnh sông Hàn. Dễ tìm, dễ đến và đủ chỗ cho cả nhóm.",
+    "venue_addr_label": "Địa chỉ:",
+    "venue_addr": "Bạch Đằng, Hòa Cường, Đà Nẵng 550000",
+    "venue_menu_label": "Thực đơn:",
+    "venue_cta_directions": "Chỉ đường trên Google Maps →",
+    "details_eyebrow": "CHI TIẾT SỰ KIỆN",
+    "details_date_label": "Thời gian",
+    "details_date": "Chủ Nhật, 4 tháng 10, 2026 · từ 16:00",
+    "details_loc_label": "Địa điểm",
+    "details_loc": "Draft Beer Danang Downtown, Bạch Đằng, Hòa Cường, Đà Nẵng",
+    "details_style_label": "Phong cách",
+    "details_style": "Gặp gỡ thư giãn bên sông · đồ ăn và đồ uống · chào đón người mới · ở lại dùng bữa tối nếu muốn"
   }
 }

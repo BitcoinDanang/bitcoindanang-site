@@ -15,8 +15,8 @@
     "hero_cta_secondary": "Next event",
     "event_eyebrow": "NEXT EVENT",
     "event_chip": "Upcoming event",
-    "event_title": "Family beach picnic at Simple Beach Tien Sa - September 6, 2026",
-    "event_subtitle": "Simple Beach Tien Sa, Son Tra · Sunday Sep 6 · from 4:00 PM · family-friendly, bring swimwear",
+    "event_title": "Meetup at Draft Beer Danang Downtown - 4 October 2026",
+    "event_subtitle": "Draft Beer Danang Downtown, Bạch Đằng · Sunday 4/10 · from 4pm · riverside in central Da Nang, stay for dinner",
     "event_cta": "See details →",
     "about_eyebrow": "ABOUT US",
     "about_title": "About the meetup",
@@ -80,7 +80,10 @@
     "june_2026_date": "June 27, 2026",
     "june_2026_title": "Meetup at ₿itCoffee",
     "june_2026_excerpt": "A family-friendly gathering at ₿itCoffee, at the base of Son Tra Mountain - a Thai cafe run by a community member.",
-    "empty_past": "No meetups in the archive yet. The first one will appear here after it takes place."
+    "empty_past": "No meetups in the archive yet. The first one will appear here after it takes place.",
+    "oct_2026_title": "Meetup at Draft Beer Danang Downtown",
+    "oct_2026_date": "4 October 2026",
+    "oct_2026_excerpt": "Back to the Hàn River in central Da Nang - a relaxed riverside meetup at Draft Beer on Bạch Đằng. From 4pm, all Bitcoiners welcome, stay for dinner if you like."
   },
   "meetup": {
     "hero_eyebrow": "JUNE MEETUP · BITCOIN DA NANG",
@@ -304,5 +307,32 @@
     "r11_label": "Mis-grading risk",
     "r11_gold": "Yes - wrong weight, wrong purity",
     "r11_btc": "No - blockchain is transparent"
+  },
+  "meetup_oct": {
+    "hero_eyebrow": "MONTHLY MEETUP · BITCOIN ĐÀ NẴNG",
+    "hero_title": "Meetup at Draft Beer Danang Downtown",
+    "hero_date": "Sunday, 4 October 2026 · from 4:00 PM",
+    "hero_subtitle": "Riverside on the Hàn in central Da Nang · from 4pm, come later if it suits",
+    "hero_cta_primary": "Get directions",
+    "invite_eyebrow": "THE INVITATION",
+    "invite_title": "Back to the Hàn River, in the heart of the city",
+    "invite_p1": "Fellow Bitcoiners,",
+    "invite_p2": "After last month's family picnic out on the beach, we are heading back into the centre of Da Nang, to the banks of the Hàn River. This time we gather at Draft Beer Danang Downtown, a big open riverside spot on Bạch Đằng.",
+    "invite_p3": "There is plenty to talk about after everything the last few weeks have brought, so come along and join the conversation. All Bitcoiners are welcome. We start meeting from 4pm, so drop by whenever suits you, and stick around for dinner if you fancy it.",
+    "invite_menu": "See the Draft Beer menu →",
+    "venue_eyebrow": "THE VENUE",
+    "venue_title": "About Draft Beer Danang Downtown",
+    "venue_body": "Draft Beer Danang Downtown is a large, open riverside beer garden and restaurant serving Vietnamese cuisine and seafood, right on Bạch Đằng beside the Hàn River. Easy to find, easy to reach, with plenty of room for the group.",
+    "venue_addr_label": "Address:",
+    "venue_addr": "Bạch Đằng, Hòa Cường, Đà Nẵng 550000",
+    "venue_menu_label": "Menu:",
+    "venue_cta_directions": "Directions on Google Maps →",
+    "details_eyebrow": "EVENT DETAILS",
+    "details_date_label": "When",
+    "details_date": "Sunday, 4 October 2026 · from 4:00 PM",
+    "details_loc_label": "Where",
+    "details_loc": "Draft Beer Danang Downtown, Bạch Đằng, Hòa Cường, Đà Nẵng",
+    "details_style_label": "Style",
+    "details_style": "Relaxed riverside meetup · food and drinks · newcomers welcome · stay for dinner if you like"
   }
 }
