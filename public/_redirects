@@ -28,16 +28,18 @@
 /admin                  /admin/index.html             200
 
 # Language-prefixed URLs - share EN or VI directly; i18n.js reads the /en/ or /vi/ prefix.
-/en                     /pages/index.html             200
-/en/                    /pages/index.html             200
+# EN serves the /pages/en/ variants (English <title>/og:* so scrapers like
+# Telegram get an English preview). VI serves the default /pages/ files.
+/en                     /pages/en/index.html          200
+/en/                    /pages/en/index.html          200
 /vi                     /pages/index.html             200
 /vi/                    /pages/index.html             200
 # Normalise accidental double-prefixed URLs (/en/pages/x, /pages/x) to the real
 # file so link-preview scrapers (Telegram et al.) get the right page + OG image
 # instead of falling through to the homepage.
-/en/pages/*             /pages/:splat                 200
+/en/pages/*             /pages/en/:splat              200
 /vi/pages/*             /pages/:splat                 200
-/en/*                   /pages/:splat                 200
+/en/*                   /pages/en/:splat              200
 /vi/*                   /pages/:splat                 200
 
 # Fallback for unknown paths -> homepage

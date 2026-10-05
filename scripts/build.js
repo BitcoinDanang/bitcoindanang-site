@@ -331,6 +331,53 @@ function renderPostPages(posts) {
 }
 
 // ---------------------------------------------------------------------------
+// English (/en) page variants
+//
+// The visible body is localised at runtime by /scripts/i18n.js (it reads the
+// /en/ path prefix). But link-preview scrapers (Telegram, etc.) do NOT run JS,
+// so they only ever see the static Vietnamese <title>/og:* tags. To get an
+// English preview we emit a copy of each page under /pages/en/ with the head
+// metadata swapped to English, served at /en/<slug> via _redirects.
+
+const EN_META = {
+  "index": { title: "Bitcoin Da Nang - Your Bitcoin community in Da Nang", description: "Your Bitcoin community in Da Nang. Monthly meetups, newcomer-friendly. No crypto, no shitcoins - just Bitcoin.", ogTitle: "Bitcoin Da Nang", ogDescription: "Your Bitcoin community in Da Nang." },
+  "events": { title: "Meetups - Bitcoin Da Nang", description: "Archive of Bitcoin Da Nang community meetups - past and upcoming gatherings.", ogTitle: "Meetups - Bitcoin Da Nang", ogDescription: "Archive of Bitcoin Da Nang community meetups." },
+  "movie-night-october-2026": { title: "Movie Night Bitcoin Da Nang - 18 October 2026 at BitCoffee", description: "A Bitcoin Da Nang community movie night at BitCoffee, Son Tra. Sunday 18 October 2026 from 5:00 PM. The first of our rainy-season film nights and workshops. All Bitcoiners welcome.", ogTitle: "Movie Night Bitcoin Da Nang - BitCoffee · 18/10/2026", ogDescription: "Moving indoors for the rainy season. A movie night hosted by BitCoffee in Son Tra - Sunday 18/10 from 5pm, all Bitcoiners welcome." },
+  "meetup-october-2026": { title: "Bitcoin Da Nang Meetup - 4 October 2026 at Draft Beer Danang Downtown", description: "Bitcoin Da Nang's monthly meetup at Draft Beer Danang Downtown, by the Han River. Sunday 4 October 2026 from 4:00 PM. All Bitcoiners welcome, stay for dinner.", ogTitle: "Bitcoin Da Nang Meetup - Draft Beer Danang Downtown · 4/10/2026", ogDescription: "Back to the Han River in central Da Nang. A riverside meetup at Draft Beer on Bach Dang - from 4pm, all Bitcoiners welcome." },
+  "meetup-september-2026": { title: "Bitcoin Da Nang Family Beach Picnic - 6 September 2026 at Simple Beach Tien Sa", description: "A Bitcoin Da Nang family beach picnic at Simple Beach Tien Sa, Son Tra. Sunday 6 September 2026 from 4:00 PM. Bring the family, swimwear and drinks.", ogTitle: "Bitcoin Da Nang Family Beach Picnic - Simple Beach Tien Sa · 6/9/2026", ogDescription: "An end-of-summer family beach picnic at a quiet beach in Son Tra. Bring the family for a relaxed afternoon talking Bitcoin." },
+  "meetup-august-2026": { title: "Bitcoin Da Nang Meetup - 1 August 2026 at The West Bar", description: "A Bitcoin Da Nang rooftop meetup at The West Bar (Fivitel Da Nang Hotel). Drinks, dinner and a free Ledger hardware wallet workshop.", ogTitle: "Bitcoin Da Nang Meetup - The West Bar · 1/8/2026", ogDescription: "A rooftop meetup at The West Bar, Fivitel Da Nang - drinks, dinner and a free Ledger hardware wallet workshop." },
+  "meetup-june-2026": { title: "Bitcoin Da Nang Meetup - 27 June 2026 at BitCoffee", description: "A family-friendly Bitcoin Da Nang meetup at BitCoffee, at the foot of Son Tra mountain.", ogTitle: "Bitcoin Da Nang Meetup - BitCoffee · 27/6/2026", ogDescription: "A family-friendly gathering at BitCoffee, at the foot of Son Tra mountain - a Thai cafe run by a community member." },
+};
+
+function escAttr(s) { return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;"); }
+
+function genEnglishPages() {
+  const pagesDir = path.join(SRC, "pages");
+  if (!fs.existsSync(pagesDir)) return;
+  const skip = new Set(["blog-post.html", "admin.html"]);
+  let n = 0;
+  for (const file of fs.readdirSync(pagesDir)) {
+    if (!file.endsWith(".html") || skip.has(file)) continue;
+    const slug = file.replace(/\.html$/, "");
+    let html = fs.readFileSync(path.join(pagesDir, file), "utf8");
+    html = html.replace('<html lang="vi">', '<html lang="en">');
+    const m = EN_META[slug];
+    if (m) {
+      if (m.title) html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(m.title)}</title>`);
+      if (m.description) html = html.replace(/(<meta name="description" content=")[^"]*(")/, `$1${escAttr(m.description)}$2`);
+      if (m.ogTitle) html = html.replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${escAttr(m.ogTitle)}$2`);
+      if (m.ogDescription) html = html.replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${escAttr(m.ogDescription)}$2`);
+    }
+    // Point canonical + og:url at the /en/ URL.
+    html = html.replace(/(<meta property="og:url" content="https:\/\/bitcoindanang\.com)([^"]*)(")/, (x, a, b, c) => `${a}/en${b || "/"}${c}`);
+    html = html.replace(/(<link rel="canonical" href="https:\/\/bitcoindanang\.com)([^"]*)(")/, (x, a, b, c) => `${a}/en${b || "/"}${c}`);
+    writeFile(path.join(DIST, "pages", "en", file), html);
+    n++;
+  }
+  console.log(`[build] generated ${n} English (/en) page variant(s)`);
+}
+
+// ---------------------------------------------------------------------------
 // main
 
 function main() {
@@ -356,6 +403,8 @@ function main() {
   if (fs.existsSync(indexSrc)) {
     fs.copyFileSync(indexSrc, path.join(DIST, "index.html"));
   }
+
+  genEnglishPages();
 
   const posts = loadPosts();
   console.log(
