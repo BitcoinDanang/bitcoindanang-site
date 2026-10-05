@@ -334,5 +334,31 @@
     "details_loc": "Draft Beer Danang Downtown, Bạch Đằng, Hòa Cường, Đà Nẵng",
     "details_style_label": "Style",
     "details_style": "Relaxed riverside meetup · food and drinks · newcomers welcome · stay for dinner if you like"
+  },
+  "movie_oct": {
+    "hero_eyebrow": "MOVIE NIGHT · BITCOIN ĐÀ NẴNG",
+    "hero_title": "Movie Night at BitCoffee",
+    "hero_date": "Sunday, 18 October 2026 · from 5:00 PM",
+    "hero_subtitle": "An indoor movie night at BitCoffee in Son Tra · the first of our rainy-season film nights and workshops",
+    "hero_cta_primary": "Get directions",
+    "invite_eyebrow": "THE INVITATION",
+    "invite_title": "Moving indoors for the rainy season",
+    "invite_p1": "Fellow Bitcoiners,",
+    "invite_p2": "It has been a great summer for Bitcoin Da Nang. Our events have grown fast, bringing together people from across the world. Now that the rainy season is here, we are launching a series of movie nights and workshops so we can keep gathering indoors, out of the weather.",
+    "invite_p3": "First up is a Movie Night hosted by BitCoffee at their cafe in Son Tra on Sunday 18 October. Come along, settle in and enjoy the evening with the community. All Bitcoiners are welcome.",
+    "invite_p4": "Our regular monthly meetups will carry on at the start of each month, with these extra events dropped in mid-month for anyone who fancies a different kind of gathering.",
+    "venue_eyebrow": "THE VENUE",
+    "venue_title": "About BitCoffee",
+    "venue_body": "BitCoffee is a Bitcoin-themed cafe at the foot of Son Tra mountain, run by a member of the community. A cosy indoor spot, perfect for a movie night out of the rain.",
+    "venue_addr_label": "Address:",
+    "venue_addr": "1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000",
+    "venue_cta_directions": "Directions on Google Maps →",
+    "details_eyebrow": "EVENT DETAILS",
+    "details_date_label": "When",
+    "details_date": "Sunday, 18 October 2026 · from 5:00 PM",
+    "details_loc_label": "Where",
+    "details_loc": "BitCoffee, 1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng",
+    "details_style_label": "Style",
+    "details_style": "Indoor movie night · relaxed and newcomer-friendly · the first of our rainy-season film nights and workshops"
   }
 }
