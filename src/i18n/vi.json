@@ -9,6 +9,20 @@
     "disclaimer": "Chúng tôi không cung cấp tư vấn đầu tư.",
     "partners_label": "Đối tác:"
   },
+  "faq": {
+    "eyebrow": "CÂU HỎI THƯỜNG GẶP",
+    "title": "Câu hỏi thường gặp",
+    "q1": "Bitcoin Đà Nẵng gặp nhau ở đâu và khi nào?",
+    "a1": "Chúng tôi gặp nhau hàng tháng, thường vào cuối tuần đầu tháng từ 16:00, tại các địa điểm quanh Đà Nẵng như Westwood, BitCoffee hoặc ven sông Hàn. Xem trang Sự kiện để biết địa điểm và thời gian của buổi gặp tiếp theo.",
+    "q2": "Tham gia có mất phí không?",
+    "a2": "Hoàn toàn miễn phí. Bạn chỉ cần trả cho đồ ăn, thức uống của mình.",
+    "q3": "Tôi có cần biết về Bitcoin trước khi tham gia không?",
+    "a3": "Không. Cộng đồng rất thân thiện với người mới - cứ đến, đặt câu hỏi và học hỏi cùng mọi người.",
+    "q4": "Làm sao để tham gia cộng đồng?",
+    "a4": "Tham gia nhóm Telegram của chúng tôi hoặc đến thẳng buổi gặp tiếp theo. Người mới luôn được chào đón.",
+    "q5": "Các bạn có nói về crypto hay altcoin không?",
+    "a5": "Không. Chúng tôi chỉ tập trung vào Bitcoin - không crypto, không shitcoin."
+  },
   "home": {
     "hero_title": "Bitcoin Đà Nẵng",
     "hero_tagline": "Cộng đồng Bitcoin của bạn tại Đà Nẵng",

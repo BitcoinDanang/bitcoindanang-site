@@ -9,6 +9,20 @@
     "disclaimer": "We do not provide investment advice.",
     "partners_label": "Partners:"
   },
+  "faq": {
+    "eyebrow": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Frequently asked questions",
+    "q1": "Where and when does Bitcoin Da Nang meet?",
+    "a1": "We meet monthly, usually on the first weekend of the month from 4pm, at venues around Da Nang such as Westwood, BitCoffee or along the Han River. See the Events page for the next meetup's venue and time.",
+    "q2": "Is it free to attend?",
+    "a2": "Completely free. You only pay for your own food and drinks.",
+    "q3": "Do I need to know about Bitcoin before joining?",
+    "a3": "No. The community is newcomer-friendly - just come along, ask questions and learn with everyone.",
+    "q4": "How do I join the community?",
+    "a4": "Join our Telegram group or simply turn up at the next meetup. Newcomers are always welcome.",
+    "q5": "Do you cover crypto or altcoins?",
+    "a5": "No. We focus on Bitcoin only - no crypto, no shitcoins."
+  },
   "home": {
     "hero_title": "Bitcoin Đà Nẵng",
     "hero_tagline": "Your Bitcoin community in Da Nang",

@@ -351,6 +351,51 @@ const EN_META = {
 
 function escAttr(s) { return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;"); }
 
+// ---------------------------------------------------------------------------
+// hreflang alternates
+//
+// Every page exists in two language variants: Vietnamese at the default URL
+// and English at /en/<slug> (see genEnglishPages below). Both variants must
+// emit the SAME reciprocal alternate set: vi -> default URL, en -> /en URL,
+// x-default -> default (Vietnamese) URL. The VI URL is derived from the
+// page's canonical tag, so this works for any page that has one.
+
+const ORIGIN = "https://bitcoindanang.com";
+
+function injectHreflang(html) {
+  if (html.includes('hreflang="x-default"')) return html; // already injected
+  const m = html.match(/<link rel="canonical" href="https:\/\/bitcoindanang\.com(\/[^"]*)" \/>/);
+  if (!m) return html; // no canonical -> no alternates
+  const pagePath = m[1];
+  if (pagePath === "/en" || pagePath.startsWith("/en/")) return html;
+  const viUrl = ORIGIN + pagePath;
+  const enUrl = ORIGIN + "/en" + (pagePath === "/" ? "/" : pagePath);
+  const tags =
+    `  <link rel="alternate" hreflang="vi" href="${viUrl}" />\n` +
+    `  <link rel="alternate" hreflang="en" href="${enUrl}" />\n` +
+    `  <link rel="alternate" hreflang="x-default" href="${viUrl}" />`;
+  return html.replace(m[0], `${m[0]}\n${tags}`);
+}
+
+// Walk dist/pages/*.html (top level - blog + en variants are handled
+// elsewhere) and inject hreflang alternates into each Vietnamese page.
+function addHreflangToDistPages() {
+  const pagesDir = path.join(DIST, "pages");
+  if (!fs.existsSync(pagesDir)) return;
+  let n = 0;
+  for (const entry of fs.readdirSync(pagesDir, { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
+    const p = path.join(pagesDir, entry.name);
+    const html = fs.readFileSync(p, "utf8");
+    const out = injectHreflang(html);
+    if (out !== html) {
+      fs.writeFileSync(p, out, "utf8");
+      n++;
+    }
+  }
+  console.log(`[build] injected hreflang alternates into ${n} page(s)`);
+}
+
 function genEnglishPages() {
   const pagesDir = path.join(SRC, "pages");
   if (!fs.existsSync(pagesDir)) return;
@@ -368,6 +413,9 @@ function genEnglishPages() {
       if (m.ogTitle) html = html.replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${escAttr(m.ogTitle)}$2`);
       if (m.ogDescription) html = html.replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${escAttr(m.ogDescription)}$2`);
     }
+    // Reciprocal hreflang alternates (same set as the VI copy), derived from
+    // the still-Vietnamese canonical - must run BEFORE the canonical rewrite.
+    html = injectHreflang(html);
     // Point canonical + og:url at the /en/ URL.
     html = html.replace(/(<meta property="og:url" content="https:\/\/bitcoindanang\.com)([^"]*)(")/, (x, a, b, c) => `${a}/en${b || "/"}${c}`);
     html = html.replace(/(<link rel="canonical" href="https:\/\/bitcoindanang\.com)([^"]*)(")/, (x, a, b, c) => `${a}/en${b || "/"}${c}`);
@@ -398,10 +446,12 @@ function main() {
     console.log("[build] no admin/ build found (run `tinacms build` first) - skipping");
   }
 
-  // Index page: surface /src/pages/index.html at /
-  const indexSrc = path.join(SRC, "pages", "index.html");
-  if (fs.existsSync(indexSrc)) {
-    fs.copyFileSync(indexSrc, path.join(DIST, "index.html"));
+  addHreflangToDistPages();
+
+  // Index page: surface the processed /dist/pages/index.html at /
+  const indexDist = path.join(DIST, "pages", "index.html");
+  if (fs.existsSync(indexDist)) {
+    fs.copyFileSync(indexDist, path.join(DIST, "index.html"));
   }
 
   genEnglishPages();
