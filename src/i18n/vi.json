@@ -15,8 +15,8 @@
     "hero_cta_secondary": "Sự kiện tiếp theo",
     "event_eyebrow": "SỰ KIỆN TIẾP THEO",
     "event_chip": "Sự kiện sắp tới",
-    "event_title": "Gặp gỡ tại Draft Beer Danang Downtown - 4 tháng 10, 2026",
-    "event_subtitle": "Draft Beer Danang Downtown, Bạch Đằng · Chủ Nhật 4/10 · từ 16:00 · bên sông ở trung tâm Đà Nẵng, ở lại dùng bữa tối",
+    "event_title": "Đêm chiếu phim tại BitCoffee - 18 tháng 10, 2026",
+    "event_subtitle": "BitCoffee, Sơn Trà · Chủ Nhật 18/10 · từ 17:00 · đêm chiếu phim trong nhà, sự kiện đầu tiên của chuỗi chiếu phim và workshop mùa mưa",
     "event_cta": "Xem chi tiết →",
     "about_eyebrow": "VỀ CHÚNG TÔI",
     "about_title": "Về Bitcoin Đà Nẵng",
@@ -60,7 +60,9 @@
     "connect_title": "Tham gia cộng đồng",
     "connect_body": "Người mới luôn được chào đón. Nhắn cho chúng tôi trên Telegram hoặc gửi email - chúng tôi rất vui được trả lời câu hỏi của bạn.",
     "connect_telegram": "Nhắn qua Telegram",
-    "connect_email": "Gửi email"
+    "connect_email": "Gửi email",
+    "partner_bitcoffee_tagline": "Quán cà phê Bitcoin dưới chân núi Sơn Trà",
+    "partner_bitcoffee_cta": "Xem BitCoffee →"
   },
   "events": {
     "hero_eyebrow": "LƯU TRỮ SỰ KIỆN",
@@ -83,7 +85,10 @@
     "empty_past": "Chưa có buổi gặp nào trong kho lưu trữ. Buổi đầu tiên sẽ xuất hiện ở đây sau khi diễn ra.",
     "oct_2026_title": "Gặp gỡ tại Draft Beer Danang Downtown",
     "oct_2026_date": "4 tháng 10, 2026",
-    "oct_2026_excerpt": "Trở lại bên sông Hàn ở trung tâm Đà Nẵng - buổi gặp thư giãn bên sông tại Draft Beer trên đường Bạch Đằng. Từ 16:00, chào đón tất cả Bitcoiner, ở lại dùng bữa tối nếu muốn."
+    "oct_2026_excerpt": "Trở lại bên sông Hàn ở trung tâm Đà Nẵng - buổi gặp thư giãn bên sông tại Draft Beer trên đường Bạch Đằng. Từ 16:00, chào đón tất cả Bitcoiner, ở lại dùng bữa tối nếu muốn.",
+    "movienight_2026_title": "Đêm chiếu phim tại BitCoffee",
+    "movienight_2026_date": "18 tháng 10, 2026",
+    "movienight_2026_excerpt": "Đêm chiếu phim trong nhà tại BitCoffee ở Sơn Trà - sự kiện đầu tiên của chuỗi chiếu phim và workshop mùa mưa. Chủ Nhật từ 17:00, chào đón tất cả Bitcoiner."
   },
   "meetup": {
     "hero_eyebrow": "GẶP GỠ THÁNG 6 · BITCOIN ĐÀ NẴNG",

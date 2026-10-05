@@ -212,7 +212,19 @@ body.theme-light .footer { background: var(--color-white-muted); color: #5a4f3a;
   justify-content: center;
   margin: 1.25rem 0;
 }
-.footer__partners a { text-decoration: none; font-weight: 600; color: var(--color-gold); }
+.footer__partners a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(160, 124, 30, 0.18);
+  border-radius: 10px;
+  padding: 0.5rem 0.85rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.footer__partners a:hover { border-color: rgba(212, 175, 55, 0.55); box-shadow: 0 6px 16px -10px rgba(33, 27, 16, 0.35); }
+.footer__partners a img { height: 2.1rem; width: auto; max-width: 150px; object-fit: contain; display: block; }
 
 .footer__small { font-size: 0.8rem; opacity: 0.75; margin-top: 1rem; }
 

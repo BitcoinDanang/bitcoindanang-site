@@ -15,8 +15,8 @@
     "hero_cta_secondary": "Next event",
     "event_eyebrow": "NEXT EVENT",
     "event_chip": "Upcoming event",
-    "event_title": "Meetup at Draft Beer Danang Downtown - 4 October 2026",
-    "event_subtitle": "Draft Beer Danang Downtown, Bạch Đằng · Sunday 4/10 · from 4pm · riverside in central Da Nang, stay for dinner",
+    "event_title": "Movie Night at BitCoffee - 18 October 2026",
+    "event_subtitle": "BitCoffee, Son Tra · Sunday 18/10 · from 5pm · indoor movie night, the first of our rainy-season film nights and workshops",
     "event_cta": "See details →",
     "about_eyebrow": "ABOUT US",
     "about_title": "About the meetup",
@@ -60,7 +60,9 @@
     "connect_title": "Join the community",
     "connect_body": "Newcomers are always welcome. Message us on Telegram or send an email - we are happy to answer your questions.",
     "connect_telegram": "Message on Telegram",
-    "connect_email": "Send an email"
+    "connect_email": "Send an email",
+    "partner_bitcoffee_tagline": "Bitcoin cafe at the foot of Son Tra",
+    "partner_bitcoffee_cta": "Visit BitCoffee →"
   },
   "events": {
     "hero_eyebrow": "EVENT ARCHIVE",
@@ -83,7 +85,10 @@
     "empty_past": "No meetups in the archive yet. The first one will appear here after it takes place.",
     "oct_2026_title": "Meetup at Draft Beer Danang Downtown",
     "oct_2026_date": "4 October 2026",
-    "oct_2026_excerpt": "Back to the Hàn River in central Da Nang - a relaxed riverside meetup at Draft Beer on Bạch Đằng. From 4pm, all Bitcoiners welcome, stay for dinner if you like."
+    "oct_2026_excerpt": "Back to the Hàn River in central Da Nang - a relaxed riverside meetup at Draft Beer on Bạch Đằng. From 4pm, all Bitcoiners welcome, stay for dinner if you like.",
+    "movienight_2026_title": "Movie Night at BitCoffee",
+    "movienight_2026_date": "18 October 2026",
+    "movienight_2026_excerpt": "An indoor movie night at BitCoffee in Son Tra - the first of our rainy-season film nights and workshops. Sunday from 5pm, all Bitcoiners welcome."
   },
   "meetup": {
     "hero_eyebrow": "JUNE MEETUP · BITCOIN DA NANG",
