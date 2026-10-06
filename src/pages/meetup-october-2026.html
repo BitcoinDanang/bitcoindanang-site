@@ -84,6 +84,7 @@
   <link rel="stylesheet" href="/styles/base.css?v=8b6d1f22" />
   <link rel="stylesheet" href="/styles/components.css?v=a17e4c33" />
   <link rel="stylesheet" href="/styles/pages.css?v=f6a11d20" />
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
 
   <!-- Google Analytics 4 (cookieless, DNT-respecting, per-domain) -->
   <script>
@@ -188,12 +189,7 @@
           <strong data-i18n="meetup_oct.venue_menu_label">Thực đơn:</strong>
           <a href="http://www.draftbeer.com.vn/" target="_blank" rel="noopener">draftbeer.com.vn</a>
         </p>
-        <div class="meetup-map">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=16.0447897%2C108.2247475" target="_blank" rel="noopener" aria-label="Draft Beer Danang Downtown location map - Bạch Đằng, Hòa Cường, Đà Nẵng">
-            <img src="https://maps.wikimedia.org/img/osm-intl,16,16.0447897,108.2247475,640x360@2x.png" referrerpolicy="no-referrer" width="640" height="360" alt="Draft Beer Danang Downtown location map - Bạch Đằng, Hòa Cường, Đà Nẵng" loading="lazy">
-          </a>
-          <span class="meetup-map__pin"></span>
-        </div>
+        <div class="meetup-map venue-map" data-lat="16.0447897" data-lng="108.2247475" data-zoom="16" style="background-image:url(/images/map-meetup-october-2026.png)" role="img" aria-label="Map of Draft Beer Danang Downtown, Da Nang"></div>
         <p>
           <a class="btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=16.0447897%2C108.2247475" target="_blank" rel="noopener" data-i18n="meetup_oct.venue_cta_directions">Chỉ đường trên Google Maps →</a>
         </p>
@@ -262,5 +258,21 @@
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>document.addEventListener("DOMContentLoaded",function(){if(window.lucide)window.lucide.createIcons();});</script>
+<script src="/vendor/leaflet/leaflet.js"></script>
+<script>
+(function(){
+  function init(el){
+    var lat=parseFloat(el.getAttribute('data-lat')),lng=parseFloat(el.getAttribute('data-lng')),z=parseInt(el.getAttribute('data-zoom')||'16',10);
+    if(!window.L||isNaN(lat)||isNaN(lng))return; /* Leaflet/data missing -> static fallback image stays */
+    try{
+      var map=L.map(el,{scrollWheelZoom:false}).setView([lat,lng],z);
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles &copy; Esri'}).addTo(map);
+      var icon=L.divIcon({className:'vm-pin',html:'<svg viewBox="0 0 24 32" width="30" height="40"><path d="M12 0c6.627 0 12 5.373 12 12 0 8-12 20-12 20S0 20 0 12C0 5.373 5.373 0 12 0z" fill="#DC2626" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="#fff"/></svg>',iconSize:[30,40],iconAnchor:[15,40]});
+      L.marker([lat,lng],{icon:icon}).addTo(map);
+    }catch(e){}
+  }
+  var els=document.querySelectorAll('.venue-map');for(var i=0;i<els.length;i++)init(els[i]);
+})();
+</script>
 </body>
 </html>

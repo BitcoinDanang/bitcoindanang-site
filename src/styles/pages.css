@@ -1759,3 +1759,9 @@ body.theme-light.ed-body {
     linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, transparent 22%),
     linear-gradient(0deg, rgba(250, 247, 240, 0.55) 0%, transparent 30%);
 }
+
+/* Interactive venue map (Leaflet + Esri tiles). Static image behind is the fallback
+   if tiles or JS fail: the Leaflet container is transparent so the bg image shows. */
+.venue-map{background-position:center;background-size:cover}
+.venue-map .leaflet-container{background:transparent}
+.vm-pin{filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
