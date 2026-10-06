@@ -13,7 +13,7 @@
     "eyebrow": "FREQUENTLY ASKED QUESTIONS",
     "title": "Frequently asked questions",
     "q1": "Where and when does Bitcoin Da Nang meet?",
-    "a1": "We meet monthly, usually on the first weekend of the month from 4pm, at venues around Da Nang such as Westwood, BitCoffee or along the Han River. See the Events page for the next meetup's venue and time.",
+    "a1": "We meet monthly, usually on the first weekend of the month from 4pm, at venues around Da Nang such as Westwood, ₿itCoffee or along the Han River. See the Events page for the next meetup's venue and time.",
     "q2": "Is it free to attend?",
     "a2": "Completely free. You only pay for your own food and drinks.",
     "q3": "Do I need to know about Bitcoin before joining?",
@@ -29,8 +29,8 @@
     "hero_cta_secondary": "Next event",
     "event_eyebrow": "NEXT EVENT",
     "event_chip": "Upcoming event",
-    "event_title": "Movie Night at BitCoffee - 18 October 2026",
-    "event_subtitle": "BitCoffee, Son Tra · Sunday 18/10 · from 5pm · indoor movie night, the first of our rainy-season film nights and workshops",
+    "event_title": "Movie Night at ₿itCoffee - 18 October 2026",
+    "event_subtitle": "₿itCoffee, Son Tra · Sunday 18/10 · from 5pm · indoor movie night, the first of our rainy-season film nights and workshops",
     "event_cta": "See details →",
     "about_eyebrow": "ABOUT US",
     "about_title": "About the meetup",
@@ -76,7 +76,7 @@
     "connect_telegram": "Message on Telegram",
     "connect_email": "Send an email",
     "partner_bitcoffee_tagline": "Bitcoin cafe at the foot of Son Tra",
-    "partner_bitcoffee_cta": "Visit BitCoffee →"
+    "partner_bitcoffee_cta": "Visit ₿itCoffee →"
   },
   "events": {
     "hero_eyebrow": "EVENT ARCHIVE",
@@ -100,9 +100,9 @@
     "oct_2026_title": "Meetup at Draft Beer Danang Downtown",
     "oct_2026_date": "4 October 2026",
     "oct_2026_excerpt": "Back to the Hàn River in central Da Nang - a relaxed riverside meetup at Draft Beer on Bạch Đằng. From 4pm, all Bitcoiners welcome, stay for dinner if you like.",
-    "movienight_2026_title": "Movie Night at BitCoffee",
+    "movienight_2026_title": "Movie Night at ₿itCoffee",
     "movienight_2026_date": "18 October 2026",
-    "movienight_2026_excerpt": "An indoor movie night at BitCoffee in Son Tra - the first of our rainy-season film nights and workshops. Sunday from 5pm, all Bitcoiners welcome."
+    "movienight_2026_excerpt": "An indoor movie night at ₿itCoffee in Son Tra - the first of our rainy-season film nights and workshops. Sunday from 5pm, all Bitcoiners welcome."
   },
   "meetup": {
     "hero_eyebrow": "JUNE MEETUP · BITCOIN DA NANG",
@@ -356,19 +356,19 @@
   },
   "movie_oct": {
     "hero_eyebrow": "MOVIE NIGHT · BITCOIN ĐÀ NẴNG",
-    "hero_title": "Movie Night at BitCoffee",
+    "hero_title": "Movie Night at ₿itCoffee",
     "hero_date": "Sunday, 18 October 2026 · from 5:00 PM",
-    "hero_subtitle": "An indoor movie night at BitCoffee in Son Tra · the first of our rainy-season film nights and workshops",
+    "hero_subtitle": "An indoor movie night at ₿itCoffee in Son Tra · the first of our rainy-season film nights and workshops",
     "hero_cta_primary": "Get directions",
     "invite_eyebrow": "THE INVITATION",
     "invite_title": "Moving indoors for the rainy season",
     "invite_p1": "Fellow Bitcoiners,",
     "invite_p2": "It has been a great summer for Bitcoin Da Nang. Our events have grown fast, bringing together people from across the world. Now that the rainy season is here, we are launching a series of movie nights and workshops so we can keep gathering indoors, out of the weather.",
-    "invite_p3": "First up is a Movie Night hosted by BitCoffee at their cafe in Son Tra on Sunday 18 October. Come along, settle in and enjoy the evening with the community. All Bitcoiners are welcome.",
+    "invite_p3": "First up is a Movie Night hosted by ₿itCoffee at their cafe in Son Tra on Sunday 18 October. Come along, settle in and enjoy the evening with the community. All Bitcoiners are welcome.",
     "invite_p4": "Our regular monthly meetups will carry on at the start of each month, with these extra events dropped in mid-month for anyone who fancies a different kind of gathering.",
     "venue_eyebrow": "THE VENUE",
-    "venue_title": "About BitCoffee",
-    "venue_body": "BitCoffee is a Bitcoin-themed cafe at the foot of Son Tra mountain, run by a member of the community. A cosy indoor spot, perfect for a movie night out of the rain.",
+    "venue_title": "About ₿itCoffee",
+    "venue_body": "₿itCoffee is a Bitcoin-themed cafe at the foot of Son Tra mountain, run by a member of the community. A cosy indoor spot, perfect for a movie night out of the rain.",
     "venue_addr_label": "Address:",
     "venue_addr": "1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000",
     "venue_cta_directions": "Directions on Google Maps →",
@@ -376,7 +376,7 @@
     "details_date_label": "When",
     "details_date": "Sunday, 18 October 2026 · from 5:00 PM",
     "details_loc_label": "Where",
-    "details_loc": "BitCoffee, 1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng",
+    "details_loc": "₿itCoffee, 1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng",
     "details_style_label": "Style",
     "details_style": "Indoor movie night · relaxed and newcomer-friendly · the first of our rainy-season film nights and workshops"
   }

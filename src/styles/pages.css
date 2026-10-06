@@ -1660,20 +1660,21 @@ body.theme-light.ed-body {
   margin: 0.75rem 0 1rem;
   background: #e8e4dc;
 }
-.meetup-map iframe {
+.meetup-map iframe,
+.meetup-map a,
+.meetup-map img {
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
+  object-fit: cover;
 }
-/* Red pin overlay - position approximated from the OSM bbox, since the
-   iframe export shows the area but the OSM default marker is small/yellow.
-   Marker at lat 16.1041544, lon 108.2594395 within bbox
-   [108.20, 16.06, 108.32, 16.15] → ~49.5% across, ~51% down. */
+/* Red pin overlay. The static map is centred on the venue coordinates, so the
+   pin sits dead-centre (its tip marks the exact point). */
 .meetup-map__pin {
   position: absolute;
-  left: 49.5%;
-  top: 51%;
+  left: 50%;
+  top: 50%;
   width: 28px;
   height: 36px;
   transform: translate(-50%, -100%);

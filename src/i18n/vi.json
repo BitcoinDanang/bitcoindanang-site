@@ -13,7 +13,7 @@
     "eyebrow": "CÂU HỎI THƯỜNG GẶP",
     "title": "Câu hỏi thường gặp",
     "q1": "Bitcoin Đà Nẵng gặp nhau ở đâu và khi nào?",
-    "a1": "Chúng tôi gặp nhau hàng tháng, thường vào cuối tuần đầu tháng từ 16:00, tại các địa điểm quanh Đà Nẵng như Westwood, BitCoffee hoặc ven sông Hàn. Xem trang Sự kiện để biết địa điểm và thời gian của buổi gặp tiếp theo.",
+    "a1": "Chúng tôi gặp nhau hàng tháng, thường vào cuối tuần đầu tháng từ 16:00, tại các địa điểm quanh Đà Nẵng như Westwood, ₿itCoffee hoặc ven sông Hàn. Xem trang Sự kiện để biết địa điểm và thời gian của buổi gặp tiếp theo.",
     "q2": "Tham gia có mất phí không?",
     "a2": "Hoàn toàn miễn phí. Bạn chỉ cần trả cho đồ ăn, thức uống của mình.",
     "q3": "Tôi có cần biết về Bitcoin trước khi tham gia không?",
@@ -29,8 +29,8 @@
     "hero_cta_secondary": "Sự kiện tiếp theo",
     "event_eyebrow": "SỰ KIỆN TIẾP THEO",
     "event_chip": "Sự kiện sắp tới",
-    "event_title": "Đêm chiếu phim tại BitCoffee - 18 tháng 10, 2026",
-    "event_subtitle": "BitCoffee, Sơn Trà · Chủ Nhật 18/10 · từ 17:00 · đêm chiếu phim trong nhà, sự kiện đầu tiên của chuỗi chiếu phim và workshop mùa mưa",
+    "event_title": "Đêm chiếu phim tại ₿itCoffee - 18 tháng 10, 2026",
+    "event_subtitle": "₿itCoffee, Sơn Trà · Chủ Nhật 18/10 · từ 17:00 · đêm chiếu phim trong nhà, sự kiện đầu tiên của chuỗi chiếu phim và workshop mùa mưa",
     "event_cta": "Xem chi tiết →",
     "about_eyebrow": "VỀ CHÚNG TÔI",
     "about_title": "Về Bitcoin Đà Nẵng",
@@ -76,7 +76,7 @@
     "connect_telegram": "Nhắn qua Telegram",
     "connect_email": "Gửi email",
     "partner_bitcoffee_tagline": "Quán cà phê Bitcoin dưới chân núi Sơn Trà",
-    "partner_bitcoffee_cta": "Xem BitCoffee →"
+    "partner_bitcoffee_cta": "Xem ₿itCoffee →"
   },
   "events": {
     "hero_eyebrow": "LƯU TRỮ SỰ KIỆN",
@@ -100,9 +100,9 @@
     "oct_2026_title": "Gặp gỡ tại Draft Beer Danang Downtown",
     "oct_2026_date": "4 tháng 10, 2026",
     "oct_2026_excerpt": "Trở lại bên sông Hàn ở trung tâm Đà Nẵng - buổi gặp thư giãn bên sông tại Draft Beer trên đường Bạch Đằng. Từ 16:00, chào đón tất cả Bitcoiner, ở lại dùng bữa tối nếu muốn.",
-    "movienight_2026_title": "Đêm chiếu phim tại BitCoffee",
+    "movienight_2026_title": "Đêm chiếu phim tại ₿itCoffee",
     "movienight_2026_date": "18 tháng 10, 2026",
-    "movienight_2026_excerpt": "Đêm chiếu phim trong nhà tại BitCoffee ở Sơn Trà - sự kiện đầu tiên của chuỗi chiếu phim và workshop mùa mưa. Chủ Nhật từ 17:00, chào đón tất cả Bitcoiner."
+    "movienight_2026_excerpt": "Đêm chiếu phim trong nhà tại ₿itCoffee ở Sơn Trà - sự kiện đầu tiên của chuỗi chiếu phim và workshop mùa mưa. Chủ Nhật từ 17:00, chào đón tất cả Bitcoiner."
   },
   "meetup": {
     "hero_eyebrow": "GẶP GỠ THÁNG 6 · BITCOIN ĐÀ NẴNG",
@@ -356,19 +356,19 @@
   },
   "movie_oct": {
     "hero_eyebrow": "ĐÊM CHIẾU PHIM · BITCOIN ĐÀ NẴNG",
-    "hero_title": "Đêm chiếu phim tại BitCoffee",
+    "hero_title": "Đêm chiếu phim tại ₿itCoffee",
     "hero_date": "Chủ Nhật, 18 tháng 10, 2026 · từ 17:00",
-    "hero_subtitle": "Đêm chiếu phim trong nhà tại BitCoffee ở Sơn Trà · sự kiện đầu tiên trong chuỗi chiếu phim và workshop mùa mưa",
+    "hero_subtitle": "Đêm chiếu phim trong nhà tại ₿itCoffee ở Sơn Trà · sự kiện đầu tiên trong chuỗi chiếu phim và workshop mùa mưa",
     "hero_cta_primary": "Chỉ đường",
     "invite_eyebrow": "LỜI MỜI",
     "invite_title": "Chuyển vào trong nhà cho mùa mưa",
     "invite_p1": "Gửi các bạn Bitcoiner,",
     "invite_p2": "Đó là một mùa hè tuyệt vời của Bitcoin Đà Nẵng. Các buổi gặp của chúng ta đã phát triển nhanh chóng, kết nối mọi người từ khắp nơi trên thế giới. Khi mùa mưa đã đến, chúng tôi bắt đầu một chuỗi đêm chiếu phim và workshop để cả nhóm có thể tiếp tục gặp nhau trong nhà, tránh thời tiết.",
-    "invite_p3": "Mở đầu là một Đêm chiếu phim do BitCoffee tổ chức tại quán cà phê của họ ở Sơn Trà vào Chủ Nhật ngày 18 tháng 10. Hãy đến, thư giãn và cùng tận hưởng buổi tối bên cộng đồng. Chào đón tất cả các bạn quan tâm đến Bitcoin.",
+    "invite_p3": "Mở đầu là một Đêm chiếu phim do ₿itCoffee tổ chức tại quán cà phê của họ ở Sơn Trà vào Chủ Nhật ngày 18 tháng 10. Hãy đến, thư giãn và cùng tận hưởng buổi tối bên cộng đồng. Chào đón tất cả các bạn quan tâm đến Bitcoin.",
     "invite_p4": "Các buổi gặp hàng tháng thường lệ vẫn tiếp tục vào đầu mỗi tháng, còn những sự kiện bổ sung này sẽ diễn ra vào giữa tháng cho những ai muốn một kiểu gặp gỡ khác.",
     "venue_eyebrow": "ĐỊA ĐIỂM",
-    "venue_title": "Về BitCoffee",
-    "venue_body": "BitCoffee là một quán cà phê theo chủ đề Bitcoin dưới chân núi Sơn Trà, do một thành viên cộng đồng điều hành. Một không gian trong nhà ấm cúng, lý tưởng cho một đêm chiếu phim tránh mưa.",
+    "venue_title": "Về ₿itCoffee",
+    "venue_body": "₿itCoffee là một quán cà phê theo chủ đề Bitcoin dưới chân núi Sơn Trà, do một thành viên cộng đồng điều hành. Một không gian trong nhà ấm cúng, lý tưởng cho một đêm chiếu phim tránh mưa.",
     "venue_addr_label": "Địa chỉ:",
     "venue_addr": "1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng 550000",
     "venue_cta_directions": "Chỉ đường trên Google Maps →",
@@ -376,7 +376,7 @@
     "details_date_label": "Thời gian",
     "details_date": "Chủ Nhật, 18 tháng 10, 2026 · từ 17:00",
     "details_loc_label": "Địa điểm",
-    "details_loc": "BitCoffee, 1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng",
+    "details_loc": "₿itCoffee, 1 Nguyễn Đăng Giai, Sơn Trà, Đà Nẵng",
     "details_style_label": "Phong cách",
     "details_style": "Đêm chiếu phim trong nhà · thoải mái, thân thiện với người mới · sự kiện đầu tiên trong chuỗi chiếu phim và workshop mùa mưa"
   }
