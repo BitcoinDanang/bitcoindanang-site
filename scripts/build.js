@@ -313,6 +313,12 @@ function writePostsJson(posts) {
   );
 }
 
+function formatPostDate(iso) {
+  const months = ["tháng 1", "tháng 2", "tháng 3", "tháng 4", "tháng 5", "tháng 6", "tháng 7", "tháng 8", "tháng 9", "tháng 10", "tháng 11", "tháng 12"];
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return iso;
+  return `${d.getUTCDate()} ${months[d.getUTCMonth()]}, ${d.getUTCFullYear()}`;
+}
 function renderPostPages(posts) {
   const tplPath = path.join(SRC, "pages", "blog-post.html");
   if (!fs.existsSync(tplPath)) return;
@@ -322,7 +328,7 @@ function renderPostPages(posts) {
     const bodyHtml = renderMarkdown(post.bodyMarkdown);
     const html = tpl
       .replace(/\{\{title\}\}/g, escapeHtml(post.title))
-      .replace(/\{\{date\}\}/g, escapeHtml(post.date))
+      .replace(/\{\{date\}\}/g, escapeHtml(formatPostDate(post.date)))
       .replace(/\{\{author\}\}/g, escapeHtml(post.author))
       .replace(/\{\{excerpt\}\}/g, escapeHtml(post.excerpt))
       .replace(/\{\{body\}\}/g, bodyHtml);

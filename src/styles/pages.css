@@ -1765,3 +1765,11 @@ body.theme-light.ed-body {
 .venue-map{background-position:center;background-size:cover}
 .venue-map .leaflet-container{background:transparent}
 .vm-pin{filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+
+/* Movie Night - tonight's film showcase */
+.movie-film{display:grid;gap:1.25rem;align-items:center;margin:1.75rem 0 .5rem;padding:1.1rem;border:1px solid rgba(160,124,30,.3);border-radius:14px;background:rgba(212,175,55,.06)}
+@media(min-width:620px){.movie-film{grid-template-columns:minmax(0,300px) 1fr}}
+.movie-film__img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:10px;display:block;box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.movie-film__body h3{margin:.4rem 0 .55rem;font-size:1.4rem;line-height:1.2}
+.movie-film__body p{margin:0 0 1rem;color:var(--color-text-muted);line-height:1.6}
+.movie-film__body .btn-outline{display:inline-flex}
