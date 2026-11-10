@@ -1622,6 +1622,10 @@ body.theme-light.ed-body {
   .ed-post { grid-template-columns: 1fr; gap: 0.5rem; }
   .ed-post__date { padding-top: 0; }
 }
+/* FAQ reuses the editorial list but has no date column - each item is a single
+   block, so drop the 10rem date column and let question + answer span full width. */
+.ed-posts--faq .ed-post { grid-template-columns: 1fr; }
+.ed-posts--faq .ed-post p { max-width: 52rem; margin-bottom: 0; }
 
 /* ---------- PARTNERS: understated logo row ---------- */
 .ed-partners__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); }
@@ -1649,6 +1653,10 @@ body.theme-light.ed-body {
    clamp(3rem, 8vw, 6rem) is way too airy for this short single-event page. */
 .meetup-page .section { padding: clamp(1.75rem, 4vw, 2.75rem) 0; }
 .meetup-page .pizza-hero { padding-bottom: clamp(1.5rem, 4vw, 2.5rem); }
+/* Meetup/movie heroes have no illustration column - let the copy span the full
+   width instead of being squeezed into the left ~half of the 2-col hero grid. */
+.meetup-page .pizza-hero__inner { grid-template-columns: 1fr; }
+.meetup-page .pizza-hero__sub { max-width: 46rem; }
 
 .meetup-map {
   position: relative;
