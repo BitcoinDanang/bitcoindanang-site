@@ -34,14 +34,14 @@
     "event_cta": "Xem chi tiết →",
     "about_eyebrow": "VỀ CHÚNG TÔI",
     "about_title": "Về Bitcoin Đà Nẵng",
-    "about_body": "Bitcoin Đà Nẵng là nhóm gặp gỡ hàng tháng dành cho những người quan tâm đến Bitcoin - không phải crypto, không phải shitcoin. Mỗi tháng chúng tôi luân phiên giữa hai điểm quen thuộc - Westwood (nơi đặt máy ATM Bitcoin đầu tiên của Đà Nẵng) và ₿itCoffee - cùng một số địa điểm khác quanh thành phố.",
+    "about_body": "Bitcoin Đà Nẵng là nhóm gặp gỡ hàng tháng dành cho những người quan tâm đến Bitcoin - không phải crypto, không phải shitcoin. Chúng tôi thường gặp nhau vào cuối tuần đầu tiên của mỗi tháng tại nhiều địa điểm khác nhau quanh thành phố, với các thành viên đến từ Việt Nam và khắp nơi trên thế giới. Các buổi chiếu phim, workshop và những sự kiện khác được tổ chức linh hoạt xen giữa các buổi gặp hàng tháng.",
     "about_facts_eyebrow": "THÔNG TIN NHANH",
     "about_facts_title": "Thông tin nhanh",
     "fact_location_label": "Địa điểm",
     "fact_location": "Westwood &amp; ₿itCoffee",
     "fact_frequency_label": "Tần suất",
     "fact_frequency": "Hàng tháng",
-    "fact_buy_label": "Mua Bitcoin",
+    "fact_buy_label": "Sở hữu Bitcoin",
     "fact_buy": "BitcoinVN.io →",
     "blog_eyebrow": "TIN MỚI",
     "blog_title": "Tin tức & Hoạt động",
@@ -76,7 +76,8 @@
     "connect_telegram": "Nhắn @BitcoinDaNang trên Telegram",
     "connect_email": "Gửi email",
     "partner_bitcoffee_tagline": "Quán cà phê Bitcoin dưới chân núi Sơn Trà",
-    "partner_bitcoffee_cta": "Xem ₿itCoffee →"
+    "partner_bitcoffee_cta": "Xem ₿itCoffee →",
+    "show_all_events": "Xem tất cả sự kiện"
   },
   "events": {
     "hero_eyebrow": "LƯU TRỮ SỰ KIỆN",

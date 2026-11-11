@@ -1627,6 +1627,11 @@ body.theme-light.ed-body {
 .ed-posts--faq .ed-post { grid-template-columns: 1fr; }
 .ed-posts--faq .ed-post p { max-width: 52rem; margin-bottom: 0; }
 
+/* News & Activity: show the 3 most recent, reveal the rest with the Show all button. */
+.ed-post--more { display: none; }
+#blog-feed.is-expanded .ed-post--more { display: grid; }
+.ed-showall { margin-top: 1.75rem; }
+
 /* ---------- PARTNERS: understated logo row ---------- */
 .ed-partners__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); }
 .ed-partner { text-align: center; padding: 1.5rem 1rem; border: 1px solid var(--ed-line); border-radius: var(--radius-lg); background: #fff; transition: var(--transition); }
