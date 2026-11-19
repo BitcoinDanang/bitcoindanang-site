@@ -1663,6 +1663,52 @@ body.theme-light.ed-body {
 .meetup-page .pizza-hero__inner { grid-template-columns: 1fr; }
 .meetup-page .pizza-hero__sub { max-width: 46rem; }
 
+/* ---------- Invite gallery: big main image + thumbnail strip ---------- */
+.xmas-gallery__stage {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--color-line, rgba(33,27,16,0.12));
+  border-radius: var(--radius-lg);
+  display: grid;
+  place-items: center;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  box-shadow: 0 16px 40px -24px rgba(33,27,16,0.35);
+}
+.xmas-gallery__stage img {
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+.xmas-gallery__thumbs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.xmas-gallery__thumb {
+  width: 84px;
+  height: 118px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.xmas-gallery__thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.xmas-gallery__thumb:hover { border-color: rgba(212,175,55,0.55); }
+.xmas-gallery__thumb.is-active { border-color: var(--color-gold); }
+.xmas-gallery__note { text-align: center; color: var(--ed-muted, #6b5d3f); font-size: 0.95rem; margin: 1rem 0 0; }
+@media (max-width: 420px) {
+  .xmas-gallery__thumb { width: 64px; height: 90px; }
+}
+
 .meetup-map {
   position: relative;
   width: 100%;
